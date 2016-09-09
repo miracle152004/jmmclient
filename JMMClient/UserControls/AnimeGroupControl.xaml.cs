@@ -1,190 +1,207 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using JMMClient.Forms;
+using System;
+using System.Globalization;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using JMMClient.Forms;
 
 namespace JMMClient.UserControls
 {
-	/// <summary>
-	/// Interaction logic for AnimeGroupControl.xaml
-	/// </summary>
-	public partial class AnimeGroupControl : UserControl
-	{
-		public AnimeGroupControl()
-		{
-			InitializeComponent();
+    /// <summary>
+    /// Interaction logic for AnimeGroupControl.xaml
+    /// </summary>
+    public partial class AnimeGroupControl : UserControl
+    {
+        public AnimeGroupControl()
+        {
+            InitializeComponent();
 
-			this.DataContextChanged += new DependencyPropertyChangedEventHandler(AnimeGroupControl_DataContextChanged);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
 
-			btnSelectDefaultSeries.Click += new RoutedEventHandler(btnSelectDefaultSeries_Click);
-			btnRemoveDefaultSeries.Click += new RoutedEventHandler(btnRemoveDefaultSeries_Click);
-			btnRandomEpisode.Click += new RoutedEventHandler(btnRandomEpisode_Click);
+            this.DataContextChanged += new DependencyPropertyChangedEventHandler(AnimeGroupControl_DataContextChanged);
 
-			lbSeriesList.MouseDoubleClick += new MouseButtonEventHandler(lbSeriesList_MouseDoubleClick);
-		}
+            btnSelectDefaultSeries.Click += new RoutedEventHandler(btnSelectDefaultSeries_Click);
+            btnRemoveDefaultSeries.Click += new RoutedEventHandler(btnRemoveDefaultSeries_Click);
+            btnRandomEpisode.Click += new RoutedEventHandler(btnRandomEpisode_Click);
 
-		void lbSeriesList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-		{
-			if (lbSeriesList.SelectedItem == null) return;
+            lbSeriesList.MouseDoubleClick += new MouseButtonEventHandler(lbSeriesList_MouseDoubleClick);
+        }
 
-			AnimeSeriesVM ser = lbSeriesList.SelectedItem as AnimeSeriesVM;
-			if (ser == null) return;
+        void lbSeriesList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (lbSeriesList.SelectedItem == null) return;
 
-			MainWindow mainwdw = (MainWindow)Window.GetWindow(this);
+            AnimeSeriesVM ser = lbSeriesList.SelectedItem as AnimeSeriesVM;
+            if (ser == null) return;
 
-			mainwdw.ShowChildrenForCurrentGroup(ser);
-		}
+            MainWindow mainwdw = (MainWindow)Window.GetWindow(this);
 
-		void btnRandomEpisode_Click(object sender, RoutedEventArgs e)
-		{
-			AnimeGroupVM grp = this.DataContext as AnimeGroupVM;
-			if (grp == null) return;
+            mainwdw.ShowChildrenForCurrentGroup(ser);
+        }
 
-			MainWindow mainwdw = (MainWindow)Window.GetWindow(this);
+        void btnRandomEpisode_Click(object sender, RoutedEventArgs e)
+        {
+            AnimeGroupVM grp = this.DataContext as AnimeGroupVM;
+            if (grp == null) return;
 
-			RandomEpisodeForm frm = new RandomEpisodeForm();
-			frm.Owner = Window.GetWindow(this); ;
-			frm.Init(RandomSeriesEpisodeLevel.Group, grp);
-			bool? result = frm.ShowDialog();
-		}
+            MainWindow mainwdw = (MainWindow)Window.GetWindow(this);
 
-		void btnRemoveDefaultSeries_Click(object sender, RoutedEventArgs e)
-		{
-			AnimeGroupVM grp = this.DataContext as AnimeGroupVM;
-			if (grp == null) return;
+            RandomEpisodeForm frm = new RandomEpisodeForm();
+            frm.Owner = Window.GetWindow(this); ;
+            frm.Init(RandomSeriesEpisodeLevel.Group, grp);
+            bool? result = frm.ShowDialog();
+        }
 
-			if (!grp.AnimeGroupID.HasValue) return;
+        void btnRemoveDefaultSeries_Click(object sender, RoutedEventArgs e)
+        {
+            AnimeGroupVM grp = this.DataContext as AnimeGroupVM;
+            if (grp == null) return;
 
-			JMMServerVM.Instance.clientBinaryHTTP.RemoveDefaultSeriesForGroup(grp.AnimeGroupID.Value);
-			grp.DefaultAnimeSeriesID = null;
-		}
+            if (!grp.AnimeGroupID.HasValue) return;
 
-		void btnSelectDefaultSeries_Click(object sender, RoutedEventArgs e)
-		{
-			AnimeGroupVM grp = this.DataContext as AnimeGroupVM;
-			if (grp == null) return;
+            JMMServerVM.Instance.clientBinaryHTTP.RemoveDefaultSeriesForGroup(grp.AnimeGroupID.Value);
+            grp.DefaultAnimeSeriesID = null;
+        }
 
-			Window wdw = Window.GetWindow(this);
+        void btnSelectDefaultSeries_Click(object sender, RoutedEventArgs e)
+        {
+            AnimeGroupVM grp = this.DataContext as AnimeGroupVM;
+            if (grp == null) return;
 
-			SelectDefaultSeriesForm frm = new SelectDefaultSeriesForm();
-			frm.Owner = wdw;
-			frm.Init(grp);
-			bool? result = frm.ShowDialog();
-			if (result.Value)
-			{
-				// update info
-				grp.DefaultAnimeSeriesID = frm.SelectedSeriesID.Value;
-				JMMServerVM.Instance.clientBinaryHTTP.SetDefaultSeriesForGroup(grp.AnimeGroupID.Value, frm.SelectedSeriesID.Value);
-			}
-		}
+            Window wdw = Window.GetWindow(this);
 
-		void AnimeGroupControl_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
-		{
-			ShowNextEpisode();
-		}
+            SelectDefaultSeriesForm frm = new SelectDefaultSeriesForm();
+            frm.Owner = wdw;
+            frm.Init(grp);
+            bool? result = frm.ShowDialog();
+            if (result.Value)
+            {
+                // update info
+                grp.DefaultAnimeSeriesID = frm.SelectedSeriesID.Value;
+                JMMServerVM.Instance.clientBinaryHTTP.SetDefaultSeriesForGroup(grp.AnimeGroupID.Value, frm.SelectedSeriesID.Value);
+            }
+        }
 
-		private void ShowNextEpisode()
-		{
-			AnimeGroupVM grp = this.DataContext as AnimeGroupVM;
-			if (grp == null) return;
+        void AnimeGroupControl_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            ShowNextEpisode();
+        }
 
-			if (!grp.AnimeGroupID.HasValue)
-			{
-				ucNextEpisode.EpisodeExists = false;
-				ucNextEpisode.EpisodeMissing = true;
-				ucNextEpisode.DataContext = null;
-				return;
-			}
+        private void ShowNextEpisode()
+        {
+            AnimeGroupVM grp = this.DataContext as AnimeGroupVM;
+            if (grp == null) return;
 
-			JMMServerBinary.Contract_AnimeEpisode ep = JMMServerVM.Instance.clientBinaryHTTP.GetNextUnwatchedEpisodeForGroup(grp.AnimeGroupID.Value, 
-				JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
-			if (ep != null)
-			{
-				AnimeEpisodeVM aniep = new AnimeEpisodeVM(ep);
-				aniep.SetTvDBInfo();
-				ucNextEpisode.DataContext = aniep;
-			}
-			else
-			{
-				ucNextEpisode.EpisodeExists = false;
-				ucNextEpisode.EpisodeMissing = true;
-				ucNextEpisode.DataContext = null;
-			}
-		}
+            if (!grp.AnimeGroupID.HasValue)
+            {
+                ucNextEpisode.EpisodeExists = false;
+                ucNextEpisode.EpisodeMissing = true;
+                ucNextEpisode.DataContext = null;
+                return;
+            }
 
-		/// <summary>
-		/// This event bubbles up from PlayEpisodeControl
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void CommandBinding_ToggleWatchedStatus(object sender, ExecutedRoutedEventArgs e)
-		{
-			object obj = e.Parameter;
-			if (obj == null) return;
+            JMMServerBinary.Contract_AnimeEpisode ep = JMMServerVM.Instance.clientBinaryHTTP.GetNextUnwatchedEpisodeForGroup(grp.AnimeGroupID.Value,
+                JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
+            if (ep != null)
+            {
+                AnimeEpisodeVM aniep = new AnimeEpisodeVM(ep);
+                aniep.SetTvDBInfo();
+                ucNextEpisode.DataContext = aniep;
+            }
+            else
+            {
+                ucNextEpisode.EpisodeExists = false;
+                ucNextEpisode.EpisodeMissing = true;
+                ucNextEpisode.DataContext = null;
+            }
+        }
 
-			this.Cursor = Cursors.Wait;
+        /// <summary>
+        /// This event bubbles up from PlayEpisodeControl
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CommandBinding_ToggleWatchedStatus(object sender, ExecutedRoutedEventArgs e)
+        {
+            object obj = e.Parameter;
+            if (obj == null) return;
 
-			try
-			{
-				Window parentWindow = Window.GetWindow(this);
-				AnimeSeriesVM ser = null;
-				bool newStatus = false;
+            this.Cursor = Cursors.Wait;
 
-				if (obj.GetType() == typeof(VideoDetailedVM))
-				{
-					VideoDetailedVM vid = obj as VideoDetailedVM;
-					newStatus = !vid.Watched;
-					JMMServerVM.Instance.clientBinaryHTTP.ToggleWatchedStatusOnVideo(vid.VideoLocalID, newStatus, JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
+            try
+            {
+                Window parentWindow = Window.GetWindow(this);
+                AnimeSeriesVM ser = null;
+                bool newStatus = false;
 
-					MainListHelperVM.Instance.UpdateHeirarchy(vid);
+                if (obj.GetType() == typeof(VideoDetailedVM))
+                {
+                    VideoDetailedVM vid = obj as VideoDetailedVM;
+                    newStatus = !vid.Watched;
+                    JMMServerVM.Instance.clientBinaryHTTP.ToggleWatchedStatusOnVideo(vid.VideoLocalID, newStatus, JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
 
-					ser = MainListHelperVM.Instance.GetSeriesForVideo(vid.VideoLocalID);
-				}
+                    MainListHelperVM.Instance.UpdateHeirarchy(vid);
 
-				if (obj.GetType() == typeof(AnimeEpisodeVM))
-				{
-					AnimeEpisodeVM ep = obj as AnimeEpisodeVM;
-					newStatus = !ep.Watched;
-					JMMServerBinary.Contract_ToggleWatchedStatusOnEpisode_Response response = JMMServerVM.Instance.clientBinaryHTTP.ToggleWatchedStatusOnEpisode(ep.AnimeEpisodeID,
-						newStatus, JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
-					if (!string.IsNullOrEmpty(response.ErrorMessage))
-					{
-						MessageBox.Show(response.ErrorMessage, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-						return;
-					}
+                    ser = MainListHelperVM.Instance.GetSeriesForVideo(vid.VideoLocalID);
+                }
 
-					MainListHelperVM.Instance.UpdateHeirarchy(response.AnimeEpisode);
+                if (obj.GetType() == typeof(AnimeEpisodeVM))
+                {
+                    AnimeEpisodeVM ep = obj as AnimeEpisodeVM;
+                    newStatus = !ep.Watched;
+                    JMMServerBinary.Contract_ToggleWatchedStatusOnEpisode_Response response = JMMServerVM.Instance.clientBinaryHTTP.ToggleWatchedStatusOnEpisode(ep.AnimeEpisodeID,
+                        newStatus, JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
+                    if (!string.IsNullOrEmpty(response.ErrorMessage))
+                    {
+                        MessageBox.Show(response.ErrorMessage, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
 
-					ser = MainListHelperVM.Instance.GetSeriesForEpisode(ep);
-				}
+                    MainListHelperVM.Instance.UpdateHeirarchy(response.AnimeEpisode);
 
-				ShowNextEpisode();
+                    ser = MainListHelperVM.Instance.GetSeriesForEpisode(ep);
+                }
 
-				if (newStatus == true && ser != null)
-				{
-					Utils.PromptToRateSeries(ser, parentWindow);
-				}
-			}
-			catch (Exception ex)
-			{
-				Utils.ShowErrorMessage(ex);
-			}
-			finally
-			{
-				this.Cursor = Cursors.Arrow;
-			}
-		}
+                ShowNextEpisode();
 
-		
-	}
+                if (newStatus == true && ser != null)
+                {
+                    Utils.PromptToRateSeries(ser, parentWindow);
+                }
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowErrorMessage(ex);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Arrow;
+            }
+        }
+
+
+    }
+
+    public class ContentAwareScrollViewer : ScrollViewer
+    {
+        protected override void OnMouseWheel(MouseWheelEventArgs e)
+        {
+            var parentElement = Parent as UIElement;
+            if (parentElement != null)
+            {
+                if ((e.Delta > 0 && VerticalOffset == 0) ||
+                    (e.Delta < 0 && VerticalOffset == ScrollableHeight))
+                {
+                    e.Handled = true;
+
+                    var routedArgs = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
+                    routedArgs.RoutedEvent = UIElement.MouseWheelEvent;
+                    parentElement.RaiseEvent(routedArgs);
+                }
+            }
+
+            base.OnMouseWheel(e);
+        }
+    }
 }

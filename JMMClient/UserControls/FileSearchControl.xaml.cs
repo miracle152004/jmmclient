@@ -1,263 +1,263 @@
-﻿using System;
+﻿using JMMClient.ViewModel;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Globalization;
+using System.IO;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.ComponentModel;
-using System.Collections.ObjectModel;
-using JMMClient.ViewModel;
-using System.IO;
 
 namespace JMMClient.UserControls
 {
-	/// <summary>
-	/// Interaction logic for FileSearchControl.xaml
-	/// </summary>
-	public partial class FileSearchControl : UserControl
-	{
-		public ICollectionView ViewFiles { get; set; }
-		public ObservableCollection<VideoLocalVM> FileResults { get; set; }
+    /// <summary>
+    /// Interaction logic for FileSearchControl.xaml
+    /// </summary>
+    public partial class FileSearchControl : UserControl
+    {
+        public ICollectionView ViewFiles { get; set; }
+        public ObservableCollection<VideoLocalVM> FileResults { get; set; }
 
-		public static readonly DependencyProperty FileCountProperty = DependencyProperty.Register("FileCount",
-			typeof(int), typeof(FileSearchControl), new UIPropertyMetadata(0, null));
+        public static readonly DependencyProperty FileCountProperty = DependencyProperty.Register("FileCount",
+            typeof(int), typeof(FileSearchControl), new UIPropertyMetadata(0, null));
 
-		public int FileCount
-		{
-			get { return (int)GetValue(FileCountProperty); }
-			set { SetValue(FileCountProperty, value); }
-		}
+        public int FileCount
+        {
+            get { return (int)GetValue(FileCountProperty); }
+            set { SetValue(FileCountProperty, value); }
+        }
 
-		private readonly string SearchTypeFileName = "File Name";
-		private readonly string SearchTypeHash = "Hash";
-		private readonly string SearchTypeTopOneHundred = "Last 100";
-		private readonly string SearchTypeFileSize = "File Size";
+        private readonly string SearchTypeFileName = JMMClient.Properties.Resources.Search_FileName;
+        private readonly string SearchTypeHash = JMMClient.Properties.Resources.Search_Hash;
+        private readonly string SearchTypeTopOneHundred = JMMClient.Properties.Resources.Search_Last100;
 
-		BackgroundWorker getDetailsWorker = new BackgroundWorker();
-		private int displayingVidID = 0;
+        private readonly string SearchTypeFileSize = JMMClient.Properties.Resources.Search_FileSize;
 
-		public FileSearchControl()
-		{
-			InitializeComponent();
+        BackgroundWorker getDetailsWorker = new BackgroundWorker();
+        private int displayingVidID = 0;
 
-			FileResults = new ObservableCollection<VideoLocalVM>();
-			ViewFiles = CollectionViewSource.GetDefaultView(FileResults);
+        public FileSearchControl()
+        {
+            InitializeComponent();
 
-			btnSearch.Click += new RoutedEventHandler(btnSearch_Click);
-			lbVideos.SelectionChanged += new SelectionChangedEventHandler(lbVideos_SelectionChanged);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
 
-			cboSearchType.Items.Clear();
-			cboSearchType.Items.Add(SearchTypeFileName);
-			cboSearchType.Items.Add(SearchTypeHash);
-			cboSearchType.Items.Add(SearchTypeTopOneHundred);
-			cboSearchType.SelectedIndex = 0;
+            FileResults = new ObservableCollection<VideoLocalVM>();
+            ViewFiles = CollectionViewSource.GetDefaultView(FileResults);
 
-			cboSearchType.SelectionChanged += new SelectionChangedEventHandler(cboSearchType_SelectionChanged);
+            btnSearch.Click += new RoutedEventHandler(btnSearch_Click);
+            lbVideos.SelectionChanged += new SelectionChangedEventHandler(lbVideos_SelectionChanged);
 
-			getDetailsWorker.DoWork += new DoWorkEventHandler(getDetailsWorker_DoWork);
-			getDetailsWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(getDetailsWorker_RunWorkerCompleted);
-		}
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
 
-		void lbVideos_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			// get detailed video, episode and series info
-			ccDetail.Content = null;
-			ccSeriesDetail.Content = null;
-			if (lbVideos.SelectedItems.Count == 0) return;
-			if (lbVideos.SelectedItem == null) return;
+            cboSearchType.Items.Clear();
+            cboSearchType.Items.Add(JMMClient.Properties.Resources.Search_FileName);
+            cboSearchType.Items.Add(JMMClient.Properties.Resources.Search_Hash);
+            cboSearchType.Items.Add(JMMClient.Properties.Resources.Search_Last100);
+            cboSearchType.SelectedIndex = 0;
 
-			VideoLocalVM vid = lbVideos.SelectedItem as VideoLocalVM;
-			displayingVidID = vid.VideoLocalID;
-			EnableDisableControls(false);
+            cboSearchType.SelectionChanged += new SelectionChangedEventHandler(cboSearchType_SelectionChanged);
 
-			try
-			{
-				this.Cursor = Cursors.Wait;
+            getDetailsWorker.DoWork += new DoWorkEventHandler(getDetailsWorker_DoWork);
+            getDetailsWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(getDetailsWorker_RunWorkerCompleted);
+        }
 
-				ccDetail.Content = vid;
+        void lbVideos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // get detailed video, episode and series info
+            ccDetail.Content = null;
+            ccSeriesDetail.Content = null;
+            if (lbVideos.SelectedItems.Count == 0) return;
+            if (lbVideos.SelectedItem == null) return;
 
-				// get the episode(s)
-				List<JMMServerBinary.Contract_AnimeEpisode> rawEps = JMMServerVM.Instance.clientBinaryHTTP.GetEpisodesForFile(
-					vid.VideoLocalID, JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
+            VideoLocalVM vid = lbVideos.SelectedItem as VideoLocalVM;
+            displayingVidID = vid.VideoLocalID;
+            EnableDisableControls(false);
 
-				if (rawEps.Count > 0)
-				{
-					AnimeEpisodeVM ep = new AnimeEpisodeVM(rawEps[0]);
-					ccSeriesDetail.Content = ep;
-				}
+            try
+            {
+                this.Cursor = Cursors.Wait;
 
-				this.Cursor = Cursors.Arrow;
+                ccDetail.Content = vid;
 
-			}
-			catch (Exception ex)
-			{
-				Utils.ShowErrorMessage(ex);
-			}
-			finally
-			{
-				this.Cursor = Cursors.Arrow;
-				EnableDisableControls(true);
-			}
-		}
+                // get the episode(s)
+                List<JMMServerBinary.Contract_AnimeEpisode> rawEps = JMMServerVM.Instance.clientBinaryHTTP.GetEpisodesForFile(
+                    vid.VideoLocalID, JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
 
-		void getDetailsWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-		{
-			
-		}
+                if (rawEps.Count > 0)
+                {
+                    AnimeEpisodeVM ep = new AnimeEpisodeVM(rawEps[0]);
+                    ccSeriesDetail.Content = ep;
+                }
 
-		void getDetailsWorker_DoWork(object sender, DoWorkEventArgs e)
-		{
-			
-		}
+                this.Cursor = Cursors.Arrow;
 
-		void cboSearchType_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			FileSearchCriteria searchType = FileSearchCriteria.Name;
-			if (cboSearchType.SelectedItem.ToString() == SearchTypeHash) searchType = FileSearchCriteria.ED2KHash;
-			if (cboSearchType.SelectedItem.ToString() == SearchTypeTopOneHundred) searchType = FileSearchCriteria.LastOneHundred;
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowErrorMessage(ex);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Arrow;
+                EnableDisableControls(true);
+            }
+        }
 
-			if (searchType == FileSearchCriteria.LastOneHundred)
-				txtFileSearch.Visibility = System.Windows.Visibility.Collapsed;
-			else
-				txtFileSearch.Visibility = System.Windows.Visibility.Visible;
-		}
+        void getDetailsWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
 
-		
+        }
 
-		void btnSearch_Click(object sender, RoutedEventArgs e)
-		{
-			try
-			{
-				if (!JMMServerVM.Instance.ServerOnline) return;
+        void getDetailsWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
 
-				FileSearchCriteria searchType = FileSearchCriteria.Name;
-				if (cboSearchType.SelectedItem.ToString() == SearchTypeHash) searchType = FileSearchCriteria.ED2KHash;
-				if (cboSearchType.SelectedItem.ToString() == SearchTypeTopOneHundred) searchType = FileSearchCriteria.LastOneHundred;
+        }
 
-				if (txtFileSearch.Text.Trim().Length == 0 && searchType != FileSearchCriteria.LastOneHundred)
-				{
-					MessageBox.Show("Please enter search criteria", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-					txtFileSearch.Focus();
-					return;
-				}
+        void cboSearchType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FileSearchCriteria searchType = FileSearchCriteria.Name;
+            if (cboSearchType.SelectedItem.ToString() == SearchTypeHash) searchType = FileSearchCriteria.ED2KHash;
+            if (cboSearchType.SelectedItem.ToString() == SearchTypeTopOneHundred) searchType = FileSearchCriteria.LastOneHundred;
 
-				FileResults.Clear();
-				ViewFiles.Refresh();
-				FileCount = 0;
+            if (searchType == FileSearchCriteria.LastOneHundred)
+                txtFileSearch.Visibility = System.Windows.Visibility.Collapsed;
+            else
+                txtFileSearch.Visibility = System.Windows.Visibility.Visible;
+        }
 
-				this.Cursor = Cursors.Wait;
-				EnableDisableControls(false);
-				List<JMMServerBinary.Contract_VideoLocal> rawVids = JMMServerVM.Instance.clientBinaryHTTP.SearchForFiles(
-					(int)searchType, txtFileSearch.Text, JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
 
-				foreach (JMMServerBinary.Contract_VideoLocal raw in rawVids)
-					FileResults.Add(new VideoLocalVM(raw));
 
-				FileCount = rawVids.Count;
+        void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (!JMMServerVM.Instance.ServerOnline) return;
 
-				this.Cursor = Cursors.Arrow;
+                FileSearchCriteria searchType = FileSearchCriteria.Name;
+                if (cboSearchType.SelectedItem.ToString() == SearchTypeHash) searchType = FileSearchCriteria.ED2KHash;
+                if (cboSearchType.SelectedItem.ToString() == SearchTypeTopOneHundred) searchType = FileSearchCriteria.LastOneHundred;
 
-			}
-			catch (Exception ex)
-			{
-				Utils.ShowErrorMessage(ex);
-			}
-			finally
-			{
-				this.Cursor = Cursors.Arrow;
-				EnableDisableControls(true);
-			}
-		}
+                if (txtFileSearch.Text.Trim().Length == 0 && searchType != FileSearchCriteria.LastOneHundred)
+                {
+                    MessageBox.Show(Properties.Resources.Seach_Criteria, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                    txtFileSearch.Focus();
+                    return;
+                }
 
-		private void EnableDisableControls(bool val)
-		{
-			lbVideos.IsEnabled = val;
-			btnSearch.IsEnabled = val;
-			ccDetail.IsEnabled = val;
-			ccSeriesDetail.IsEnabled = val;
-		}
+                FileResults.Clear();
+                ViewFiles.Refresh();
+                FileCount = 0;
 
-		private void CommandBinding_OpenFolder(object sender, ExecutedRoutedEventArgs e)
-		{
-			object obj = e.Parameter;
-			if (obj == null) return;
+                this.Cursor = Cursors.Wait;
+                EnableDisableControls(false);
+                List<JMMServerBinary.Contract_VideoLocal> rawVids = JMMServerVM.Instance.clientBinaryHTTP.SearchForFiles(
+                    (int)searchType, txtFileSearch.Text, JMMServerVM.Instance.CurrentUser.JMMUserID.Value);
 
-			if (obj.GetType() == typeof(VideoLocalVM))
-			{
-				VideoLocalVM vid = obj as VideoLocalVM;
+                foreach (JMMServerBinary.Contract_VideoLocal raw in rawVids)
+                    FileResults.Add(new VideoLocalVM(raw));
 
-				if (File.Exists(vid.FullPath))
-				{
-					Utils.OpenFolderAndSelectFile(vid.FullPath);
-				}
-				else
-				{
-					MessageBox.Show(Properties.Resources.MSG_ERR_FileNotFound, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-				}
-			}
-		}
+                FileCount = rawVids.Count;
 
-		
+                this.Cursor = Cursors.Arrow;
 
-		private void CommandBinding_RehashFile(object sender, ExecutedRoutedEventArgs e)
-		{
-			try
-			{
-				Window parentWindow = Window.GetWindow(this);
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowErrorMessage(ex);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Arrow;
+                EnableDisableControls(true);
+            }
+        }
 
-				object obj = e.Parameter;
-				if (obj == null) return;
+        private void EnableDisableControls(bool val)
+        {
+            lbVideos.IsEnabled = val;
+            btnSearch.IsEnabled = val;
+            ccDetail.IsEnabled = val;
+            ccSeriesDetail.IsEnabled = val;
+        }
 
-				if (obj.GetType() == typeof(VideoLocalVM))
-				{
-					VideoLocalVM vid = obj as VideoLocalVM;
-					EnableDisableControls(false);
+        private void CommandBinding_OpenFolder(object sender, ExecutedRoutedEventArgs e)
+        {
+            object obj = e.Parameter;
+            if (obj == null) return;
 
-					JMMServerVM.Instance.clientBinaryHTTP.RehashFile(vid.VideoLocalID);
-				}
+            if (obj.GetType() == typeof(VideoLocalVM))
+            {
+                VideoLocalVM vid = obj as VideoLocalVM;
 
-				MessageBox.Show(Properties.Resources.MSG_INFO_AddedQueueCmds, "Done", MessageBoxButton.OK, MessageBoxImage.Information);
-			}
-			catch (Exception ex)
-			{
-				Utils.ShowErrorMessage(ex);
-			}
+                if (File.Exists(vid.FullPath))
+                {
+                    Utils.OpenFolderAndSelectFile(vid.FullPath);
+                }
+                else
+                {
+                    MessageBox.Show(Properties.Resources.MSG_ERR_FileNotFound, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
 
-			EnableDisableControls(true);
-		}
 
-		private void CommandBinding_RescanFile(object sender, ExecutedRoutedEventArgs e)
-		{
-			try
-			{
-				Window parentWindow = Window.GetWindow(this);
 
-				object obj = e.Parameter;
-				if (obj == null) return;
+        private void CommandBinding_RehashFile(object sender, ExecutedRoutedEventArgs e)
+        {
+            try
+            {
+                Window parentWindow = Window.GetWindow(this);
 
-				if (obj.GetType() == typeof(VideoLocalVM))
-				{
-					VideoLocalVM vid = obj as VideoLocalVM;
-					EnableDisableControls(false);
+                object obj = e.Parameter;
+                if (obj == null) return;
 
-					JMMServerVM.Instance.clientBinaryHTTP.RescanFile(vid.VideoLocalID);
-				}
+                if (obj.GetType() == typeof(VideoLocalVM))
+                {
+                    VideoLocalVM vid = obj as VideoLocalVM;
+                    EnableDisableControls(false);
 
-				MessageBox.Show(Properties.Resources.MSG_INFO_AddedQueueCmds, "Done", MessageBoxButton.OK, MessageBoxImage.Information);
-			}
-			catch (Exception ex)
-			{
-				Utils.ShowErrorMessage(ex);
-			}
+                    JMMServerVM.Instance.clientBinaryHTTP.RehashFile(vid.VideoLocalID);
+                }
 
-			EnableDisableControls(true);
-		}
-	}
+                MessageBox.Show(Properties.Resources.MSG_INFO_AddedQueueCmds, "Done", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowErrorMessage(ex);
+            }
+
+            EnableDisableControls(true);
+        }
+
+        private void CommandBinding_RescanFile(object sender, ExecutedRoutedEventArgs e)
+        {
+            try
+            {
+                Window parentWindow = Window.GetWindow(this);
+
+                object obj = e.Parameter;
+                if (obj == null) return;
+
+                if (obj.GetType() == typeof(VideoLocalVM))
+                {
+                    VideoLocalVM vid = obj as VideoLocalVM;
+                    EnableDisableControls(false);
+
+                    JMMServerVM.Instance.clientBinaryHTTP.RescanFile(vid.VideoLocalID);
+                }
+
+                MessageBox.Show(Properties.Resources.MSG_INFO_AddedQueueCmds, Properties.Resources.Done, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowErrorMessage(ex);
+            }
+
+            EnableDisableControls(true);
+        }
+    }
 }

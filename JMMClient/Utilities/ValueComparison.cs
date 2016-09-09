@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
 using System.ComponentModel;
+using System.Globalization;
+using System.Reflection;
+using System.Threading;
 
 // Source code by Owen Emlen (owene_1998@yahoo.com, owen@binarynorthwest.com)
 
@@ -88,6 +89,8 @@ namespace JMMClient
         /// </summary>
         public void Initialize()
         {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
+
             if (fFoundProperty == false)
             {
                 fFoundProperty = true;
@@ -99,8 +102,8 @@ namespace JMMClient
 
                     if (pi == null)
                     {
-                        throw new Exception("Property name " + sPropertyName +
-                          " not found while trying to compare objects of type " + typeof(T).Name);
+                        throw new Exception(Properties.Resources.ValueCompare_PropertyName + " " + sPropertyName +
+                          " " + Properties.Resources.ValueCompare_NotFound + " " + typeof(T).Name);
                     }
                 }
                 typ = pi.PropertyType;
@@ -280,7 +283,7 @@ namespace JMMClient
         /// <param name="y"></param>
         /// <returns></returns>
         public int FastCompareEnumsAsc(T x, T y)
-        {            
+        {
             int oX = (int)property.GetValue(x);
             int oY = (int)property.GetValue(y);
             string s1, s2;
@@ -407,6 +410,8 @@ namespace JMMClient
         /// </summary>
         public void Initialize()
         {
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
+
             if (fFoundField == false)
             {
                 fFoundField = true;
@@ -421,8 +426,8 @@ namespace JMMClient
                     fi = typeof(T).GetField(sFieldName);
                     if (fi == null)
                     {
-                        throw new Exception("Field name " + sFieldName +
-                          " not found while trying to compare objects of type " + typeof(T).Name);
+                        throw new Exception(Properties.Resources.ValueCompare_FieldName + " " + sFieldName +
+                          " " + Properties.Resources.ValueCompare_NotFound + " " + typeof(T).Name);
                     }
                 }
                 typ = fi.FieldType;

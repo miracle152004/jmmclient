@@ -1,77 +1,71 @@
-﻿using System;
+﻿using JMMClient.ViewModel;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Globalization;
+using System.Threading;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using JMMClient.ViewModel;
 
 namespace JMMClient.Forms
 {
-	/// <summary>
-	/// Interaction logic for LoginForm.xaml
-	/// </summary>
-	public partial class LoginForm : Window
-	{
-		public JMMUserVM ThisUser { get; set; }
+    /// <summary>
+    /// Interaction logic for LoginForm.xaml
+    /// </summary>
+    public partial class LoginForm : Window
+    {
+        public JMMUserVM ThisUser { get; set; }
 
-		public LoginForm()
-		{
-			InitializeComponent();
+        public LoginForm()
+        {
+            InitializeComponent();
 
-			btnLogin.Click += new RoutedEventHandler(btnLogin_Click);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
 
-			ThisUser = null;
+            btnLogin.Click += new RoutedEventHandler(btnLogin_Click);
 
-			cboUsers.Items.Clear();
+            ThisUser = null;
 
-			List<JMMServerBinary.Contract_JMMUser> users = JMMServerVM.Instance.clientBinaryHTTP.GetAllUsers();
-			foreach (JMMServerBinary.Contract_JMMUser user in users)
-				cboUsers.Items.Add(new JMMUserVM(user));
+            cboUsers.Items.Clear();
 
-			if (cboUsers.Items.Count > 0)
-				cboUsers.SelectedIndex = 0;
+            List<JMMServerBinary.Contract_JMMUser> users = JMMServerVM.Instance.clientBinaryHTTP.GetAllUsers();
+            foreach (JMMServerBinary.Contract_JMMUser user in users)
+                cboUsers.Items.Add(new JMMUserVM(user));
 
-			txtPassword.PasswordChanged += new RoutedEventHandler(txtPassword_PasswordChanged);
-			this.Loaded += new RoutedEventHandler(LoginForm_Loaded);
-		}
+            if (cboUsers.Items.Count > 0)
+                cboUsers.SelectedIndex = 0;
 
-		void txtPassword_PasswordChanged(object sender, RoutedEventArgs e)
-		{
-			txtStatus.Text = "";
-		}
+            txtPassword.PasswordChanged += new RoutedEventHandler(txtPassword_PasswordChanged);
+            this.Loaded += new RoutedEventHandler(LoginForm_Loaded);
+        }
 
-		void LoginForm_Loaded(object sender, RoutedEventArgs e)
-		{
-			txtPassword.Focus();
-		}
+        void txtPassword_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            txtStatus.Text = "";
+        }
 
-		void btnLogin_Click(object sender, RoutedEventArgs e)
-		{
-			ThisUser = null;
+        void LoginForm_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtPassword.Focus();
+        }
 
-			JMMUserVM user = cboUsers.SelectedItem as JMMUserVM;
-			if (user != null)
-			{
-				JMMServerBinary.Contract_JMMUser retUser = JMMServerVM.Instance.clientBinaryHTTP.AuthenticateUser(user.Username, txtPassword.Password.Trim());
-				if (retUser != null)
-				{
-					ThisUser = user;
-					this.DialogResult = true;
-					this.Close();
-				}
-				else
-				{
-					txtPassword.Focus();
-					txtStatus.Text = "Incorrect Password";
-				}
-			}
-		}
-	}
+        void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            ThisUser = null;
+
+            JMMUserVM user = cboUsers.SelectedItem as JMMUserVM;
+            if (user != null)
+            {
+                JMMServerBinary.Contract_JMMUser retUser = JMMServerVM.Instance.clientBinaryHTTP.AuthenticateUser(user.Username, txtPassword.Password.Trim());
+                if (retUser != null)
+                {
+                    ThisUser = user;
+                    this.DialogResult = true;
+                    this.Close();
+                }
+                else
+                {
+                    txtPassword.Focus();
+                    txtStatus.Text = Properties.Resources.Login_IncorrectPassword;
+                }
+            }
+        }
+    }
 }

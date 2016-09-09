@@ -4,7 +4,7 @@
         xmlns:local="clr-namespace:JMMClient"
         xmlns:forms="clr-namespace:JMMClient.Forms"
         xmlns:usercontrols="clr-namespace:JMMClient.UserControls"
-        Title="Select Title" Height="300" Width="500" ShowInTaskbar="False" WindowStyle="ToolWindow" Icon="/JMMDesktop;component/Images/anidb.ico"
+        Title="{Resx ResxName=JMMClient.Properties.Resources, Key=Select_Title}" Height="300" Width="500" ShowInTaskbar="False" WindowStyle="ToolWindow" Icon="/JMMDesktop;component/Images/32_anidb.png"
         WindowStartupLocation="CenterOwner" Topmost="False">
     <Grid>
         <Grid.Resources>
@@ -78,18 +78,14 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Image Grid.Row="0" Grid.Column="0" Height="16" Width="16" Source="/Images/32_info.png" Margin="5,0,5,0"/>
+                <Image Grid.Column="0" Height="16" Width="16" VerticalAlignment="Top" Source="/Images/32_info.png" Margin="5,2,4,0"/>
 
-                <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=SelectAniDBTitle_SelectName}" Margin="0,0,0,3" />
+                <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=SelectAniDBTitle_SelectName}" Margin="0,0,0,0" />
             </Grid>
-
-
-
         </Border>
-
 
         <!-- Series List -->
         <Border Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" Background="White" BorderBrush="LightGray" BorderThickness="1">
@@ -97,7 +93,7 @@
                             ItemsSource="{Binding Path=AllTitles, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type forms:SelectAniDBTitleForm}}}"
                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                             ItemTemplate="{DynamicResource TitleTemplate}"
-                            ItemContainerStyle="{DynamicResource ListBoxItemStyle}" 
+                            ItemContainerStyle="{DynamicResource ListBoxItemStylePlain}" 
                             />
         </Border>
 

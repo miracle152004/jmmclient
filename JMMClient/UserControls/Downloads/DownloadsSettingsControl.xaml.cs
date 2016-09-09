@@ -1,64 +1,58 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Globalization;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace JMMClient.UserControls
 {
-	/// <summary>
-	/// Interaction logic for DownloadsSettingsControl.xaml
-	/// </summary>
-	public partial class DownloadsSettingsControl : UserControl
-	{
-		public DownloadsSettingsControl()
-		{
-			InitializeComponent();
+    /// <summary>
+    /// Interaction logic for DownloadsSettingsControl.xaml
+    /// </summary>
+    public partial class DownloadsSettingsControl : UserControl
+    {
+        public DownloadsSettingsControl()
+        {
+            InitializeComponent();
 
-			btnTest.Click += new RoutedEventHandler(btnTest_Click);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
 
-			udRefreshInterval.ValueChanged += new RoutedPropertyChangedEventHandler<object>(udRefreshInterval_ValueChanged);
-		}
+            btnTest.Click += new RoutedEventHandler(btnTest_Click);
 
-		void udRefreshInterval_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-		{
-			UserSettingsVM.Instance.UTorrentRefreshInterval = udRefreshInterval.Value.Value;
-		}
+            udRefreshInterval.ValueChanged += new RoutedPropertyChangedEventHandler<object>(udRefreshInterval_ValueChanged);
+        }
 
-		void btnTest_Click(object sender, RoutedEventArgs e)
-		{
-			if (!UTorrentHelperVM.Instance.AreCredentialsValid())
-			{
-				MessageBox.Show("Please enter all uTorrent details", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-				txtServer.Focus();
-				return;
-			}
+        void udRefreshInterval_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            UserSettingsVM.Instance.UTorrentRefreshInterval = udRefreshInterval.Value.Value;
+        }
 
-			Window parentWindow = Window.GetWindow(this);
-			parentWindow.Cursor = Cursors.Wait;
-			this.IsEnabled = false;
+        void btnTest_Click(object sender, RoutedEventArgs e)
+        {
+            if (!UTorrentHelperVM.Instance.AreCredentialsValid())
+            {
+                MessageBox.Show(Properties.Resources.Downloads_uTorrentDetails, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                txtServer.Focus();
+                return;
+            }
 
-			bool success = UTorrentHelperVM.Instance.TestConnection();
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Cursor = Cursors.Wait;
+            this.IsEnabled = false;
 
-			parentWindow.Cursor = Cursors.Arrow;
-			this.IsEnabled = true;
+            bool success = UTorrentHelperVM.Instance.TestConnection();
 
-			if (success)
-				MessageBox.Show("Connected sucessfully", "Sucess", MessageBoxButton.OK, MessageBoxImage.Information);
-			else
-			{
-				MessageBox.Show("Failed! See log for more details if needed", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-				txtServer.Focus();
-				return;
-			}
-		}
-	}
+            parentWindow.Cursor = Cursors.Arrow;
+            this.IsEnabled = true;
+
+            if (success)
+                MessageBox.Show(Properties.Resources.Downloads_Connected, Properties.Resources.Success, MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+            {
+                MessageBox.Show(Properties.Resources.Downloads_Failed, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                txtServer.Focus();
+                return;
+            }
+        }
+    }
 }

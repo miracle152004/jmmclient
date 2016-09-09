@@ -51,11 +51,11 @@
                                 <usercontrols:HyperLinkStandard VerticalAlignment="Center" DisplayText="{Binding Path=RelatedAnimeID}" URL="{Binding Path=AniDB_SiteURL}" Margin="0,0,0,0"/>
                                 
                                 <!-- show create series from button -->
-                                <Button Margin="0,0,0,0" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center"
+                                <Button Margin="0" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center"
                                         Visibility="{Binding Path=ShowCreateSeriesButton, Converter={StaticResource BooleanToVisibilityConverter}}"
                                         Command="{DynamicResource CreateSeriesFromAnimeCommand}" CommandParameter="{Binding}">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                        <Image Height="16" Width="16" Source="/Images/16_television.png" Margin="2,0,2,0">
+                                        <Image Height="16" Width="16" Source="/Images/32_television.png" Margin="1,0,1,0">
                                             <Image.ToolTip>
                                                 <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_CreateSeries}"/>
                                             </Image.ToolTip>
@@ -64,24 +64,24 @@
                                 </Button>
 
                                 <!-- show pinned series button -->
-                                <Button Margin="0,0,0,0" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center"
+                                <Button Margin="0" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center"
                                         Visibility="{Binding Path=LocalSeriesExists, Converter={StaticResource BooleanToVisibilityConverter}}"
                                         Command="{DynamicResource ShowPinnedSeriesCommand}" CommandParameter="{Binding}">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                        <Image Height="16" Width="16" Source="/Images/16_windows.png" Margin="2,0,2,0">
+                                        <Image Height="16" Width="16" Source="/Images/32_pin.png" Margin="1,0,1,0">
                                             <Image.ToolTip>
-                                                <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_ViewSeries}"/>
+                                                <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_PinSeries}"/>
                                             </Image.ToolTip>
                                         </Image>
                                     </StackPanel>
                                 </Button>
 
                                 <!-- bookmark anime button -->
-                                <Button Grid.Column="2" Margin="5,0,2,0" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center"
+                                <Button Grid.Column="2" Margin="0" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center"
                                         Visibility="{Binding Path=AnimeInfoExists, Converter={StaticResource BooleanToVisibilityConverter}}"
                                         Command="{DynamicResource BookmarkAnimeCommand}" CommandParameter="{Binding}">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                        <Image Height="16" Width="16" Source="/Images/32_bookmark.png" Margin="1,0,1,0" ToolTipService.ShowDuration="60000">
+                                        <Image Height="16" Width="16" Source="/Images/16_bookmark.png" Margin="1,0,1,0" ToolTipService.ShowDuration="60000">
                                             <Image.ToolTip>
                                                 <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Related_Bookmark}"/>
                                             </Image.ToolTip>
@@ -90,11 +90,11 @@
                                 </Button>
 
                                 <!-- download button -->
-                                <Button Grid.Column="3"  Margin="5,0,2,0" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center" Name="btnSearchDownloads"
+                                <Button Grid.Column="3"  Margin="0" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center" Name="btnSearchDownloads"
                                         Visibility="{Binding Path=AnimeInfoExists, Converter={StaticResource BooleanToVisibilityConverter}}"
                                         Command="{DynamicResource ShowTorrentSearchCommand}" CommandParameter="{Binding}">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                        <Image Height="16" Width="16" Source="/Images/24_download3.png" Margin="2,0,2,0">
+                                        <Image Height="16" Width="16" Source="/Images/24_download.png" Margin="1,0,1,0">
                                             <Image.ToolTip>
                                                 <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Related_Search}"/>
                                             </Image.ToolTip>
@@ -141,7 +141,7 @@
                             Background="FloralWhite">
                         <StackPanel Orientation="Vertical"  HorizontalAlignment="Left" Margin="5,3,5,5">
                             <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
-                                <Image Height="16" Width="16" Source="/Images/32_calendar.png" Margin="5,0,5,0" VerticalAlignment="Center"
+                                <Image Height="16" Width="16" Source="/Images/24_calendar.png" Margin="5,0,5,0" VerticalAlignment="Center"
                                        Visibility="{Binding Path=AnimeInfoExists, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                                 <TextBlock Grid.Row="1" Grid.Column="2" Padding="5" Text="{Binding Path=AniDB_Anime.AirDateAsString}" VerticalAlignment="Center"
                                            Visibility="{Binding Path=AnimeInfoExists, Converter={StaticResource BooleanToVisibilityConverter}}"/>
@@ -153,11 +153,27 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <DockPanel LastChildFill="True">
+    <StackPanel Orientation="Vertical" Margin="0,0,0,0">
+        <Border BorderBrush="LightGray" BorderThickness="1" Background="#FFE9ECEF">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=RelatedAnime}" Margin="5,5,0,5" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+
+                <!-- Update Series Info -->
+                <Button x:Name="btnGetRelMissingInfo" Margin="10,0,5,0" Style="{DynamicResource FlatButtonStyle}"
+                        Visibility="{Binding Path=DataExists, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type usercontrols:RelatedAnimeControl}}, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                        <Image Height="16" Width="16" Source="/Images/32_anidb.png" Margin="0,0,5,0"/>
+                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=GetMissingData}" Margin="0,0,0,0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+    
+    <DockPanel LastChildFill="True" Margin="5,5,5,5">
         <StackPanel Orientation="Horizontal" Margin="10,10,0,10" HorizontalAlignment="Left" DockPanel.Dock="Top"
                     Visibility="{Binding Path=DataMissing, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type usercontrols:RelatedAnimeControl}}, Converter={StaticResource BooleanToVisibilityConverter}}">
             <Image Height="24" Width="24" Source="/Images/32_info.png" Margin="0,0,10,0" VerticalAlignment="Center"/>
-            <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=NoRelatedAnime}" FontWeight="DemiBold" Foreground="Black" VerticalAlignment="Center" />
+            <TextBlock Text="{Binding Path=SeriesName, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type usercontrols:RelatedAnimeControl}}}" FontWeight="DemiBold" Foreground="Black" VerticalAlignment="Center" />
         </StackPanel>
 
         <ListBox BorderThickness="0" HorizontalAlignment="Stretch"  Margin="5,0,5,10" VerticalAlignment="Stretch"
@@ -178,4 +194,5 @@
             </ListBox.ItemsPanel>
         </ListBox>
     </DockPanel>
+    </StackPanel>
 </UserControl>

@@ -61,6 +61,51 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to JMM Blog.
+        /// </summary>
+        public static string About_Blog {
+            get {
+                return ResourceManager.GetString("About_Blog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home Page.
+        /// </summary>
+        public static string About_Home {
+            get {
+                return ResourceManager.GetString("About_Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MediaPortal Forum.
+        /// </summary>
+        public static string About_MediaPortal {
+            get {
+                return ResourceManager.GetString("About_MediaPortal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Page.
+        /// </summary>
+        public static string About_Project {
+            get {
+                return ResourceManager.GetString("About_Project", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sync Votes.
+        /// </summary>
+        public static string Actions_SyncVotes {
+            get {
+                return ResourceManager.GetString("Actions_SyncVotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add.
         /// </summary>
         public static string Add {
@@ -160,6 +205,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting AniDB Titles.
+        /// </summary>
+        public static string AniDB_GetTitles {
+            get {
+                return ResourceManager.GetString("AniDB_GetTitles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Got vids for anime from service:.
         /// </summary>
         public static string AniDB_GotVids {
@@ -183,6 +237,24 @@ namespace JMMClient.Properties {
         public static string AniDB_MustSee {
             get {
                 return ResourceManager.GetString("AniDB_MustSee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adding file to MyList: {0}.
+        /// </summary>
+        public static string AniDB_MyListAdd {
+            get {
+                return ResourceManager.GetString("AniDB_MyListAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting file from MyList: {0}_{1}.
+        /// </summary>
+        public static string AniDB_MyListDelete {
+            get {
+                return ResourceManager.GetString("AniDB_MyListDelete", resourceCulture);
             }
         }
         
@@ -304,6 +376,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete File (AniDB).
+        /// </summary>
+        public static string AniDBMyListDelete {
+            get {
+                return ResourceManager.GetString("AniDBMyListDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Action.
         /// </summary>
         public static string AniDBMyListDeleteAction {
@@ -313,11 +394,65 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete File (Local DB).
+        /// </summary>
+        public static string AniDBMyListDeleteLocal {
+            get {
+                return ResourceManager.GetString("AniDBMyListDeleteLocal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CD/DVD.
+        /// </summary>
+        public static string AniDBMyListDVD {
+            get {
+                return ResourceManager.GetString("AniDBMyListDVD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HDD.
+        /// </summary>
+        public static string AniDBMyListHDD {
+            get {
+                return ResourceManager.GetString("AniDBMyListHDD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Local Actions.
         /// </summary>
         public static string AniDBMyListLocalActions {
             get {
                 return ResourceManager.GetString("AniDBMyListLocalActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mark Deleted.
+        /// </summary>
+        public static string AniDBMyListMarkDeleted {
+            get {
+                return ResourceManager.GetString("AniDBMyListMarkDeleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mark External (CD/DVD).
+        /// </summary>
+        public static string AniDBMyListMarkExternal {
+            get {
+                return ResourceManager.GetString("AniDBMyListMarkExternal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mark Unknown.
+        /// </summary>
+        public static string AniDBMyListMarkUnknown {
+            get {
+                return ResourceManager.GetString("AniDBMyListMarkUnknown", resourceCulture);
             }
         }
         
@@ -381,6 +516,15 @@ namespace JMMClient.Properties {
         public static string AniDBMyListSyncAndImport {
             get {
                 return ResourceManager.GetString("AniDBMyListSyncAndImport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        public static string AniDBMyListUnknown {
+            get {
+                return ResourceManager.GetString("AniDBMyListUnknown", resourceCulture);
             }
         }
         
@@ -466,11 +610,128 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add All Episodes.
+        /// </summary>
+        public static string Anime_AddAllEpisodes {
+            get {
+                return ResourceManager.GetString("Anime_AddAllEpisodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Series.
+        /// </summary>
+        public static string Anime_AddSeries {
+            get {
+                return ResourceManager.GetString("Anime_AddSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Unwatched Episodes.
+        /// </summary>
+        public static string Anime_AddUnwatched {
+            get {
+                return ResourceManager.GetString("Anime_AddUnwatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comment text must be less than 2000 characters ({0}).
+        /// </summary>
+        public static string Anime_CommentText {
+            get {
+                return ResourceManager.GetString("Anime_CommentText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Got episode contracts:.
         /// </summary>
         public static string Anime_Contracts {
             get {
                 return ResourceManager.GetString("Anime_Contracts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot set a disabled image as the default.
+        /// </summary>
+        public static string Anime_DisabledImage {
+            get {
+                return ResourceManager.GetString("Anime_DisabledImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter text for your comment.
+        /// </summary>
+        public static string Anime_EnterText {
+            get {
+                return ResourceManager.GetString("Anime_EnterText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Episode.
+        /// </summary>
+        public static string Anime_Episode {
+            get {
+                return ResourceManager.GetString("Anime_Episode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Episodes.
+        /// </summary>
+        public static string Anime_Episodes {
+            get {
+                return ResourceManager.GetString("Anime_Episodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File.
+        /// </summary>
+        public static string Anime_File {
+            get {
+                return ResourceManager.GetString("Anime_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Files.
+        /// </summary>
+        public static string Anime_Files {
+            get {
+                return ResourceManager.GetString("Anime_Files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter.
+        /// </summary>
+        public static string Anime_Filter {
+            get {
+                return ResourceManager.GetString("Anime_Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter Name must be populated.
+        /// </summary>
+        public static string Anime_FilterName {
+            get {
+                return ResourceManager.GetString("Anime_FilterName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filters.
+        /// </summary>
+        public static string Anime_Filters {
+            get {
+                return ResourceManager.GetString("Anime_Filters", resourceCulture);
             }
         }
         
@@ -493,6 +754,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Group.
+        /// </summary>
+        public static string Anime_Group {
+            get {
+                return ResourceManager.GetString("Anime_Group", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quality/Release Group Details.
+        /// </summary>
+        public static string Anime_GroupDetails {
+            get {
+                return ResourceManager.GetString("Anime_GroupDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Group name must be populated.
         /// </summary>
         public static string Anime_GroupName {
@@ -511,6 +790,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Release Group Summary.
+        /// </summary>
+        public static string Anime_GroupSummary {
+            get {
+                return ResourceManager.GetString("Anime_GroupSummary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to in.
         /// </summary>
         public static string Anime_In {
@@ -520,11 +808,110 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have not authorized JMM to use your Trakt account, for more info go to &apos;Settings - Community Sites - Trakt TV&apos;.
+        /// </summary>
+        public static string Anime_JMMAuth {
+            get {
+                return ResourceManager.GetString("Anime_JMMAuth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string Anime_Message {
+            get {
+                return ResourceManager.GetString("Anime_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot comment where a series has more than one Trakt show linked.
+        /// </summary>
+        public static string Anime_MultiTrakt {
+            get {
+                return ResourceManager.GetString("Anime_MultiTrakt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Playlist.
+        /// </summary>
+        public static string Anime_NewPlaylists {
+            get {
+                return ResourceManager.GetString("Anime_NewPlaylists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot comment where a series does not have a Trakt show linked.
+        /// </summary>
+        public static string Anime_NoTrakt {
+            get {
+                return ResourceManager.GetString("Anime_NoTrakt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Playlist Menu:.
+        /// </summary>
+        public static string Anime_PlaylistMenu {
+            get {
+                return ResourceManager.GetString("Anime_PlaylistMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not find playlist.
+        /// </summary>
+        public static string Anime_PlaylistMissing {
+            get {
+                return ResourceManager.GetString("Anime_PlaylistMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to By Quality Ranking.
+        /// </summary>
+        public static string Anime_QualityRanking {
+            get {
+                return ResourceManager.GetString("Anime_QualityRanking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to By Release Group.
+        /// </summary>
+        public static string Anime_ReleaseGroup {
+            get {
+                return ResourceManager.GetString("Anime_ReleaseGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you also want to rename the parent group?.
+        /// </summary>
+        public static string Anime_RenameParent {
+            get {
+                return ResourceManager.GetString("Anime_RenameParent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Series.
         /// </summary>
         public static string Anime_Series {
             get {
                 return ResourceManager.GetString("Anime_Series", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anime series info not found.
+        /// </summary>
+        public static string Anime_SeriesNotFound {
+            get {
+                return ResourceManager.GetString("Anime_SeriesNotFound", resourceCulture);
             }
         }
         
@@ -543,6 +930,42 @@ namespace JMMClient.Properties {
         public static string Anime_SortName {
             get {
                 return ResourceManager.GetString("Anime_SortName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special.
+        /// </summary>
+        public static string Anime_Special {
+            get {
+                return ResourceManager.GetString("Anime_Special", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specials.
+        /// </summary>
+        public static string Anime_Specials {
+            get {
+                return ResourceManager.GetString("Anime_Specials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have not enabled Trakt, for more info go to &apos;Settings - Community Sites - Trakt TV&apos;.
+        /// </summary>
+        public static string Anime_TraktNotEnabled {
+            get {
+                return ResourceManager.GetString("Anime_TraktNotEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Have Your Say....
+        /// </summary>
+        public static string Anime_YourSay {
+            get {
+                return ResourceManager.GetString("Anime_YourSay", resourceCulture);
             }
         }
         
@@ -772,11 +1195,47 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Complete!.
+        /// </summary>
+        public static string AVDump_Complete {
+            get {
+                return ResourceManager.GetString("AVDump_Complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dump files.
         /// </summary>
         public static string AvDump_Dump {
             get {
                 return ResourceManager.GetString("AvDump_Dump", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error!.
+        /// </summary>
+        public static string AVDump_Error {
+            get {
+                return ResourceManager.GetString("AVDump_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not find AvDump2 CLI:.
+        /// </summary>
+        public static string AVDump_Missing {
+            get {
+                return ResourceManager.GetString("AVDump_Missing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Processing....
+        /// </summary>
+        public static string AVDump_Processing {
+            get {
+                return ResourceManager.GetString("AVDump_Processing", resourceCulture);
             }
         }
         
@@ -795,6 +1254,24 @@ namespace JMMClient.Properties {
         public static string AVDump_ToBe {
             get {
                 return ResourceManager.GetString("AVDump_ToBe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not find Video File:.
+        /// </summary>
+        public static string AVDump_VideoMissing {
+            get {
+                return ResourceManager.GetString("AVDump_VideoMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Worker is already running.
+        /// </summary>
+        public static string AVDump_WorkerRunning {
+            get {
+                return ResourceManager.GetString("AVDump_WorkerRunning", resourceCulture);
             }
         }
         
@@ -907,6 +1384,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Currently Downloading.
+        /// </summary>
+        public static string Bookmarks_CurrentlyDownloading {
+            get {
+                return ResourceManager.GetString("Bookmarks_CurrentlyDownloading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this bookmark: {0}.
+        /// </summary>
+        public static string Bookmarks_Delete {
+            get {
+                return ResourceManager.GetString("Bookmarks_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Downloading.
         /// </summary>
         public static string Bookmarks_Downloading {
@@ -916,11 +1411,47 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Download Now.
+        /// </summary>
+        public static string Bookmarks_DownloadNow {
+            get {
+                return ResourceManager.GetString("Bookmarks_DownloadNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Notes.
+        /// </summary>
+        public static string Bookmarks_EditNotes {
+            get {
+                return ResourceManager.GetString("Bookmarks_EditNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Not Downloading.
         /// </summary>
         public static string Bookmarks_NotDownloading {
             get {
                 return ResourceManager.GetString("Bookmarks_NotDownloading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes:.
+        /// </summary>
+        public static string Bookmarks_Notes {
+            get {
+                return ResourceManager.GetString("Bookmarks_Notes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Priority:.
+        /// </summary>
+        public static string Bookmarks_Priority {
+            get {
+                return ResourceManager.GetString("Bookmarks_Priority", resourceCulture);
             }
         }
         
@@ -970,11 +1501,20 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Changing Password For: .
+        ///   Looks up a localized string similar to Changing Password For:.
         /// </summary>
         public static string ChangingPassword {
             get {
                 return ResourceManager.GetString("ChangingPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Credentials.
+        /// </summary>
+        public static string CheckCred {
+            get {
+                return ResourceManager.GetString("CheckCred", resourceCulture);
             }
         }
         
@@ -1015,6 +1555,528 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting anime info from HTTP API: {0}.
+        /// </summary>
+        public static string Command_AnimeInfo {
+            get {
+                return ResourceManager.GetString("Command_AnimeInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error deleting image: ({0}) - {1}.
+        /// </summary>
+        public static string Command_DeleteError {
+            get {
+                return ResourceManager.GetString("Command_DeleteError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading Image: {0}.
+        /// </summary>
+        public static string Command_DownloadImage {
+            get {
+                return ResourceManager.GetString("Command_DownloadImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading watched states from MAL.
+        /// </summary>
+        public static string Command_DownloadMalWatched {
+            get {
+                return ResourceManager.GetString("Command_DownloadMalWatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting images from The TvDB: {0}.
+        /// </summary>
+        public static string Command_DownloadTvDBImages {
+            get {
+                return ResourceManager.GetString("Command_DownloadTvDBImages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting file info from UDP API: {0}.
+        /// </summary>
+        public static string Command_FileInfo {
+            get {
+                return ResourceManager.GetString("Command_FileInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting calendar info from UDP API.
+        /// </summary>
+        public static string Command_GetCalendar {
+            get {
+                return ResourceManager.GetString("Command_GetCalendar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting episode info from UDP API: {0}.
+        /// </summary>
+        public static string Command_GetEpisodeList {
+            get {
+                return ResourceManager.GetString("Command_GetEpisodeList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting file info from UDP API: {0}.
+        /// </summary>
+        public static string Command_GetFileInfo {
+            get {
+                return ResourceManager.GetString("Command_GetFileInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting group status info from UDP API for Anime: {0}.
+        /// </summary>
+        public static string Command_GetReleaseGroup {
+            get {
+                return ResourceManager.GetString("Command_GetReleaseGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting release group info from UDP API: {0}.
+        /// </summary>
+        public static string Command_GetReleaseInfo {
+            get {
+                return ResourceManager.GetString("Command_GetReleaseInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting review info from UDP API for Anime: {0}.
+        /// </summary>
+        public static string Command_GetReviewInfo {
+            get {
+                return ResourceManager.GetString("Command_GetReviewInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting episodes from The TvDB: {0}.
+        /// </summary>
+        public static string Command_GettingTvDB {
+            get {
+                return ResourceManager.GetString("Command_GettingTvDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting list of updated animes from UDP API.
+        /// </summary>
+        public static string Command_GetUpdatedAnime {
+            get {
+                return ResourceManager.GetString("Command_GetUpdatedAnime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hashing File: {0}.
+        /// </summary>
+        public static string Command_HashingFile {
+            get {
+                return ResourceManager.GetString("Command_HashingFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Idle.
+        /// </summary>
+        public static string Command_Idle {
+            get {
+                return ResourceManager.GetString("Command_Idle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating Changed TvDB association: {0}.
+        /// </summary>
+        public static string Command_LinkAniDBTvDB {
+            get {
+                return ResourceManager.GetString("Command_LinkAniDBTvDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paused.
+        /// </summary>
+        public static string Command_Paused {
+            get {
+                return ResourceManager.GetString("Command_Paused", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Queued.
+        /// </summary>
+        public static string Command_Queued {
+            get {
+                return ResourceManager.GetString("Command_Queued", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reading Media Info for File: {0}.
+        /// </summary>
+        public static string Command_ReadingMedia {
+            get {
+                return ResourceManager.GetString("Command_ReadingMedia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refreshing Anime Stats: {0}.
+        /// </summary>
+        public static string Command_Refresh {
+            get {
+                return ResourceManager.GetString("Command_Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Searching for anime on MAL: {0}.
+        /// </summary>
+        public static string Command_SearchMal {
+            get {
+                return ResourceManager.GetString("Command_SearchMal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Searching for anime on The MovieDB: {0}.
+        /// </summary>
+        public static string Command_SearchTMDb {
+            get {
+                return ResourceManager.GetString("Command_SearchTMDb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Searching for anime on Trakt.TV: {0}.
+        /// </summary>
+        public static string Command_SearchTrakt {
+            get {
+                return ResourceManager.GetString("Command_SearchTrakt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Searching for anime on The TvDB: {0}.
+        /// </summary>
+        public static string Command_SearchTvDB {
+            get {
+                return ResourceManager.GetString("Command_SearchTvDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sending anime xml to azure: {0}.
+        /// </summary>
+        public static string Command_SendAnimeAzure {
+            get {
+                return ResourceManager.GetString("Command_SendAnimeAzure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sending anime full to azure: {0}.
+        /// </summary>
+        public static string Command_SendAnimeFull {
+            get {
+                return ResourceManager.GetString("Command_SendAnimeFull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sending anime title to azure: {0}.
+        /// </summary>
+        public static string Command_SendAnimeTitle {
+            get {
+                return ResourceManager.GetString("Command_SendAnimeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sending anonymous usage data to azure.
+        /// </summary>
+        public static string Command_SendAnonymousData {
+            get {
+                return ResourceManager.GetString("Command_SendAnonymousData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting command worker (general)....
+        /// </summary>
+        public static string Command_StartingGeneral {
+            get {
+                return ResourceManager.GetString("Command_StartingGeneral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting command worker (hasher)....
+        /// </summary>
+        public static string Command_StartingHasher {
+            get {
+                return ResourceManager.GetString("Command_StartingHasher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting command worker (images)....
+        /// </summary>
+        public static string Command_StartingImages {
+            get {
+                return ResourceManager.GetString("Command_StartingImages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Syncing MyList info from HTTP API.
+        /// </summary>
+        public static string Command_SyncMyList {
+            get {
+                return ResourceManager.GetString("Command_SyncMyList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Syncing Trakt Collection.
+        /// </summary>
+        public static string Command_SyncTrakt {
+            get {
+                return ResourceManager.GetString("Command_SyncTrakt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sync episode to collection on Trakt: {0} - {1}.
+        /// </summary>
+        public static string Command_SyncTraktEpisodes {
+            get {
+                return ResourceManager.GetString("Command_SyncTraktEpisodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Syncing Trakt Collection for series: {0}.
+        /// </summary>
+        public static string Command_SyncTraktSeries {
+            get {
+                return ResourceManager.GetString("Command_SyncTraktSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Syncing Vote info from HTTP API.
+        /// </summary>
+        public static string Command_SyncVotes {
+            get {
+                return ResourceManager.GetString("Command_SyncVotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add episode to history on Trakt: {0}.
+        /// </summary>
+        public static string Command_TraktAddHistory {
+            get {
+                return ResourceManager.GetString("Command_TraktAddHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating status on MAL: {0}.
+        /// </summary>
+        public static string Command_UpdateMALWatched {
+            get {
+                return ResourceManager.GetString("Command_UpdateMALWatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating MyList info from UDP API for File: {0}.
+        /// </summary>
+        public static string Command_UpdateMyListInfo {
+            get {
+                return ResourceManager.GetString("Command_UpdateMyListInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating AniDB MyListStats.
+        /// </summary>
+        public static string Command_UpdateMyListStats {
+            get {
+                return ResourceManager.GetString("Command_UpdateMyListStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating all Trakt Series Info.
+        /// </summary>
+        public static string Command_UpdateTrakt {
+            get {
+                return ResourceManager.GetString("Command_UpdateTrakt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating info/images on Trakt.TV: {0}.
+        /// </summary>
+        public static string Command_UpdateTraktData {
+            get {
+                return ResourceManager.GetString("Command_UpdateTraktData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uploading watched states to MAL.
+        /// </summary>
+        public static string Command_UploadMALWatched {
+            get {
+                return ResourceManager.GetString("Command_UploadMALWatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voting: {0} - {1}.
+        /// </summary>
+        public static string Command_VoteAnime {
+            get {
+                return ResourceManager.GetString("Command_VoteAnime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting cross ref for Anidb to MAL from web cache: {0}.
+        /// </summary>
+        public static string Command_WebCacheDeleteXRefAniDBMAL {
+            get {
+                return ResourceManager.GetString("Command_WebCacheDeleteXRefAniDBMAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting cross ref for Anidb to Other from web cache: {0}.
+        /// </summary>
+        public static string Command_WebCacheDeleteXRefAniDBOther {
+            get {
+                return ResourceManager.GetString("Command_WebCacheDeleteXRefAniDBOther", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting cross ref for Anidb to Trakt from web cache: {0}.
+        /// </summary>
+        public static string Command_WebCacheDeleteXRefAniDBTrakt {
+            get {
+                return ResourceManager.GetString("Command_WebCacheDeleteXRefAniDBTrakt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting cross ref for Anidb to TvDB from web cache: {0}.
+        /// </summary>
+        public static string Command_WebCacheDeleteXRefAniDBTvDB {
+            get {
+                return ResourceManager.GetString("Command_WebCacheDeleteXRefAniDBTvDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting cross ref for file to episode to web cache: {0}-{1}.
+        /// </summary>
+        public static string Command_WebCacheDeleteXRefFileEpisode {
+            get {
+                return ResourceManager.GetString("Command_WebCacheDeleteXRefFileEpisode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sending cross ref for Anidb to MAL from web cache: {0}.
+        /// </summary>
+        public static string Command_WebCacheSendXRefAniDBMAL {
+            get {
+                return ResourceManager.GetString("Command_WebCacheSendXRefAniDBMAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sending cross ref for Anidb to Other from web cache: {0}.
+        /// </summary>
+        public static string Command_WebCacheSendXRefAniDBOther {
+            get {
+                return ResourceManager.GetString("Command_WebCacheSendXRefAniDBOther", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sending cross ref for Anidb to Trakt from web cache: {0}.
+        /// </summary>
+        public static string Command_WebCacheSendXRefAniDBTrakt {
+            get {
+                return ResourceManager.GetString("Command_WebCacheSendXRefAniDBTrakt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sending cross ref for Anidb to TvDB from web cache: {0}.
+        /// </summary>
+        public static string Command_WebCacheSendXRefAniDBTvDB {
+            get {
+                return ResourceManager.GetString("Command_WebCacheSendXRefAniDBTvDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sending cross ref for file to episode to web cache: {0}.
+        /// </summary>
+        public static string Command_WebCacheSendXRefFileEpisode {
+            get {
+                return ResourceManager.GetString("Command_WebCacheSendXRefFileEpisode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Admin Approved.
+        /// </summary>
+        public static string Community_AdminApproved {
+            get {
+                return ResourceManager.GetString("Community_AdminApproved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AniDB ID.
+        /// </summary>
+        public static string Community_AniDBID {
+            get {
+                return ResourceManager.GetString("Community_AniDBID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Approve.
+        /// </summary>
+        public static string Community_Approve {
+            get {
+                return ResourceManager.GetString("Community_Approve", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check if my links are different from the community recommendations.
         /// </summary>
         public static string Community_CommunityCheck {
@@ -1042,11 +2104,47 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Filters.
+        /// </summary>
+        public static string Community_Filters {
+            get {
+                return ResourceManager.GetString("Community_Filters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting all series data....
+        /// </summary>
+        public static string Community_GettingData {
+            get {
+                return ResourceManager.GetString("Community_GettingData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Has Trakt Link.
         /// </summary>
         public static string Community_HasTraktLink {
             get {
                 return ResourceManager.GetString("Community_HasTraktLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Link is Different to Approved Link.
+        /// </summary>
+        public static string Community_LinkDifferent {
+            get {
+                return ResourceManager.GetString("Community_LinkDifferent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Missing a Link.
+        /// </summary>
+        public static string Community_LinkMissing {
+            get {
+                return ResourceManager.GetString("Community_LinkMissing", resourceCulture);
             }
         }
         
@@ -1069,11 +2167,56 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Random Anime.
+        /// </summary>
+        public static string Community_Random {
+            get {
+                return ResourceManager.GetString("Community_Random", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Refresh data for this series.
         /// </summary>
         public static string Community_Refresh {
             get {
                 return ResourceManager.GetString("Community_Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revoke.
+        /// </summary>
+        public static string Community_Revoke {
+            get {
+                return ResourceManager.GetString("Community_Revoke", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string Community_Search {
+            get {
+                return ResourceManager.GetString("Community_Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Searching....
+        /// </summary>
+        public static string Community_Searching {
+            get {
+                return ResourceManager.GetString("Community_Searching", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Season #.
+        /// </summary>
+        public static string Community_SeasonNumber {
+            get {
+                return ResourceManager.GetString("Community_SeasonNumber", resourceCulture);
             }
         }
         
@@ -1087,11 +2230,101 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start Ep Type.
+        /// </summary>
+        public static string Community_StartEp {
+            get {
+                return ResourceManager.GetString("Community_StartEp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Ep #.
+        /// </summary>
+        public static string Community_StartEpNumber {
+            get {
+                return ResourceManager.GetString("Community_StartEpNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status.
         /// </summary>
         public static string Community_Status {
             get {
                 return ResourceManager.GetString("Community_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trakt.
+        /// </summary>
+        public static string Community_Trakt {
+            get {
+                return ResourceManager.GetString("Community_Trakt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Anime still need Trakt approval.
+        /// </summary>
+        public static string Community_TraktApproval {
+            get {
+                return ResourceManager.GetString("Community_TraktApproval", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checking Trakt link against community recommendation....
+        /// </summary>
+        public static string Community_TraktCompare {
+            get {
+                return ResourceManager.GetString("Community_TraktCompare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checking if Trakt data is valid....
+        /// </summary>
+        public static string Community_TraktDataCheck {
+            get {
+                return ResourceManager.GetString("Community_TraktDataCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trakt ID.
+        /// </summary>
+        public static string Community_TraktID {
+            get {
+                return ResourceManager.GetString("Community_TraktID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Populating series data.
+        /// </summary>
+        public static string Community_TraktPopulating {
+            get {
+                return ResourceManager.GetString("Community_TraktPopulating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}: {1} of {2} - {3}.
+        /// </summary>
+        public static string Community_TraktProgress {
+            get {
+                return ResourceManager.GetString("Community_TraktProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting all Trakt Cross Ref data....
+        /// </summary>
+        public static string Community_TraktRef {
+            get {
+                return ResourceManager.GetString("Community_TraktRef", resourceCulture);
             }
         }
         
@@ -1105,11 +2338,65 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Checking series.
+        /// </summary>
+        public static string Community_TraktSeriesCheck {
+            get {
+                return ResourceManager.GetString("Community_TraktSeriesCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trakt Title.
+        /// </summary>
+        public static string Community_TraktTitle {
+            get {
+                return ResourceManager.GetString("Community_TraktTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check my links are still valid on Trakt.
         /// </summary>
         public static string Community_TraktValid {
             get {
                 return ResourceManager.GetString("Community_TraktValid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Anime still need TvDB approval.
+        /// </summary>
+        public static string Community_TvDBApproval {
+            get {
+                return ResourceManager.GetString("Community_TvDBApproval", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TvDB ID.
+        /// </summary>
+        public static string Community_TvDBID {
+            get {
+                return ResourceManager.GetString("Community_TvDBID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TvDB Title.
+        /// </summary>
+        public static string Community_TvDBTitle {
+            get {
+                return ResourceManager.GetString("Community_TvDBTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        public static string Community_Username {
+            get {
+                return ResourceManager.GetString("Community_Username", resourceCulture);
             }
         }
         
@@ -1132,11 +2419,47 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Approval Exists.
+        /// </summary>
+        public static string CommunityLinks_ApprovalExists {
+            get {
+                return ResourceManager.GetString("CommunityLinks_ApprovalExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auto Link.
         /// </summary>
         public static string CommunityLinks_AutoLink {
             get {
                 return ResourceManager.GetString("CommunityLinks_AutoLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Checking Online....
+        /// </summary>
+        public static string CommunityLinks_CheckingOnline {
+            get {
+                return ResourceManager.GetString("CommunityLinks_CheckingOnline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command has been queued.
+        /// </summary>
+        public static string CommunityLinks_CommandQueued {
+            get {
+                return ResourceManager.GetString("CommunityLinks_CommandQueued", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this link?.
+        /// </summary>
+        public static string CommunityLinks_DeleteLink {
+            get {
+                return ResourceManager.GetString("CommunityLinks_DeleteLink", resourceCulture);
             }
         }
         
@@ -1159,6 +2482,51 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Movie:.
+        /// </summary>
+        public static string CommunityLinks_Movie {
+            get {
+                return ResourceManager.GetString("CommunityLinks_Movie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Links Need Approval.
+        /// </summary>
+        public static string CommunityLinks_NeedApproval {
+            get {
+                return ResourceManager.GetString("CommunityLinks_NeedApproval", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You don&apos;t have any links.
+        /// </summary>
+        public static string CommunityLinks_NoLinks {
+            get {
+                return ResourceManager.GetString("CommunityLinks_NoLinks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Community Links Available.
+        /// </summary>
+        public static string CommunityLinks_NoLinksAvailable {
+            get {
+                return ResourceManager.GetString("CommunityLinks_NoLinksAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Community Admin.
+        /// </summary>
+        public static string CommunityLinks_ShowAdmin {
+            get {
+                return ResourceManager.GetString("CommunityLinks_ShowAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Start:.
         /// </summary>
         public static string CommunityLinks_Start {
@@ -1177,7 +2545,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Trakt: .
+        ///   Looks up a localized string similar to Trakt:.
         /// </summary>
         public static string CommunityLinks_Trakt {
             get {
@@ -1195,11 +2563,20 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TvDB: .
+        ///   Looks up a localized string similar to TvDB:.
         /// </summary>
         public static string CommunityLinks_TvDB {
             get {
                 return ResourceManager.GetString("CommunityLinks_TvDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use My Links.
+        /// </summary>
+        public static string CommunityLins_UseMyLinks {
+            get {
+                return ResourceManager.GetString("CommunityLins_UseMyLinks", resourceCulture);
             }
         }
         
@@ -1209,6 +2586,15 @@ namespace JMMClient.Properties {
         public static string CommunityRecommendation {
             get {
                 return ResourceManager.GetString("CommunityRecommendation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Complete!.
+        /// </summary>
+        public static string Complete {
+            get {
+                return ResourceManager.GetString("Complete", resourceCulture);
             }
         }
         
@@ -1263,6 +2649,15 @@ namespace JMMClient.Properties {
         public static string CustomTag_Description {
             get {
                 return ResourceManager.GetString("CustomTag_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a tag name.
+        /// </summary>
+        public static string CustomTag_EnterName {
+            get {
+                return ResourceManager.GetString("CustomTag_EnterName", resourceCulture);
             }
         }
         
@@ -1402,6 +2797,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Regular Dashboard.
+        /// </summary>
+        public static string Dashboard_Regular {
+            get {
+                return ResourceManager.GetString("Dashboard_Regular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string Dashboard_Settings {
+            get {
+                return ResourceManager.GetString("Dashboard_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sync Votes.
         /// </summary>
         public static string Dashboard_SyncVotes {
@@ -1456,29 +2869,20 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select the default series for.
+        ///   Looks up a localized string similar to If a default series is selected for a group, only that series images will be displayed instead of randomly selecting images from the different series within the group..
         /// </summary>
-        public static string DefSeries1 {
+        public static string DefaultSeries_Info {
             get {
-                return ResourceManager.GetString("DefSeries1", resourceCulture);
+                return ResourceManager.GetString("DefaultSeries_Info", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selecting a default series means that all images that are dsiplayed for a group will use that .
+        ///   Looks up a localized string similar to Select Default Series.
         /// </summary>
-        public static string DefSeries2 {
+        public static string DefaultSeries_Select {
             get {
-                return ResourceManager.GetString("DefSeries2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to default series instead of a random series within the group.
-        /// </summary>
-        public static string DefSeries3 {
-            get {
-                return ResourceManager.GetString("DefSeries3", resourceCulture);
+                return ResourceManager.GetString("DefaultSeries_Select", resourceCulture);
             }
         }
         
@@ -1497,6 +2901,42 @@ namespace JMMClient.Properties {
         public static string DeleteAll {
             get {
                 return ResourceManager.GetString("DeleteAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete these {0} file/s, the physical video files will also be deleted.
+        /// </summary>
+        public static string DeleteFiles_Confirm {
+            get {
+                return ResourceManager.GetString("DeleteFiles_Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting file {0} of {1}.
+        /// </summary>
+        public static string DeleteFiles_Deleting {
+            get {
+                return ResourceManager.GetString("DeleteFiles_Deleting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Files.
+        /// </summary>
+        public static string DeleteFiles_Name {
+            get {
+                return ResourceManager.GetString("DeleteFiles_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please wait until the process is complete.
+        /// </summary>
+        public static string DeleteFiles_Wait {
+            get {
+                return ResourceManager.GetString("DeleteFiles_Wait", resourceCulture);
             }
         }
         
@@ -1546,7 +2986,16 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click for detailed explanation of options.
+        ///   Looks up a localized string similar to Delete Series/Group.
+        /// </summary>
+        public static string DeleteSeriesGroup {
+            get {
+                return ResourceManager.GetString("DeleteSeriesGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Click here for detailed explanation of options.
         /// </summary>
         public static string DetailedExplanation {
             get {
@@ -1560,6 +3009,15 @@ namespace JMMClient.Properties {
         public static string DetailedInformationLink {
             get {
                 return ResourceManager.GetString("DetailedInformationLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Done!.
+        /// </summary>
+        public static string Done {
+            get {
+                return ResourceManager.GetString("Done", resourceCulture);
             }
         }
         
@@ -1870,6 +3328,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please enter Anime Bytes login details.
+        /// </summary>
+        public static string Downloads_AnimeBytesDetails {
+            get {
+                return ResourceManager.GetString("Downloads_AnimeBytesDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AnimeBytes is an anime torrent site which specializes in full series downloads, however it requires an account first.
         /// </summary>
         public static string Downloads_AnimeBytesInfo {
@@ -1888,6 +3355,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please enter BakaBT login details.
+        /// </summary>
+        public static string Downloads_BakaBTDetails {
+            get {
+                return ResourceManager.GetString("Downloads_BakaBTDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BakaBT is an anime torrent site which specializes in full series downloads, however it requires an account first.
         /// </summary>
         public static string Downloads_BakaBTInfo {
@@ -1897,11 +3373,74 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Connected sucessfully.
+        /// </summary>
+        public static string Downloads_Connected {
+            get {
+                return ResourceManager.GetString("Downloads_Connected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string Downloads_Details {
+            get {
+                return ResourceManager.GetString("Downloads_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download.
+        /// </summary>
+        public static string Downloads_Download {
+            get {
+                return ResourceManager.GetString("Downloads_Download", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed! See log for more details if needed.
+        /// </summary>
+        public static string Downloads_Failed {
+            get {
+                return ResourceManager.GetString("Downloads_Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Go to Website.
         /// </summary>
         public static string Downloads_GoTo {
             get {
                 return ResourceManager.GetString("Downloads_GoTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to Website.
+        /// </summary>
+        public static string Downloads_GoWebsite {
+            get {
+                return ResourceManager.GetString("Downloads_GoWebsite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Results.
+        /// </summary>
+        public static string Downloads_Results {
+            get {
+                return ResourceManager.GetString("Downloads_Results", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Searching....
+        /// </summary>
+        public static string Downloads_Searching {
+            get {
+                return ResourceManager.GetString("Downloads_Searching", resourceCulture);
             }
         }
         
@@ -1924,11 +3463,11 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This uses the uTorrent WebUI API, which you need to enable in your uTorrent client first.
+        ///   Looks up a localized string similar to Please enter all uTorrent details.
         /// </summary>
-        public static string Downloads_uTorrentInfo {
+        public static string Downloads_uTorrentDetails {
             get {
-                return ResourceManager.GetString("Downloads_uTorrentInfo", resourceCulture);
+                return ResourceManager.GetString("Downloads_uTorrentDetails", resourceCulture);
             }
         }
         
@@ -1956,6 +3495,24 @@ namespace JMMClient.Properties {
         public static string DropSource {
             get {
                 return ResourceManager.GetString("DropSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this file, the physical video file will also be deleted.
+        /// </summary>
+        public static string DuplicateFiles_ConfirmDelete {
+            get {
+                return ResourceManager.GetString("DuplicateFiles_ConfirmDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this entry?.
+        /// </summary>
+        public static string DuplicateFiles_DeleteEntry {
+            get {
+                return ResourceManager.GetString("DuplicateFiles_DeleteEntry", resourceCulture);
             }
         }
         
@@ -2131,6 +3688,60 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Command has been queued for processing on the server.
+        /// </summary>
+        public static string EpisodeDetail_CommandQueued {
+            get {
+                return ResourceManager.GetString("EpisodeDetail_CommandQueued", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this file, the physical video file will also be deleted.
+        /// </summary>
+        public static string EpisodeDetail_ConfirmDelete {
+            get {
+                return ResourceManager.GetString("EpisodeDetail_ConfirmDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Playlist.
+        /// </summary>
+        public static string EpisodeDetail_NewPlaylist {
+            get {
+                return ResourceManager.GetString("EpisodeDetail_NewPlaylist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Playlist Menu:.
+        /// </summary>
+        public static string EpisodeDetail_PlaylistMenu {
+            get {
+                return ResourceManager.GetString("EpisodeDetail_PlaylistMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not find playlist.
+        /// </summary>
+        public static string EpisodeDetail_PlaylistMissing {
+            get {
+                return ResourceManager.GetString("EpisodeDetail_PlaylistMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The series must be linked to a TvDB series first.
+        /// </summary>
+        public static string EpisodeDetail_TvDBLink {
+            get {
+                return ResourceManager.GetString("EpisodeDetail_TvDBLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Episode Detail Style.
         /// </summary>
         public static string EpisodeDetailStyle {
@@ -2190,15 +3801,6 @@ namespace JMMClient.Properties {
         public static string EpisodeMarkAllWatchedPrevious {
             get {
                 return ResourceManager.GetString("EpisodeMarkAllWatchedPrevious", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Episodes.
-        /// </summary>
-        public static string Episodes {
-            get {
-                return ResourceManager.GetString("Episodes", resourceCulture);
             }
         }
         
@@ -2329,6 +3931,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A series already exists for this anime.
         /// </summary>
         public static string ERROR_SeriesExists {
@@ -2352,6 +3963,15 @@ namespace JMMClient.Properties {
         public static string Export {
             get {
                 return ResourceManager.GetString("Export", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exporting....
+        /// </summary>
+        public static string Exporting {
+            get {
+                return ResourceManager.GetString("Exporting", resourceCulture);
             }
         }
         
@@ -2383,20 +4003,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Force update information from AniDB.
+        ///   Looks up a localized string similar to Removed this folder as your default.
         /// </summary>
-        public static string FileSearch_AniDBForceUpdate {
+        public static string Files_DefaultRemoved {
             get {
-                return ResourceManager.GetString("FileSearch_AniDBForceUpdate", resourceCulture);
+                return ResourceManager.GetString("Files_DefaultRemoved", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rescan.
+        ///   Looks up a localized string similar to Open.
         /// </summary>
-        public static string FileSearch_Rescan {
+        public static string Files_Open {
             get {
-                return ResourceManager.GetString("FileSearch_Rescan", resourceCulture);
+                return ResourceManager.GetString("Files_Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a default Folder.
+        /// </summary>
+        public static string Files_SelectDefault {
+            get {
+                return ResourceManager.GetString("Files_SelectDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set this folder as your default folder, where all new files will be moved to on import.
+        /// </summary>
+        public static string Files_SetDefault {
+            get {
+                return ResourceManager.GetString("Files_SetDefault", resourceCulture);
             }
         }
         
@@ -2424,6 +4062,51 @@ namespace JMMClient.Properties {
         public static string Filter {
             get {
                 return ResourceManager.GetString("Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the Filter Condition: {0}.
+        /// </summary>
+        public static string Filter_DeleteCondition {
+            get {
+                return ResourceManager.GetString("Filter_DeleteCondition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the Group Filter: {0}.
+        /// </summary>
+        public static string Filter_DeleteGroup {
+            get {
+                return ResourceManager.GetString("Filter_DeleteGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the sorting?.
+        /// </summary>
+        public static string Filter_DeleteSort {
+            get {
+                return ResourceManager.GetString("Filter_DeleteSort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Filter.
+        /// </summary>
+        public static string Filter_New {
+            get {
+                return ResourceManager.GetString("Filter_New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not find playlist.
+        /// </summary>
+        public static string Filter_PlaylistMissing {
+            get {
+                return ResourceManager.GetString("Filter_PlaylistMissing", resourceCulture);
             }
         }
         
@@ -2500,7 +4183,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Groups.
+        ///   Looks up a localized string similar to Groups.
         /// </summary>
         public static string Group_GroupCount {
             get {
@@ -2572,11 +4255,29 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Group Filter Condition.
+        /// </summary>
+        public static string GroupFilter_Condition {
+            get {
+                return ResourceManager.GetString("GroupFilter_Condition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Favorites.
         /// </summary>
         public static string GroupFilter_Favorites {
             get {
                 return ResourceManager.GetString("GroupFilter_Favorites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter an integer value only.
+        /// </summary>
+        public static string GroupFilter_IntegerOnly {
+            get {
+                return ResourceManager.GetString("GroupFilter_IntegerOnly", resourceCulture);
             }
         }
         
@@ -2613,6 +4314,15 @@ namespace JMMClient.Properties {
         public static string GroupFilter_RandomSeries {
             get {
                 return ResourceManager.GetString("GroupFilter_RandomSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group Filter Sorting.
+        /// </summary>
+        public static string GroupFilter_Sorting {
+            get {
+                return ResourceManager.GetString("GroupFilter_Sorting", resourceCulture);
             }
         }
         
@@ -2824,6 +4534,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Latest Episode Air Date.
+        /// </summary>
+        public static string GroupFilterConditionType_LatestEpisodeAirDate {
+            get {
+                return ResourceManager.GetString("GroupFilterConditionType_LatestEpisodeAirDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Missing Episodes.
         /// </summary>
         public static string GroupFilterConditionType_MissingEpisodes {
@@ -2919,6 +4638,15 @@ namespace JMMClient.Properties {
         public static string GroupFilterConditionType_VideoQuality {
             get {
                 return ResourceManager.GetString("GroupFilterConditionType_VideoQuality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string GroupFilterConditionType_Year {
+            get {
+                return ResourceManager.GetString("GroupFilterConditionType_Year", resourceCulture);
             }
         }
         
@@ -3103,6 +4831,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Group Filter Name.
+        /// </summary>
+        public static string GroupFilterSorting_GroupFilter {
+            get {
+                return ResourceManager.GetString("GroupFilterSorting_GroupFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Group Name.
         /// </summary>
         public static string GroupFilterSorting_GroupName {
@@ -3265,7 +5002,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This utility will show you all the anime you have chosen to ignore from the recommendations. Deleting these records means they may show in recommendations again..
+        ///   Looks up a localized string similar to This utility will show all anime series you have marked as ignored from the recommendations section. If you delete a series from this list, it&apos;s possible for it to show up in the recommendations section again..
         /// </summary>
         public static string IgnoredAnime_Note {
             get {
@@ -3391,6 +5128,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Process is Running.
+        /// </summary>
+        public static string Import_Running {
+            get {
+                return ResourceManager.GetString("Import_Running", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import Folder.
+        /// </summary>
+        public static string ImportFolder {
+            get {
+                return ResourceManager.GetString("ImportFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This folder is being watched for new files.
         /// </summary>
         public static string ImportFolder_Watched {
@@ -3432,6 +5187,24 @@ namespace JMMClient.Properties {
         public static string ImportSettings_AutoGroupSeries {
             get {
                 return ResourceManager.GetString("ImportSettings_AutoGroupSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom.
+        /// </summary>
+        public static string ImportSettings_Custom {
+            get {
+                return ResourceManager.GetString("ImportSettings_Custom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default.
+        /// </summary>
+        public static string ImportSettings_Default {
+            get {
+                return ResourceManager.GetString("ImportSettings_Default", resourceCulture);
             }
         }
         
@@ -3499,56 +5272,92 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Duplicate files are where you have two or more files which are exactly the same, except they are in different folders or are named differently. JMM only allows one file with the same hash in the collection..
+        ///   Looks up a localized string similar to Here you can configure your torrent program settings, what sites to use for searching and input your login information for supported sites..
         /// </summary>
-        public static string INFO_DuplicateFiles {
+        public static string Info_Downloads {
             get {
-                return ResourceManager.GetString("INFO_DuplicateFiles", resourceCulture);
+                return ResourceManager.GetString("Info_Downloads", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Multiple files are where you have two or more files for the same episode. This utility will let you examine all these occurrences, and decide which ones you want to  keep.
+        ///   Looks up a localized string similar to This utility will show all instances where there are two or more files with the same hash. JMM only allows you to have one file with the same hash in your collection..
         /// </summary>
-        public static string INFO_MultipleFiles {
+        public static string Info_DuplicateFiles {
             get {
-                return ResourceManager.GetString("INFO_MultipleFiles", resourceCulture);
+                return ResourceManager.GetString("Info_DuplicateFiles", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You will need to refresh your group list to see the effects of the changes.
+        ///   Looks up a localized string similar to This utility will show all instances where you have multiple files for the same episode. You will be able to view each instance and decide which ones you&apos;d like to keep..
         /// </summary>
-        public static string INFO_SettingsDisplayStyle {
+        public static string Info_MultipleFiles {
             get {
-                return ResourceManager.GetString("INFO_SettingsDisplayStyle", resourceCulture);
+                return ResourceManager.GetString("Info_MultipleFiles", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All the settings on this page should be populated. Make sure to test and save the JMM Server and AniDB details before proceeding. If this is your first time running the application enter at least one import folder and the press the Run Import button..
+        ///   Looks up a localized string similar to The display panel allows you to customize how series images and information is displayed..
         /// </summary>
-        public static string INFO_SettingsEssential {
+        public static string Info_SettingsDisplay {
             get {
-                return ResourceManager.GetString("INFO_SettingsEssential", resourceCulture);
+                return ResourceManager.GetString("Info_SettingsDisplay", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add or edit users here. Users are stored in the database, and shared across different clients. You must always have at least one admin user..
+        ///   Looks up a localized string similar to The essentials panel contains all settings that are required to run JMM. For the JMM Server and AniDB Login sections, you&apos;ll need to click the &quot;Test And Save&quot; button to save any changes you make. .
         /// </summary>
-        public static string INFO_SettingsUserAdmin {
+        public static string Info_SettingsEssential {
             get {
-                return ResourceManager.GetString("INFO_SettingsUserAdmin", resourceCulture);
+                return ResourceManager.GetString("Info_SettingsEssential", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set the language or languages used for naming when groups or series are added to your collection. These titles are pulled directly from AniDB so outside of English, Romaji or Kanji; not all groups or series will have additional titles available. To use synonyms listed on AniDB make sure to check “Also Use Synonyms” and to rename existing groups and series make sure to click “Rename All Groups/Series” once you’re done..
+        /// </summary>
+        public static string Info_SettingsLanguage {
+            get {
+                return ResourceManager.GetString("Info_SettingsLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Users are stored in your database and can be accessed by any client that connects to your database. When adding a new user or updating an existing one, you must click the Save button otherwise your changes will not take effect. JMM requires at least one user with administrator rights selected..
+        /// </summary>
+        public static string Info_SettingsUserAdmin {
+            get {
+                return ResourceManager.GetString("Info_SettingsUserAdmin", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The web cache is an online database created by the developers of JMM and MyAnime. It&apos;s purpose is to fill in the gaps which other databases don&apos;t cater for, and also make the import process quicker by sharing information with other users of JMM..
         /// </summary>
-        public static string INFO_SettingsWebCache {
+        public static string Info_SettingsWebCache {
             get {
-                return ResourceManager.GetString("INFO_SettingsWebCache", resourceCulture);
+                return ResourceManager.GetString("Info_SettingsWebCache", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input Number.
+        /// </summary>
+        public static string Input_Number {
+            get {
+                return ResourceManager.GetString("Input_Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input Text.
+        /// </summary>
+        public static string Input_Text {
+            get {
+                return ResourceManager.GetString("Input_Text", resourceCulture);
             }
         }
         
@@ -3598,6 +5407,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Complete!.
+        /// </summary>
+        public static string JMMServer_Complete {
+            get {
+                return ResourceManager.GetString("JMMServer_Complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please note, updating your drop destination will only affect new series being added. Series you&apos;ve already imported will not be affected..
+        /// </summary>
+        public static string JMMServer_DDInfo {
+            get {
+                return ResourceManager.GetString("JMMServer_DDInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         public static string JMMServer_Error {
@@ -3616,11 +5443,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fill out the form below to add an import folder. Input the folder&apos;s location, select the import type and then click Save to add the import folder..
+        /// </summary>
+        public static string JMMServer_ImportFoldersInfo {
+            get {
+                return ResourceManager.GetString("JMMServer_ImportFoldersInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Paused.
         /// </summary>
         public static string JMMServer_Paused {
             get {
                 return ResourceManager.GetString("JMMServer_Paused", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Process is queued on server, please try refreshing in a few seconds.
+        /// </summary>
+        public static string JMMServer_ProcessQueued {
+            get {
+                return ResourceManager.GetString("JMMServer_ProcessQueued", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Process is Running on server, please try refreshing when it has finished.
+        /// </summary>
+        public static string JMMServer_ProcessRunning {
+            get {
+                return ResourceManager.GetString("JMMServer_ProcessRunning", resourceCulture);
             }
         }
         
@@ -3661,7 +5515,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Trakt Auth.
+        ///   Looks up a localized string similar to Trakt Authorization Status.
         /// </summary>
         public static string JMMServer_TraktAuth {
             get {
@@ -3679,11 +5533,47 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to JMM Desktop needs to restart to change the language, click OK to auto restart or Cancel to manually restart..
+        /// </summary>
+        public static string Language_Info {
+            get {
+                return ResourceManager.GetString("Language_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rename All Groups/Series.
+        /// </summary>
+        public static string Language_Rename {
+            get {
+                return ResourceManager.GetString("Language_Rename", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All groups and series have been successfully renamed!.
+        /// </summary>
+        public static string Language_RenameComplete {
+            get {
+                return ResourceManager.GetString("Language_RenameComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switch Language.
+        /// </summary>
+        public static string Language_Switch {
+            get {
+                return ResourceManager.GetString("Language_Switch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Also Use Synonyms.
         /// </summary>
-        public static string LanguageUseSynonyms {
+        public static string Language_UseSynonyms {
             get {
-                return ResourceManager.GetString("LanguageUseSynonyms", resourceCulture);
+                return ResourceManager.GetString("Language_UseSynonyms", resourceCulture);
             }
         }
         
@@ -3711,6 +5601,78 @@ namespace JMMClient.Properties {
         public static string LatestEp_Yours {
             get {
                 return ResourceManager.GetString("LatestEp_Yours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn more about AniDB options.
+        /// </summary>
+        public static string LearnMore_AniDBOptions {
+            get {
+                return ResourceManager.GetString("LearnMore_AniDBOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn more about series linking.
+        /// </summary>
+        public static string LearnMore_ComLinking {
+            get {
+                return ResourceManager.GetString("LearnMore_ComLinking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn more about using JMM to download anime.
+        /// </summary>
+        public static string LearnMore_Downloads {
+            get {
+                return ResourceManager.GetString("LearnMore_Downloads", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What are Group Filters?.
+        /// </summary>
+        public static string LearnMore_GroupFilters {
+            get {
+                return ResourceManager.GetString("LearnMore_GroupFilters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn more about import folders.
+        /// </summary>
+        public static string LearnMore_ImportFolders {
+            get {
+                return ResourceManager.GetString("LearnMore_ImportFolders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn more about relation settings.
+        /// </summary>
+        public static string LearnMore_RelationSettings {
+            get {
+                return ResourceManager.GetString("LearnMore_RelationSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn more about configuring a video player for use with JMM.
+        /// </summary>
+        public static string LearnMore_VideoPlayer {
+            get {
+                return ResourceManager.GetString("LearnMore_VideoPlayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn more about the web cache.
+        /// </summary>
+        public static string LearnMore_WebCache {
+            get {
+                return ResourceManager.GetString("LearnMore_WebCache", resourceCulture);
             }
         }
         
@@ -3769,6 +5731,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/downloads/.
+        /// </summary>
+        public static string Link_Downloads {
+            get {
+                return ResourceManager.GetString("Link_Downloads", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://jmediamanager.org/streaming/.
+        /// </summary>
+        public static string Link_EnableStreaming {
+            get {
+                return ResourceManager.GetString("Link_EnableStreaming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/utilities/file-renaming/.
         /// </summary>
         public static string Link_FileRenaming {
@@ -3778,7 +5758,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/collection/#what-are-filters.
+        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/collection/filters/#what-are-filters.
         /// </summary>
         public static string Link_GroupFilters {
             get {
@@ -3787,11 +5767,29 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-server/configuring-jmm-server/#import-folders.
+        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/.
+        /// </summary>
+        public static string Link_Help {
+            get {
+                return ResourceManager.GetString("Link_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/server/#import-folders.
         /// </summary>
         public static string Link_ImportFolders {
             get {
                 return ResourceManager.GetString("Link_ImportFolders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/collection/collection-overview/#linking.
+        /// </summary>
+        public static string Link_Linking {
+            get {
+                return ResourceManager.GetString("Link_Linking", resourceCulture);
             }
         }
         
@@ -3805,20 +5803,20 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/settings/#mpc.
+        ///   Looks up a localized string similar to https://github.com/rossy/mpv-install/blob/master/README.md.
         /// </summary>
-        public static string Link_MPC {
+        public static string Link_MPV {
             get {
-                return ResourceManager.GetString("Link_MPC", resourceCulture);
+                return ResourceManager.GetString("Link_MPV", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/settings/#pot-player.
+        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/settings/#essential.
         /// </summary>
-        public static string Link_PotPlayer {
+        public static string Link_RelationSettings {
             get {
-                return ResourceManager.GetString("Link_PotPlayer", resourceCulture);
+                return ResourceManager.GetString("Link_RelationSettings", resourceCulture);
             }
         }
         
@@ -3859,20 +5857,11 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/downloads/#utorrent.
+        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/settings/#video-player.
         /// </summary>
-        public static string Link_uTorrent {
+        public static string Link_VideoPlayer {
             get {
-                return ResourceManager.GetString("Link_uTorrent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to http://jmediamanager.org/jmm-desktop/settings/#vlc.
-        /// </summary>
-        public static string Link_VLC {
-            get {
-                return ResourceManager.GetString("Link_VLC", resourceCulture);
+                return ResourceManager.GetString("Link_VideoPlayer", resourceCulture);
             }
         }
         
@@ -3922,6 +5911,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect Password.
+        /// </summary>
+        public static string Login_IncorrectPassword {
+            get {
+                return ResourceManager.GetString("Login_IncorrectPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Login.
+        /// </summary>
+        public static string Login_UserLogin {
+            get {
+                return ResourceManager.GetString("Login_UserLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
         public static string Main_About {
@@ -3931,7 +5938,16 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feed.
+        ///   Looks up a localized string similar to Discord.
+        /// </summary>
+        public static string Main_Discord {
+            get {
+                return ResourceManager.GetString("Main_Discord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to News.
         /// </summary>
         public static string Main_Feed {
             get {
@@ -3949,11 +5965,29 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Paused due to BAN from AniDB (.
+        ///   Looks up a localized string similar to Paused due to BAN from AniDB.
         /// </summary>
         public static string Main_Paused {
             get {
                 return ResourceManager.GetString("Main_Paused", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Process is Running.
+        /// </summary>
+        public static string Main_ProcessRunning {
+            get {
+                return ResourceManager.GetString("Main_ProcessRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want run this process?.
+        /// </summary>
+        public static string Main_RunProcess {
+            get {
+                return ResourceManager.GetString("Main_RunProcess", resourceCulture);
             }
         }
         
@@ -3967,11 +6001,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Never Decrease Watched Counts.
+        ///   Looks up a localized string similar to Check MAL Credentials.
+        /// </summary>
+        public static string MAL_CheckCred {
+            get {
+                return ResourceManager.GetString("MAL_CheckCred", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MAL login successful, settings saved..
+        /// </summary>
+        public static string MAL_LoginCorrect {
+            get {
+                return ResourceManager.GetString("MAL_LoginCorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Never Decrease Series Status.
         /// </summary>
         public static string MAL_NeverDecrease {
             get {
                 return ResourceManager.GetString("MAL_NeverDecrease", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valid MAL credentials are required in order to use this feature..
+        /// </summary>
+        public static string MAL_SearchInfo {
+            get {
+                return ResourceManager.GetString("MAL_SearchInfo", resourceCulture);
             }
         }
         
@@ -3990,6 +6051,15 @@ namespace JMMClient.Properties {
         public static string MALShow {
             get {
                 return ResourceManager.GetString("MALShow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MANUAL LINK.
+        /// </summary>
+        public static string ManualLink {
+            get {
+                return ResourceManager.GetString("ManualLink", resourceCulture);
             }
         }
         
@@ -4138,7 +6208,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Airing State:.
+        ///   Looks up a localized string similar to Airing State.
         /// </summary>
         public static string MissingEpisodes_AiringState {
             get {
@@ -4170,6 +6240,15 @@ namespace JMMClient.Properties {
         public static string MissingEpisodes_AnimeName {
             get {
                 return ResourceManager.GetString("MissingEpisodes_AnimeName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Columns.
+        /// </summary>
+        public static string MissingEpisodes_Columns {
+            get {
+                return ResourceManager.GetString("MissingEpisodes_Columns", resourceCulture);
             }
         }
         
@@ -4210,6 +6289,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Finished Airing.
+        /// </summary>
+        public static string MissingEpisodes_FinishedAiring {
+            get {
+                return ResourceManager.GetString("MissingEpisodes_FinishedAiring", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Group Summary.
         /// </summary>
         public static string MissingEpisodes_GroupSummary {
@@ -4219,7 +6307,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This utility will show you a summary of all your missing episodes..
+        ///   Looks up a localized string similar to This utility will show you a summary of all episodes you are missing from series in your collection. This utility runs in the background so you do not need to wait for the results. It may also take some time depending on how many missing episodes there are so please be patient..
         /// </summary>
         public static string MissingEpisodes_Note {
             get {
@@ -4237,7 +6325,16 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View Missing File.
+        ///   Looks up a localized string similar to Still Aring.
+        /// </summary>
+        public static string MissingEpisodes_StillAiring {
+            get {
+                return ResourceManager.GetString("MissingEpisodes_StillAiring", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Missing Files.
         /// </summary>
         public static string MissingMyList_Missing {
             get {
@@ -4246,7 +6343,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This utility will download your list of files from AniDB, and compare it to the files locally. You will then have the chance to remove those files from AniDB if they don&apos;t exist..
+        ///   Looks up a localized string similar to This utility will compare your current collection with your AniDB MyList and display any file discrepancies between the two. You can review the results and have JMM automatically remove all file discrepancies. Please note that JMM will use your current collection as the base and remove all entries in your AniDB MyList that are not present in your current collection. This utility runs in the background so you do not need to wait for the results. It may also take some time depending on how many file discrepan [rest of string was truncated]&quot;;.
         /// </summary>
         public static string MissingMyList_Note {
             get {
@@ -4314,6 +6411,15 @@ namespace JMMClient.Properties {
         public static string MovieDB_FanartCount {
             get {
                 return ResourceManager.GetString("MovieDB_FanartCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to While The Movie DB does index TV Series, JMM only supports linking movies..
+        /// </summary>
+        public static string MovieDB_Info {
+            get {
+                return ResourceManager.GetString("MovieDB_Info", resourceCulture);
             }
         }
         
@@ -4426,7 +6532,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The import folder location cannot be blank. Enter a valid path on OMM Server.
+        ///   Looks up a localized string similar to The import folder location cannot be blank. Enter a valid path on JMM Server.
         /// </summary>
         public static string MSG_ERR_ImportFolderLocationCheck {
             get {
@@ -4480,6 +6586,33 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this file, the physical video file will also be deleted.
+        /// </summary>
+        public static string MultipleFiles_ConfirmDelete {
+            get {
+                return ResourceManager.GetString("MultipleFiles_ConfirmDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Only Finished Airing.
+        /// </summary>
+        public static string MultipleFiles_Finished {
+            get {
+                return ResourceManager.GetString("MultipleFiles_Finished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ignore Variations.
+        /// </summary>
+        public static string MultipleFiles_Ignore {
+            get {
+                return ResourceManager.GetString("MultipleFiles_Ignore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Episode Range.
         /// </summary>
         public static string MultiTypeRange {
@@ -4498,7 +6631,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Only Release Goups I Am Collecting.
+        ///   Looks up a localized string similar to Only Release Groups I Am Collecting.
         /// </summary>
         public static string MyGroupsOnly {
             get {
@@ -4588,6 +6721,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create New Series.
+        /// </summary>
+        public static string NewSeries_CreateNew {
+            get {
+                return ResourceManager.GetString("NewSeries_CreateNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search By Title or ID.
         /// </summary>
         public static string NewSeries_Search {
@@ -4602,6 +6744,15 @@ namespace JMMClient.Properties {
         public static string NewSeries_SearchBy {
             get {
                 return ResourceManager.GetString("NewSeries_SearchBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select an anime first.
+        /// </summary>
+        public static string NewSeries_SelectAnime {
+            get {
+                return ResourceManager.GetString("NewSeries_SelectAnime", resourceCulture);
             }
         }
         
@@ -4624,7 +6775,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No related anime could be found.
+        ///   Looks up a localized string similar to does not have any related anime listed on AniDB.
         /// </summary>
         public static string NoRelatedAnime {
             get {
@@ -4633,7 +6784,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No similar anime could be found.
+        ///   Looks up a localized string similar to does not have any similar anime listed on AniDB.
         /// </summary>
         public static string NoSimilarAnime {
             get {
@@ -4741,6 +6892,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the playlist: {0}.
+        /// </summary>
+        public static string Playlist_Delete {
+            get {
+                return ResourceManager.GetString("Playlist_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Playlist Items.
         /// </summary>
         public static string Playlist_Items {
@@ -4750,7 +6910,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter playlist name: .
+        ///   Looks up a localized string similar to Enter playlist name:.
         /// </summary>
         public static string Playlist_Name {
             get {
@@ -4777,11 +6937,47 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Play All.
+        /// </summary>
+        public static string Playlist_PlayAll {
+            get {
+                return ResourceManager.GetString("Playlist_PlayAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Play Unwatched.
+        /// </summary>
+        public static string Playlist_PlayUnwatched {
+            get {
+                return ResourceManager.GetString("Playlist_PlayUnwatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Play Watched.
+        /// </summary>
+        public static string Playlist_PlayWatched {
+            get {
+                return ResourceManager.GetString("Playlist_PlayWatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Random Episode.
         /// </summary>
         public static string Playlist_Random {
             get {
                 return ResourceManager.GetString("Playlist_Random", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use Fanart.
+        /// </summary>
+        public static string Playlist_UseFanart {
+            get {
+                return ResourceManager.GetString("Playlist_UseFanart", resourceCulture);
             }
         }
         
@@ -4858,6 +7054,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Process is Queued.
+        /// </summary>
+        public static string Process_Queued {
+            get {
+                return ResourceManager.GetString("Process_Queued", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Process is Running.
+        /// </summary>
+        public static string Process_Running {
+            get {
+                return ResourceManager.GetString("Process_Running", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Prompt to rate series on completion.
         /// </summary>
         public static string PromptRateSeries {
@@ -4890,6 +7104,24 @@ namespace JMMClient.Properties {
         public static string QuickSort {
             get {
                 return ResourceManager.GetString("QuickSort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        public static string Random_All {
+            get {
+                return ResourceManager.GetString("Random_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Any.
+        /// </summary>
+        public static string Random_Any {
+            get {
+                return ResourceManager.GetString("Random_Any", resourceCulture);
             }
         }
         
@@ -4930,7 +7162,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View this Series.
+        ///   Looks up a localized string similar to View Series.
         /// </summary>
         public static string Random_View {
             get {
@@ -4948,6 +7180,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All Episodes In My Collection.
+        /// </summary>
+        public static string Rankings_AllEpisodes {
+            get {
+                return ResourceManager.GetString("Rankings_AllEpisodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Episodes Watched.
+        /// </summary>
+        public static string Rankings_AllWatched {
+            get {
+                return ResourceManager.GetString("Rankings_AllWatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AniDB Rating.
         /// </summary>
         public static string Rankings_AniDB {
@@ -4957,11 +7207,20 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Anime.
+        ///   Looks up a localized string similar to Anime.
         /// </summary>
         public static string Rankings_Anime {
             get {
                 return ResourceManager.GetString("Rankings_Anime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This anime is not in your collection.
+        /// </summary>
+        public static string Rankings_AnimeNotInCollection {
+            get {
+                return ResourceManager.GetString("Rankings_AnimeNotInCollection", resourceCulture);
             }
         }
         
@@ -4993,11 +7252,47 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to In My Collection.
+        /// </summary>
+        public static string Rankings_InCollection {
+            get {
+                return ResourceManager.GetString("Rankings_InCollection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to My Vote.
         /// </summary>
         public static string Rankings_MyVote {
             get {
                 return ResourceManager.GetString("Rankings_MyVote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not In My Collection.
+        /// </summary>
+        public static string Rankings_NotInCollection {
+            get {
+                return ResourceManager.GetString("Rankings_NotInCollection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not Voted.
+        /// </summary>
+        public static string Rankings_NotVoted {
+            get {
+                return ResourceManager.GetString("Rankings_NotVoted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not Watched.
+        /// </summary>
+        public static string Rankings_NotWatched {
+            get {
+                return ResourceManager.GetString("Rankings_NotWatched", resourceCulture);
             }
         }
         
@@ -5038,6 +7333,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Voted.
+        /// </summary>
+        public static string Rankings_Votes {
+            get {
+                return ResourceManager.GetString("Rankings_Votes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Year.
         /// </summary>
         public static string Rankings_Year {
@@ -5052,6 +7356,15 @@ namespace JMMClient.Properties {
         public static string RateSeries_Rate {
             get {
                 return ResourceManager.GetString("RateSeries_Rate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rate Series.
+        /// </summary>
+        public static string RateSeries_Title {
+            get {
+                return ResourceManager.GetString("RateSeries_Title", resourceCulture);
             }
         }
         
@@ -5092,6 +7405,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Overview not available.
+        /// </summary>
+        public static string Recommendation_Overview {
+            get {
+                return ResourceManager.GetString("Recommendation_Overview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Re-enter Password.
         /// </summary>
         public static string ReenterPassword {
@@ -5115,15 +7437,6 @@ namespace JMMClient.Properties {
         public static string Refresh {
             get {
                 return ResourceManager.GetString("Refresh", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pressing the refresh button can take several minutes, so please be patient.
-        /// </summary>
-        public static string RefreshWait {
-            get {
-                return ResourceManager.GetString("RefreshWait", resourceCulture);
             }
         }
         
@@ -5182,6 +7495,123 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alternative Setting.
+        /// </summary>
+        public static string RelationSetting_AltSetting {
+            get {
+                return ResourceManager.GetString("RelationSetting_AltSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alternative Version.
+        /// </summary>
+        public static string RelationSetting_AltVersion {
+            get {
+                return ResourceManager.GetString("RelationSetting_AltVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Character.
+        /// </summary>
+        public static string RelationSetting_Character {
+            get {
+                return ResourceManager.GetString("RelationSetting_Character", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Story.
+        /// </summary>
+        public static string RelationSetting_FullStory {
+            get {
+                return ResourceManager.GetString("RelationSetting_FullStory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Movie.
+        /// </summary>
+        public static string RelationSetting_Movie {
+            get {
+                return ResourceManager.GetString("RelationSetting_Movie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other.
+        /// </summary>
+        public static string RelationSetting_Other {
+            get {
+                return ResourceManager.GetString("RelationSetting_Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OVA.
+        /// </summary>
+        public static string RelationSetting_OVA {
+            get {
+                return ResourceManager.GetString("RelationSetting_OVA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parent Story.
+        /// </summary>
+        public static string RelationSetting_ParentStory {
+            get {
+                return ResourceManager.GetString("RelationSetting_ParentStory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Same Setting.
+        /// </summary>
+        public static string RelationSetting_SameSetting {
+            get {
+                return ResourceManager.GetString("RelationSetting_SameSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Side Story.
+        /// </summary>
+        public static string RelationSetting_SideStory {
+            get {
+                return ResourceManager.GetString("RelationSetting_SideStory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Summary.
+        /// </summary>
+        public static string RelationSetting_Summary {
+            get {
+                return ResourceManager.GetString("RelationSetting_Summary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If enabled, JMM will group all related series in your collection based on the series relation graphs on AniDB. You can exclude certain types of relations by clicking the relation you don&apos;t want grouped..
+        /// </summary>
+        public static string RelationSettings_Info {
+            get {
+                return ResourceManager.GetString("RelationSettings_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        public static string Remove {
+            get {
+                return ResourceManager.GetString("Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remove Default Series.
         /// </summary>
         public static string RemoveDefaultSeries {
@@ -5218,11 +7648,137 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Entire Collection.
+        /// </summary>
+        public static string Rename_All {
+            get {
+                return ResourceManager.GetString("Rename_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anime ID.
+        /// </summary>
+        public static string Rename_AnimeID {
+            get {
+                return ResourceManager.GetString("Rename_AnimeID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anime Name - English.
+        /// </summary>
+        public static string Rename_AnimeNameEnglish {
+            get {
+                return ResourceManager.GetString("Rename_AnimeNameEnglish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anime Name - Kanji.
+        /// </summary>
+        public static string Rename_AnimeNameKanji {
+            get {
+                return ResourceManager.GetString("Rename_AnimeNameKanji", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anime Name - Romaji.
+        /// </summary>
+        public static string Rename_AnimeNameRomaji {
+            get {
+                return ResourceManager.GetString("Rename_AnimeNameRomaji", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anime Type.
+        /// </summary>
+        public static string Rename_AnimeType {
+            get {
+                return ResourceManager.GetString("Rename_AnimeType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Audio Codecs.
+        /// </summary>
+        public static string Rename_AudioCodec {
+            get {
+                return ResourceManager.GetString("Rename_AudioCodec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a script name.
+        /// </summary>
+        public static string Rename_BlankScript {
+            get {
+                return ResourceManager.GetString("Rename_BlankScript", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Censored.
+        /// </summary>
+        public static string Rename_Censored {
+            get {
+                return ResourceManager.GetString("Rename_Censored", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} of {1}.
+        /// </summary>
+        public static string Rename_Changed {
+            get {
+                return ResourceManager.GetString("Rename_Changed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clear.
         /// </summary>
         public static string Rename_Clear {
             get {
                 return ResourceManager.GetString("Rename_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Codec.
+        /// </summary>
+        public static string Rename_Codec {
+            get {
+                return ResourceManager.GetString("Rename_Codec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to rename the files below?.
+        /// </summary>
+        public static string Rename_Confirm {
+            get {
+                return ResourceManager.GetString("Rename_Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CRC - Lower.
+        /// </summary>
+        public static string Rename_CRCLower {
+            get {
+                return ResourceManager.GetString("Rename_CRCLower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CRC - Upper.
+        /// </summary>
+        public static string Rename_CRCUpper {
+            get {
+                return ResourceManager.GetString("Rename_CRCUpper", resourceCulture);
             }
         }
         
@@ -5236,11 +7792,191 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the script: {0}.
+        /// </summary>
+        public static string Rename_DeleteScript {
+            get {
+                return ResourceManager.GetString("Rename_DeleteScript", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deprecated.
+        /// </summary>
+        public static string Rename_Deprecated {
+            get {
+                return ResourceManager.GetString("Rename_Deprecated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dub Language.
+        /// </summary>
+        public static string Rename_DubLanguage {
+            get {
+                return ResourceManager.GetString("Rename_DubLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ED2K - Lower.
+        /// </summary>
+        public static string Rename_ED2KLower {
+            get {
+                return ResourceManager.GetString("Rename_ED2KLower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ED2K - Upper.
+        /// </summary>
+        public static string Rename_ED2KUpper {
+            get {
+                return ResourceManager.GetString("Rename_ED2KUpper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Script Name:.
+        /// </summary>
+        public static string Rename_EnterScriptName {
+            get {
+                return ResourceManager.GetString("Rename_EnterScriptName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Episode Count.
+        /// </summary>
+        public static string Rename_EpisodeCount {
+            get {
+                return ResourceManager.GetString("Rename_EpisodeCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Episode ID.
+        /// </summary>
+        public static string Rename_EpisodeID {
+            get {
+                return ResourceManager.GetString("Rename_EpisodeID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Episode Name - English.
+        /// </summary>
+        public static string Rename_EpisodeNameEnglish {
+            get {
+                return ResourceManager.GetString("Rename_EpisodeNameEnglish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Episode Name - Romaji.
+        /// </summary>
+        public static string Rename_EpisodeNameRomaji {
+            get {
+                return ResourceManager.GetString("Rename_EpisodeNameRomaji", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Episode Number.
+        /// </summary>
+        public static string Rename_EpisodeNumber {
+            get {
+                return ResourceManager.GetString("Rename_EpisodeNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Episode Count.
+        /// </summary>
+        public static string Rename_Episodes {
+            get {
+                return ResourceManager.GetString("Rename_Episodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed.
+        /// </summary>
+        public static string Rename_Failed {
+            get {
+                return ResourceManager.GetString("Rename_Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File ID.
+        /// </summary>
+        public static string Rename_FileID {
+            get {
+                return ResourceManager.GetString("Rename_FileID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Files.
+        /// </summary>
+        public static string Rename_Files {
+            get {
+                return ResourceManager.GetString("Rename_Files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File Version.
+        /// </summary>
+        public static string Rename_FileVersion {
+            get {
+                return ResourceManager.GetString("Rename_FileVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filter:.
         /// </summary>
         public static string Rename_Filter {
             get {
                 return ResourceManager.GetString("Rename_Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group ID.
+        /// </summary>
+        public static string Rename_GroupID {
+            get {
+                return ResourceManager.GetString("Rename_GroupID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group Name - Long.
+        /// </summary>
+        public static string Rename_GroupLongName {
+            get {
+                return ResourceManager.GetString("Rename_GroupLongName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group Name - Short.
+        /// </summary>
+        public static string Rename_GroupShortName {
+            get {
+                return ResourceManager.GetString("Rename_GroupShortName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Has Episodes.
+        /// </summary>
+        public static string Rename_HasEpisodes {
+            get {
+                return ResourceManager.GetString("Rename_HasEpisodes", resourceCulture);
             }
         }
         
@@ -5254,11 +7990,56 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Manually Linked.
+        /// </summary>
+        public static string Rename_ManuallyLinked {
+            get {
+                return ResourceManager.GetString("Rename_ManuallyLinked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
         public static string Rename_New {
             get {
                 return ResourceManager.GetString("Rename_New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Name.
+        /// </summary>
+        public static string Rename_NewName {
+            get {
+                return ResourceManager.GetString("Rename_NewName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Old Name.
+        /// </summary>
+        public static string Rename_OldName {
+            get {
+                return ResourceManager.GetString("Rename_OldName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sub Group File Name.
+        /// </summary>
+        public static string Rename_OriginalFileName {
+            get {
+                return ResourceManager.GetString("Rename_OriginalFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Passed.
+        /// </summary>
+        public static string Rename_Passed {
+            get {
+                return ResourceManager.GetString("Rename_Passed", resourceCulture);
             }
         }
         
@@ -5272,11 +8053,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Random.
+        /// </summary>
+        public static string Rename_Random {
+            get {
+                return ResourceManager.GetString("Rename_Random", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rename Now.
         /// </summary>
         public static string Rename_Rename {
             get {
                 return ResourceManager.GetString("Rename_Rename", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Resolution.
+        /// </summary>
+        public static string Rename_Resolution {
+            get {
+                return ResourceManager.GetString("Rename_Resolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rip Source.
+        /// </summary>
+        public static string Rename_RipSource {
+            get {
+                return ResourceManager.GetString("Rename_RipSource", resourceCulture);
             }
         }
         
@@ -5299,11 +8107,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Help with scripting.
+        ///   Looks up a localized string similar to Help With Scripting.
         /// </summary>
         public static string Rename_ScriptingHelp {
             get {
                 return ResourceManager.GetString("Rename_ScriptingHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Series.
+        /// </summary>
+        public static string Rename_Series {
+            get {
+                return ResourceManager.GetString("Rename_Series", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Source.
+        /// </summary>
+        public static string Rename_Source {
+            get {
+                return ResourceManager.GetString("Rename_Source", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sub Language.
+        /// </summary>
+        public static string Rename_SubLanguage {
+            get {
+                return ResourceManager.GetString("Rename_SubLanguage", resourceCulture);
             }
         }
         
@@ -5326,16 +8161,70 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rename All Groups.
+        ///   Looks up a localized string similar to Renaming Rules.
         /// </summary>
-        public static string RenameGroups {
+        public static string Rename_Title {
             get {
-                return ResourceManager.GetString("RenameGroups", resourceCulture);
+                return ResourceManager.GetString("Rename_Title", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Re-scan All.
+        ///   Looks up a localized string similar to Anime Type.
+        /// </summary>
+        public static string Rename_Type {
+            get {
+                return ResourceManager.GetString("Rename_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Bit Depth.
+        /// </summary>
+        public static string Rename_VideoBitDepth {
+            get {
+                return ResourceManager.GetString("Rename_VideoBitDepth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Codecs.
+        /// </summary>
+        public static string Rename_VideoCodec {
+            get {
+                return ResourceManager.GetString("Rename_VideoCodec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Res Height.
+        /// </summary>
+        public static string Rename_VideoResolutionHeight {
+            get {
+                return ResourceManager.GetString("Rename_VideoResolutionHeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Res Width.
+        /// </summary>
+        public static string Rename_VideoResolutionWidth {
+            get {
+                return ResourceManager.GetString("Rename_VideoResolutionWidth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string Rename_Year {
+            get {
+                return ResourceManager.GetString("Rename_Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rescan All.
         /// </summary>
         public static string RescanAll {
             get {
@@ -5349,6 +8238,15 @@ namespace JMMClient.Properties {
         public static string Restore {
             get {
                 return ResourceManager.GetString("Restore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result.
+        /// </summary>
+        public static string Result {
+            get {
+                return ResourceManager.GetString("Result", resourceCulture);
             }
         }
         
@@ -5398,11 +8296,29 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please enter search criteria.
+        /// </summary>
+        public static string Seach_Criteria {
+            get {
+                return ResourceManager.GetString("Seach_Criteria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search.
         /// </summary>
         public static string Search {
             get {
                 return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force update information from AniDB.
+        /// </summary>
+        public static string Search_AniDBForceUpdate {
+            get {
+                return ResourceManager.GetString("Search_AniDBForceUpdate", resourceCulture);
             }
         }
         
@@ -5425,11 +8341,56 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please enter a title for the show.
+        /// </summary>
+        public static string Search_EnterTitle {
+            get {
+                return ResourceManager.GetString("Search_EnterTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Episodes:.
         /// </summary>
         public static string Search_Episodes {
             get {
                 return ResourceManager.GetString("Search_Episodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Everything.
+        /// </summary>
+        public static string Search_Everything {
+            get {
+                return ResourceManager.GetString("Search_Everything", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File Name.
+        /// </summary>
+        public static string Search_FileName {
+            get {
+                return ResourceManager.GetString("Search_FileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File Size.
+        /// </summary>
+        public static string Search_FileSize {
+            get {
+                return ResourceManager.GetString("Search_FileSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hash.
+        /// </summary>
+        public static string Search_Hash {
+            get {
+                return ResourceManager.GetString("Search_Hash", resourceCulture);
             }
         }
         
@@ -5443,11 +8404,65 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MAL: .
+        ///   Looks up a localized string similar to Please enter a valid number as the MAL ID.
+        /// </summary>
+        public static string Search_InvalidMAL {
+            get {
+                return ResourceManager.GetString("Search_InvalidMAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a valid number as the movie ID.
+        /// </summary>
+        public static string Search_InvalidMovieID {
+            get {
+                return ResourceManager.GetString("Search_InvalidMovieID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a valid number as the series ID.
+        /// </summary>
+        public static string Search_InvalidTvDB {
+            get {
+                return ResourceManager.GetString("Search_InvalidTvDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last 100.
+        /// </summary>
+        public static string Search_Last100 {
+            get {
+                return ResourceManager.GetString("Search_Last100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MAL:.
         /// </summary>
         public static string Search_MAL {
             get {
                 return ResourceManager.GetString("Search_MAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search MyAnimeList.
+        /// </summary>
+        public static string Search_MyAnimeList {
+            get {
+                return ResourceManager.GetString("Search_MyAnimeList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rescan.
+        /// </summary>
+        public static string Search_Rescan {
+            get {
+                return ResourceManager.GetString("Search_Rescan", resourceCulture);
             }
         }
         
@@ -5457,6 +8472,15 @@ namespace JMMClient.Properties {
         public static string Search_StartingAt {
             get {
                 return ResourceManager.GetString("Search_StartingAt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search The TvDB.
+        /// </summary>
+        public static string Search_TheTVDB {
+            get {
+                return ResourceManager.GetString("Search_TheTVDB", resourceCulture);
             }
         }
         
@@ -5479,7 +8503,16 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Trakt: .
+        ///   Looks up a localized string similar to Search The MovieDB.
+        /// </summary>
+        public static string Search_TMDBForm {
+            get {
+                return ResourceManager.GetString("Search_TMDBForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trakt:.
         /// </summary>
         public static string Search_Trakt {
             get {
@@ -5488,7 +8521,16 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TvDB: .
+        ///   Looks up a localized string similar to Search Trakt TV.
+        /// </summary>
+        public static string Search_TraktForm {
+            get {
+                return ResourceManager.GetString("Search_TraktForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TvDB:.
         /// </summary>
         public static string Search_TvDB {
             get {
@@ -5506,11 +8548,11 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select the default language.
+        ///   Looks up a localized string similar to Select Default Series.
         /// </summary>
-        public static string Select_DefaultLanguage {
+        public static string Select_DefaultSeries {
             get {
-                return ResourceManager.GetString("Select_DefaultLanguage", resourceCulture);
+                return ResourceManager.GetString("Select_DefaultSeries", resourceCulture);
             }
         }
         
@@ -5520,6 +8562,15 @@ namespace JMMClient.Properties {
         public static string Select_EpisodeType {
             get {
                 return ResourceManager.GetString("Select_EpisodeType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change MAL Starting Episode.
+        /// </summary>
+        public static string Select_MALStart {
+            get {
+                return ResourceManager.GetString("Select_MALStart", resourceCulture);
             }
         }
         
@@ -5551,6 +8602,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Title.
+        /// </summary>
+        public static string Select_Title {
+            get {
+                return ResourceManager.GetString("Select_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switch Trakt Season.
+        /// </summary>
+        public static string Select_TraktSeason {
+            get {
+                return ResourceManager.GetString("Select_TraktSeason", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trakt TV.
         /// </summary>
         public static string Select_TraktTV {
@@ -5565,6 +8634,42 @@ namespace JMMClient.Properties {
         public static string Select_TvDBDetails {
             get {
                 return ResourceManager.GetString("Select_TvDBDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search Episode.
+        /// </summary>
+        public static string Select_TvDBEpisode {
+            get {
+                return ResourceManager.GetString("Select_TvDBEpisode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select TvDB Language.
+        /// </summary>
+        public static string Select_TvDBLanguage {
+            get {
+                return ResourceManager.GetString("Select_TvDBLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switch TvDB Season.
+        /// </summary>
+        public static string Select_TvDBSeason {
+            get {
+                return ResourceManager.GetString("Select_TvDBSeason", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a valid episode number.
+        /// </summary>
+        public static string Select_ValidEpisode {
+            get {
+                return ResourceManager.GetString("Select_ValidEpisode", resourceCulture);
             }
         }
         
@@ -5605,7 +8710,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The specified file or folder doesn&apos;t exists : .
+        ///   Looks up a localized string similar to The specified file or folder doesn&apos;t exists :.
         /// </summary>
         public static string Selected_DoesNotExist {
             get {
@@ -5614,7 +8719,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select a Group.
+        ///   Looks up a localized string similar to Select Group Type.
         /// </summary>
         public static string SelectGroup {
             get {
@@ -5623,7 +8728,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select a .
+        ///   Looks up a localized string similar to Select a.
         /// </summary>
         public static string SelectGroupSeries_Select {
             get {
@@ -5686,7 +8791,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Folder.
+        ///   Looks up a localized string similar to Folders.
         /// </summary>
         public static string Series_Folder {
             get {
@@ -5803,15 +8908,6 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Details:.
-        /// </summary>
-        public static string SeriesSimple_Details {
-            get {
-                return ResourceManager.GetString("SeriesSimple_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Episodes.
         /// </summary>
         public static string SeriesSimple_Episodes {
@@ -5893,11 +8989,11 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Play All UnWatched (.
+        ///   Looks up a localized string similar to Play All Unwatched.
         /// </summary>
-        public static string SeriesSimple_PlayUnWatched {
+        public static string SeriesSimple_PlayUnwatched {
             get {
-                return ResourceManager.GetString("SeriesSimple_PlayUnWatched", resourceCulture);
+                return ResourceManager.GetString("SeriesSimple_PlayUnwatched", resourceCulture);
             }
         }
         
@@ -5925,6 +9021,15 @@ namespace JMMClient.Properties {
         public static string SeriesSimple_View {
             get {
                 return ResourceManager.GetString("SeriesSimple_View", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Series.
+        /// </summary>
+        public static string SeriesSimple_ViewSeries {
+            get {
+                return ResourceManager.GetString("SeriesSimple_ViewSeries", resourceCulture);
             }
         }
         
@@ -5974,7 +9079,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This utility will show you all the series which do not have any files. Deleting the series will also delete the group if no other series in that group have files..
+        ///   Looks up a localized string similar to This utility will show all the series in your collection that do not have any files. Deleting the series from your collection will also delete the group if there are no other series in that group or if any additional series in that group do not have files. .
         /// </summary>
         public static string SeriesWithoutFiles_Note {
             get {
@@ -5988,6 +9093,15 @@ namespace JMMClient.Properties {
         public static string Server {
             get {
                 return ResourceManager.GetString("Server", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AutoStart Local JMM Server.
+        /// </summary>
+        public static string Server_AutoStart {
+            get {
+                return ResourceManager.GetString("Server_AutoStart", resourceCulture);
             }
         }
         
@@ -6015,15 +9129,6 @@ namespace JMMClient.Properties {
         public static string ServerPath {
             get {
                 return ResourceManager.GetString("ServerPath", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Add Default Series.
-        /// </summary>
-        public static string SetDefaultSeries {
-            get {
-                return ResourceManager.GetString("SetDefaultSeries", resourceCulture);
             }
         }
         
@@ -6127,7 +9232,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error trying to sort list of .
+        ///   Looks up a localized string similar to Error trying to sort list of.
         /// </summary>
         public static string Sort_Error {
             get {
@@ -6136,7 +9241,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception in MultiSort while sorting a list of .
+        ///   Looks up a localized string similar to Exception in MultiSort while sorting a list of.
         /// </summary>
         public static string Sort_Exception {
             get {
@@ -6145,7 +9250,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to field .
+        ///   Looks up a localized string similar to field.
         /// </summary>
         public static string Sort_Field {
             get {
@@ -6163,7 +9268,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to property .
+        ///   Looks up a localized string similar to property.
         /// </summary>
         public static string Sort_Property {
             get {
@@ -6172,7 +9277,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  using .
+        ///   Looks up a localized string similar to using.
         /// </summary>
         public static string Sort_Using {
             get {
@@ -6186,15 +9291,6 @@ namespace JMMClient.Properties {
         public static string SortName {
             get {
                 return ResourceManager.GetString("SortName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Specials.
-        /// </summary>
-        public static string Specials {
-            get {
-                return ResourceManager.GetString("Specials", resourceCulture);
             }
         }
         
@@ -6451,6 +9547,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help!.
+        /// </summary>
+        public static string Tab_Help {
+            get {
+                return ResourceManager.GetString("Tab_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ignored Anime.
         /// </summary>
         public static string TAB_IgnoredAnime {
@@ -6631,11 +9736,20 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language Preferences.
+        ///   Looks up a localized string similar to Language Preference for Group/Series Naming.
         /// </summary>
         public static string TAB_Settings_Language {
             get {
                 return ResourceManager.GetString("TAB_Settings_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Relation Settings.
+        /// </summary>
+        public static string TAB_Settings_RelationSettings {
+            get {
+                return ResourceManager.GetString("TAB_Settings_RelationSettings", resourceCulture);
             }
         }
         
@@ -6940,7 +10054,7 @@ namespace JMMClient.Properties {
         ///   Looks up a localized string similar to What action to take for a file when you delete it from you local collection.
         ///Delete File (AniDB) - Removes file from your AniDB MyList.
         ///Delete File (Local DB) - Remove file from your local DB only.
-        ///Mark Deleted -  Leaves the file on your list, but changes the state to deleted.
+        ///Mark Deleted - Leaves the file on your list, but changes the state to deleted.
         ///Mark External (CD/DVD) - Leaves the file on your list, but changes the state to external storage.
         ///Mark Unknown - Leaves the file on your list, but changes the state to unkown..
         /// </summary>
@@ -7019,6 +10133,24 @@ namespace JMMClient.Properties {
         public static string Tooltip_AniDBScheduleMyList {
             get {
                 return ResourceManager.GetString("Tooltip_AniDBScheduleMyList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Series View.
+        /// </summary>
+        public static string Tooltip_AnimeFull {
+            get {
+                return ResourceManager.GetString("Tooltip_AnimeFull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Info from AniDB and Refresh.
+        /// </summary>
+        public static string Tooltip_AnimeUpdateAniDBInfo {
+            get {
+                return ResourceManager.GetString("Tooltip_AnimeUpdateAniDBInfo", resourceCulture);
             }
         }
         
@@ -7109,6 +10241,33 @@ namespace JMMClient.Properties {
         public static string Tooltip_AutoLinkEnabledTvDB {
             get {
                 return ResourceManager.GetString("Tooltip_AutoLinkEnabledTvDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit the priority.
+        /// </summary>
+        public static string Tooltip_BookmarksPriority {
+            get {
+                return ResourceManager.GetString("Tooltip_BookmarksPriority", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search for downloads for this series.
+        /// </summary>
+        public static string Tooltip_BookmarksSearch {
+            get {
+                return ResourceManager.GetString("Tooltip_BookmarksSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggle downloading status.
+        /// </summary>
+        public static string Tooltip_BookmarksToggle {
+            get {
+                return ResourceManager.GetString("Tooltip_BookmarksToggle", resourceCulture);
             }
         }
         
@@ -7284,7 +10443,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search  groups by name (in any language), category or tag.
+        ///   Looks up a localized string similar to Search groups by name (in any language), category or tag.
         /// </summary>
         public static string Tooltip_GroupSearch {
             get {
@@ -7401,6 +10560,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable Section.
+        /// </summary>
+        public static string Tooltip_MetroEnable {
+            get {
+                return ResourceManager.GetString("Tooltip_MetroEnable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Missing episodes from all release groups.
         /// </summary>
         public static string Tooltip_MissingEps {
@@ -7455,7 +10623,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You can manually type the preferred name or use the green arrows to the right to select a name from AniDB..
+        ///   Looks up a localized string similar to You can manually type the preferred name or use the green arrows to the right to select a name from AniDB.
         /// </summary>
         public static string Tooltip_NameOverride {
             get {
@@ -7464,7 +10632,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select a name from a list of AniDB names..
+        ///   Looks up a localized string similar to Select a name from the list of available AniDB names.
         /// </summary>
         public static string Tooltip_NameOverride2 {
             get {
@@ -7478,6 +10646,24 @@ namespace JMMClient.Properties {
         public static string Tooltip_NewSeries_Search {
             get {
                 return ResourceManager.GetString("Tooltip_NewSeries_Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pin This Anime.
+        /// </summary>
+        public static string Tooltip_PinSeries {
+            get {
+                return ResourceManager.GetString("Tooltip_PinSeries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Play all episodes (sent as a playlist to the default player).
+        /// </summary>
+        public static string Tooltip_PlayAll {
+            get {
+                return ResourceManager.GetString("Tooltip_PlayAll", resourceCulture);
             }
         }
         
@@ -7509,11 +10695,20 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Queued images awaiting download.
+        ///   Looks up a localized string similar to Images Awaiting Download.
         /// </summary>
         public static string Tooltip_QueueImages {
             get {
                 return ResourceManager.GetString("Tooltip_QueueImages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This will delete all your current groups and then re-organize all your series into new groups based on your import settings.
+        /// </summary>
+        public static string Tooltip_RecreateAllGroups {
+            get {
+                return ResourceManager.GetString("Tooltip_RecreateAllGroups", resourceCulture);
             }
         }
         
@@ -7586,6 +10781,51 @@ namespace JMMClient.Properties {
         public static string Tooltip_Style_GroupList {
             get {
                 return ResourceManager.GetString("Tooltip_Style_GroupList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close Tab.
+        /// </summary>
+        public static string Tooltip_StylesCloseTab {
+            get {
+                return ResourceManager.GetString("Tooltip_StylesCloseTab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit JMM Desktop.
+        /// </summary>
+        public static string Tooltip_StylesExit {
+            get {
+                return ResourceManager.GetString("Tooltip_StylesExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Screen.
+        /// </summary>
+        public static string Tooltip_StylesFullScreen {
+            get {
+                return ResourceManager.GetString("Tooltip_StylesFullScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimize.
+        /// </summary>
+        public static string Tooltip_StylesMinimize {
+            get {
+                return ResourceManager.GetString("Tooltip_StylesMinimize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Normal Window.
+        /// </summary>
+        public static string Tooltip_StylesNormal {
+            get {
+                return ResourceManager.GetString("Tooltip_StylesNormal", resourceCulture);
             }
         }
         
@@ -7698,6 +10938,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Download fresh data from The Movie DB and update the local database.
+        /// </summary>
+        public static string Tooltip_UpdateMovieDB {
+            get {
+                return ResourceManager.GetString("Tooltip_UpdateMovieDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update.
         /// </summary>
         public static string Tooltip_UpdateTitle {
@@ -7748,15 +10997,6 @@ namespace JMMClient.Properties {
         public static string Tooltip_User_PlexUsers {
             get {
                 return ResourceManager.GetString("Tooltip_User_PlexUsers", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Open this Anime Series in a new window.
-        /// </summary>
-        public static string Tooltip_ViewSeries {
-            get {
-                return ResourceManager.GetString("Tooltip_ViewSeries", resourceCulture);
             }
         }
         
@@ -7815,6 +11055,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use the web cache to look up links between AniDB and Trakt. If not selected you will need to manually search for all Trakt links..
+        /// </summary>
+        public static string Tooltip_WebCache_TraktAssociations {
+            get {
+                return ResourceManager.GetString("Tooltip_WebCache_TraktAssociations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use the web cache to look up links between AniDB and TvDB. If not selected you will need to manually search for all TvDB links..
         /// </summary>
         public static string Tooltip_WebCache_TvDBAssociations {
@@ -7869,7 +11118,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total File Count.
+        ///   Looks up a localized string similar to Total File Count:.
         /// </summary>
         public static string TotalFileCount {
             get {
@@ -7923,6 +11172,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check Trakt Credentials.
+        /// </summary>
+        public static string Trakt_CheckCred {
+            get {
+                return ResourceManager.GetString("Trakt_CheckCred", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Current token is valid until:.
         /// </summary>
         public static string Trakt_CurrentToken {
@@ -7950,6 +11208,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have not authorized JMM to access your Trakt account!.
+        /// </summary>
+        public static string Trakt_JMMNotAuth {
+            get {
+                return ResourceManager.GetString("Trakt_JMMNotAuth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No seasons available, check the Trakt ID again.
+        /// </summary>
+        public static string Trakt_NoSeasons {
+            get {
+                return ResourceManager.GetString("Trakt_NoSeasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Trakt_Password {
@@ -7964,6 +11240,33 @@ namespace JMMClient.Properties {
         public static string Trakt_PIN {
             get {
                 return ResourceManager.GetString("Trakt_PIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valid Trakt credentials are required in order to use this feature..
+        /// </summary>
+        public static string Trakt_SearchInfo {
+            get {
+                return ResourceManager.GetString("Trakt_SearchInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your token has expired, please get a new one..
+        /// </summary>
+        public static string Trakt_TokenExpired {
+            get {
+                return ResourceManager.GetString("Trakt_TokenExpired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current token is valid until: {0}.
+        /// </summary>
+        public static string Trakt_TokenValid {
+            get {
+                return ResourceManager.GetString("Trakt_TokenValid", resourceCulture);
             }
         }
         
@@ -8076,6 +11379,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select the language you&apos;d like episode titles and descriptions to be downloaded in from The TvDB. Please note that if an episode title or description is not available in the language you&apos;ve selected, the default English version will be downloaded..
+        /// </summary>
+        public static string TvDB_DefaultLanguage {
+            get {
+                return ResourceManager.GetString("TvDB_DefaultLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auto Download Fanart.
         /// </summary>
         public static string TvDB_FanartAutoDownload {
@@ -8090,6 +11402,42 @@ namespace JMMClient.Properties {
         public static string TvDB_FanartCount {
             get {
                 return ResourceManager.GetString("TvDB_FanartCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If fixing an incorrect linking, please add it to the community links so other users can benefit from your correct link. .
+        /// </summary>
+        public static string TvDB_ManualLink {
+            get {
+                return ResourceManager.GetString("TvDB_ManualLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are no episodes available on AniDB.
+        /// </summary>
+        public static string TvDB_NoAniDB {
+            get {
+                return ResourceManager.GetString("TvDB_NoAniDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No seasons available, check the TvDB ID again.
+        /// </summary>
+        public static string TvDB_NoSeasons {
+            get {
+                return ResourceManager.GetString("TvDB_NoSeasons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are no episodes available on The TvDB.
+        /// </summary>
+        public static string TvDB_NoTvDB {
+            get {
+                return ResourceManager.GetString("TvDB_NoTvDB", resourceCulture);
             }
         }
         
@@ -8121,6 +11469,33 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The TvDB prohibits adult content, do not add adult related series to The TvDB or attempt to link them..
+        /// </summary>
+        public static string TvDB_SearchInfo {
+            get {
+                return ResourceManager.GetString("TvDB_SearchInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search on the TvDB or enter TvDB Series ID.
+        /// </summary>
+        public static string TvDB_SearchPrompt {
+            get {
+                return ResourceManager.GetString("TvDB_SearchPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go To TvDB.
+        /// </summary>
+        public static string TvDB_Show {
+            get {
+                return ResourceManager.GetString("TvDB_Show", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auto Download Wide Banners.
         /// </summary>
         public static string TvDB_WideBannerAutoDownload {
@@ -8139,20 +11514,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search on the TvDB or enter TvDB Series ID.
+        ///   Looks up a localized string similar to files queued for AniDB rehash.
         /// </summary>
-        public static string TvDBSearchPrompt {
+        public static string Unrecognized_AniDBQueue {
             get {
-                return ResourceManager.GetString("TvDBSearchPrompt", resourceCulture);
+                return ResourceManager.GetString("Unrecognized_AniDBQueue", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Go To TvDB.
+        ///   Looks up a localized string similar to files queued for AniDB scan.
         /// </summary>
-        public static string TvDBShow {
+        public static string Unrecognized_AniDBScan {
             get {
-                return ResourceManager.GetString("TvDBShow", resourceCulture);
+                return ResourceManager.GetString("Unrecognized_AniDBScan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this file: {0}.
+        /// </summary>
+        public static string Unrecognized_ConfirmDelete {
+            get {
+                return ResourceManager.GetString("Unrecognized_ConfirmDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CRC.
+        /// </summary>
+        public static string Unrecognized_CRC {
+            get {
+                return ResourceManager.GetString("Unrecognized_CRC", resourceCulture);
             }
         }
         
@@ -8162,6 +11555,42 @@ namespace JMMClient.Properties {
         public static string Unrecognized_CRC32 {
             get {
                 return ResourceManager.GetString("Unrecognized_CRC32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string Unrecognized_Date {
+            get {
+                return ResourceManager.GetString("Unrecognized_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the {0} selected files.
+        /// </summary>
+        public static string Unrecognized_DeleteSelected {
+            get {
+                return ResourceManager.GetString("Unrecognized_DeleteSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File Name.
+        /// </summary>
+        public static string Unrecognized_FileName {
+            get {
+                return ResourceManager.GetString("Unrecognized_FileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Folder.
+        /// </summary>
+        public static string Unrecognized_Folder {
+            get {
+                return ResourceManager.GetString("Unrecognized_Folder", resourceCulture);
             }
         }
         
@@ -8211,7 +11640,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Re-hash All.
+        ///   Looks up a localized string similar to Rehash All.
         /// </summary>
         public static string Unrecognized_Rehash {
             get {
@@ -8225,6 +11654,15 @@ namespace JMMClient.Properties {
         public static string Unrecognized_Rescan {
             get {
                 return ResourceManager.GetString("Unrecognized_Rescan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Size.
+        /// </summary>
+        public static string Unrecognized_Size {
+            get {
+                return ResourceManager.GetString("Unrecognized_Size", resourceCulture);
             }
         }
         
@@ -8283,6 +11721,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to JMM Desktop Updates.
+        /// </summary>
+        public static string Update_JMMDesktop {
+            get {
+                return ResourceManager.GetString("Update_JMMDesktop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to JMM Desktop Update Available!.
         /// </summary>
         public static string Update_Update {
@@ -8319,7 +11766,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Data relating to files is downloaded from AniDB and then stored in your local database when you first import a file. In some cases this data may not be complete when you first download it. Or extra data may be downloaded but newer versions of JMM. This utility will allow you to get a fresh copy of that information from AniDB.
+        ///   Looks up a localized string similar to Data that&apos;s related to files in your collection is automatically downloaded and stored in your local database when JMM first imports files. This process is only run once so if specific file data is missing on AniDB at the time of download, if will be missing in your database. Additionally, it&apos;s possible that future versions of JMM might use additional file data that’s available but was not downloaded when JMM initially imported your files. This utility will update and replace all stored file data with what&apos; [rest of string was truncated]&quot;;.
         /// </summary>
         public static string UpdateAniDB_Info1 {
             get {
@@ -8364,11 +11811,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} Files queued for processing.
+        /// </summary>
+        public static string UpdateAniDB_QueueActual {
+            get {
+                return ResourceManager.GetString("UpdateAniDB_QueueActual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} Files will be queued for processing.
+        /// </summary>
+        public static string UpdateAniDB_QueueCount {
+            get {
+                return ResourceManager.GetString("UpdateAniDB_QueueCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Queue Commands.
         /// </summary>
         public static string UpdateAniDB_Queued {
             get {
                 return ResourceManager.GetString("UpdateAniDB_Queued", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Local AniDB Metadata.
+        /// </summary>
+        public static string UpdateAniDB_UpdateAniDB {
+            get {
+                return ResourceManager.GetString("UpdateAniDB_UpdateAniDB", resourceCulture);
             }
         }
         
@@ -8499,11 +11973,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the User: {0}.
+        /// </summary>
+        public static string User_Delete {
+            get {
+                return ResourceManager.GetString("User_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot delete currently logged in user.
+        /// </summary>
+        public static string User_DeleteError {
+            get {
+                return ResourceManager.GetString("User_DeleteError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Server Settings.
         /// </summary>
         public static string User_EditSettings {
             get {
                 return ResourceManager.GetString("User_EditSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a username.
+        /// </summary>
+        public static string User_EnterUsername {
+            get {
+                return ResourceManager.GetString("User_EnterUsername", resourceCulture);
             }
         }
         
@@ -8571,6 +12072,24 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Passwords must match.
+        /// </summary>
+        public static string User_PasswordMatch {
+            get {
+                return ResourceManager.GetString("User_PasswordMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Plex User &apos;{0}&apos; is already asigned to the JMM User &apos;{1}&apos;.
+        /// </summary>
+        public static string User_PlexAssigned {
+            get {
+                return ResourceManager.GetString("User_PlexAssigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Plex Users.
         /// </summary>
         public static string User_PlexUsers {
@@ -8607,6 +12126,15 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable Streaming.
+        /// </summary>
+        public static string UseStreaming {
+            get {
+                return ResourceManager.GetString("UseStreaming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use This.
         /// </summary>
         public static string UseThis {
@@ -8634,7 +12162,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Field name .
+        ///   Looks up a localized string similar to Field name.
         /// </summary>
         public static string ValueCompare_FieldName {
             get {
@@ -8643,7 +12171,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  not found while trying to compare objects of type .
+        ///   Looks up a localized string similar to not found while trying to compare objects of type.
         /// </summary>
         public static string ValueCompare_NotFound {
             get {
@@ -8652,7 +12180,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Property name .
+        ///   Looks up a localized string similar to Property name.
         /// </summary>
         public static string ValueCompare_PropertyName {
             get {
@@ -8715,11 +12243,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 8bit.
+        /// </summary>
+        public static string Video_Hi08P {
+            get {
+                return ResourceManager.GetString("Video_Hi08P", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 10bit.
         /// </summary>
         public static string Video_Hi10P {
             get {
                 return ResourceManager.GetString("Video_Hi10P", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 12bit.
+        /// </summary>
+        public static string Video_Hi12P {
+            get {
+                return ResourceManager.GetString("Video_Hi12P", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not Configured.
+        /// </summary>
+        public static string Video_Player_DefaultPlayerNotConfigured {
+            get {
+                return ResourceManager.GetString("Video_Player_DefaultPlayerNotConfigured", resourceCulture);
             }
         }
         
@@ -8733,7 +12288,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Updating to watched by media player: .
+        ///   Looks up a localized string similar to Updating to watched by media player:.
         /// </summary>
         public static string Video_Updating {
             get {
@@ -8778,7 +12333,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automatic File Selection - First episode in series.
+        ///   Looks up a localized string similar to Automatic File Selection - First Episode In Series.
         /// </summary>
         public static string VideoPlayer_AutoFileFirstEpisode {
             get {
@@ -8787,7 +12342,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automatic File Selection - Subsequent episodes in series.
+        ///   Looks up a localized string similar to Automatic File Selection - Subsequent Episodes In Series.
         /// </summary>
         public static string VideoPlayer_AutoFileNextEpisode {
             get {
@@ -8796,7 +12351,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automatic File Selection Preferences - this refers to when you have more than file for an episode.
+        ///   Looks up a localized string similar to You can setup how JMM will handle playback for episodes with more then one file. These settings are automatically applied to playlist playback but can be applied to single episode playback by enabling the option below.  .
         /// </summary>
         public static string VideoPlayer_AutoFileNote1 {
             get {
@@ -8805,7 +12360,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to For a playlist it needs to choose one file, which will be based on you preferences below..
+        ///   Looks up a localized string similar to Please note, if &apos;Release Group From Previously Played Episode&apos; for &apos;Automatic File Selection - Subsequent Episodes In Series&apos; is selected and you want to mark the file as watched instead of the episode. You&apos;ll need to uncheck &apos;Set File As Watched If Episode Is Watched&quot; under Settings - Essental - Import Settings and then manually mark the file as watched, not episode as watched..
         /// </summary>
         public static string VideoPlayer_AutoFileNote2 {
             get {
@@ -8814,47 +12369,83 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to For a single episode you can enable auto file selection or have JMM prompt you to select a file whenever you have more than one.
-        /// </summary>
-        public static string VideoPlayer_AutoFileNote3 {
-            get {
-                return ResourceManager.GetString("VideoPlayer_AutoFileNote3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to If you select &apos;Release Group From Previously Played Episode&apos; in the above setting you also need to do the following.
-        /// </summary>
-        public static string VideoPlayer_AutoFileNote4 {
-            get {
-                return ResourceManager.GetString("VideoPlayer_AutoFileNote4", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Uncheck &apos;Set file as watched if episode is watched&apos; Under Settings - Essential - Import Settings.
-        /// </summary>
-        public static string VideoPlayer_AutoFileNote5 {
-            get {
-                return ResourceManager.GetString("VideoPlayer_AutoFileNote5", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Always Mark a File as watched and not an episode.
-        /// </summary>
-        public static string VideoPlayer_AutoFileNote6 {
-            get {
-                return ResourceManager.GetString("VideoPlayer_AutoFileNote6", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Automatically mark files as watched when the following percentage is watched.
+        ///   Looks up a localized string similar to Automatically Mark Files As Watched When The Following Percentage Is Watched.
         /// </summary>
         public static string VideoPlayer_AutoMark {
             get {
                 return ResourceManager.GetString("VideoPlayer_AutoMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configured.
+        /// </summary>
+        public static string VideoPlayer_Configured {
+            get {
+                return ResourceManager.GetString("VideoPlayer_Configured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default Video Player.
+        /// </summary>
+        public static string VideoPlayer_Default {
+            get {
+                return ResourceManager.GetString("VideoPlayer_Default", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to By default, JMM Desktop will use the video player listed by Windows as the default video player. However, you can change the video player JMM Desktop uses by selecting one of the supported players from the list below. No configuration is required as JMM Desktop pulls the video player&apos;s .exe file location from your registry..
+        /// </summary>
+        public static string VideoPlayer_DefaultNote {
+            get {
+                return ResourceManager.GetString("VideoPlayer_DefaultNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default Player.
+        /// </summary>
+        public static string VideoPlayer_DefaultPlayer {
+            get {
+                return ResourceManager.GetString("VideoPlayer_DefaultPlayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enabled.
+        /// </summary>
+        public static string VideoPlayer_DefaultPlayerEnabled {
+            get {
+                return ResourceManager.GetString("VideoPlayer_DefaultPlayerEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INI file found, but no history found for previous watched files.
+        /// </summary>
+        public static string VideoPlayer_INIFound {
+            get {
+                return ResourceManager.GetString("VideoPlayer_INIFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INI file found. Sample of recently watched file....
+        /// </summary>
+        public static string VideoPlayer_INIFoundHistory {
+            get {
+                return ResourceManager.GetString("VideoPlayer_INIFoundHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installed.
+        /// </summary>
+        public static string VideoPlayer_Installed {
+            get {
+                return ResourceManager.GetString("VideoPlayer_Installed", resourceCulture);
             }
         }
         
@@ -8868,20 +12459,20 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clear MPC INI Folder.
+        /// </summary>
+        public static string VideoPlayer_MPCClear {
+            get {
+                return ResourceManager.GetString("VideoPlayer_MPCClear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MPC INI Folder.
         /// </summary>
         public static string VideoPlayer_MPCFolder {
             get {
                 return ResourceManager.GetString("VideoPlayer_MPCFolder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Media Player Classic Integration.
-        /// </summary>
-        public static string VideoPlayer_MPCI {
-            get {
-                return ResourceManager.GetString("VideoPlayer_MPCI", resourceCulture);
             }
         }
         
@@ -8895,29 +12486,121 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to For MPC Integration you must enable two options (1) Store settings to .ini file and (2) Keep history of recently watched files. See the following screenshot for more details. The location of MPC is usually something like C:\Program Files (x86)\Combined Community Codec Pack\MPC.
+        ///   Looks up a localized string similar to No ini files found in the MPC Folder.
         /// </summary>
-        public static string VideoPlayer_MPCNote {
+        public static string VideoPlayer_MPCINIMissing {
             get {
-                return ResourceManager.GetString("VideoPlayer_MPCNote", resourceCulture);
+                return ResourceManager.GetString("VideoPlayer_MPCINIMissing", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MPC Options.
+        ///   Looks up a localized string similar to There are 2 types of MPC Integrations:.
         /// </summary>
-        public static string VideoPlayer_MPCOptions {
+        public static string VideoPlayer_MPCIntegrationTypeNote {
             get {
-                return ResourceManager.GetString("VideoPlayer_MPCOptions", resourceCulture);
+                return ResourceManager.GetString("VideoPlayer_MPCIntegrationTypeNote", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Test MPC File.
+        ///   Looks up a localized string similar to For INI integration you must enable the following options in View &gt; Options &gt; Player; (1) Store settings to .ini file and (2) Keep history of recently watched files (3) Remember File Position. The location of the INI file is usually something like C:\Program Files (x86)\Combined Community Codec Pack\MPC.
+        /// </summary>
+        public static string VideoPlayer_MPCNote1 {
+            get {
+                return ResourceManager.GetString("VideoPlayer_MPCNote1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For Web UI integration you must enable the following option in View &gt; Options &gt; Player &gt; Web Interface; Listen On Port. The default listening port is 13579 which you can use, if you decide to change it make sure you change it in the box below..
+        /// </summary>
+        public static string VideoPlayer_MPCNote2 {
+            get {
+                return ResourceManager.GetString("VideoPlayer_MPCNote2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MPC Folder does not exist.
+        /// </summary>
+        public static string VideoPlayer_MPCNotFound {
+            get {
+                return ResourceManager.GetString("VideoPlayer_MPCNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MPC Folder not selected.
+        /// </summary>
+        public static string VideoPlayer_MPCNotSelected {
+            get {
+                return ResourceManager.GetString("VideoPlayer_MPCNotSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test MPC INI File.
         /// </summary>
         public static string VideoPlayer_MPCTest {
             get {
                 return ResourceManager.GetString("VideoPlayer_MPCTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MPC Web UI Port.
+        /// </summary>
+        public static string VideoPlayer_MPCWebUIPort {
+            get {
+                return ResourceManager.GetString("VideoPlayer_MPCWebUIPort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MPV.
+        /// </summary>
+        public static string VideoPlayer_MPV {
+            get {
+                return ResourceManager.GetString("VideoPlayer_MPV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MPV Install Instructions.
+        /// </summary>
+        public static string VideoPlayer_MPVInstall {
+            get {
+                return ResourceManager.GetString("VideoPlayer_MPVInstall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MPV is a lightweight media player that should be primarily used when streaming your collection. MPV was developed to run on a multitude of different operating systems so non-essential features, such as tracking, are not supported which prevents MPV from being able to relay your watched state to JMM. 
+        ///
+        ///Unlike the other supported media players, MPV is the fastest when it comes to streaming usually starting playback within seconds of opening the file. We recommend having a decent connection to JMM Server if  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string VideoPlayer_MPVNote {
+            get {
+                return ResourceManager.GetString("VideoPlayer_MPVNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NOT Configured Please Resolve.
+        /// </summary>
+        public static string VideoPlayer_NotConfigured {
+            get {
+                return ResourceManager.GetString("VideoPlayer_NotConfigured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not Installed.
+        /// </summary>
+        public static string VideoPlayer_NotInstalled {
+            get {
+                return ResourceManager.GetString("VideoPlayer_NotInstalled", resourceCulture);
             }
         }
         
@@ -8927,6 +12610,15 @@ namespace JMMClient.Properties {
         public static string VideoPlayer_PotPlayer {
             get {
                 return ResourceManager.GetString("VideoPlayer_PotPlayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear Pot Player INI Folder.
+        /// </summary>
+        public static string VideoPlayer_PotPlayerClear {
+            get {
+                return ResourceManager.GetString("VideoPlayer_PotPlayerClear", resourceCulture);
             }
         }
         
@@ -8949,7 +12641,16 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to For PotPlayer Integration you must enable the following options (1) Preferences &gt; General &gt; Store Settings to .ini file (2) Preferences &gt; Playback &gt; Play from latest point. See the following screenshot for more details. The location of the PlotPlayer .ini file is usually something like C:\Users\username\AppData\Roaming\PotPlayer64\PotPlayer64.ini.
+        ///   Looks up a localized string similar to No ini files found in the Pot Player Folder.
+        /// </summary>
+        public static string VideoPlayer_PotPlayerINIMissing {
+            get {
+                return ResourceManager.GetString("VideoPlayer_PotPlayerINIMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For PotPlayer Integration you must enable the following options (1) Preferences &gt; General &gt; Store Settings to .ini file (2) Preferences &gt; Playback &gt; Play from latest point. The location of the PlotPlayer .ini file is usually something like C:\Users\username\AppData\Roaming\PotPlayer64\PotPlayer64.ini.
         /// </summary>
         public static string VideoPlayer_PotPlayerNote {
             get {
@@ -8958,20 +12659,38 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PotPlayer Options.
+        ///   Looks up a localized string similar to Pot Player Folder does not exist.
         /// </summary>
-        public static string VideoPlayer_PotPlayerOptions {
+        public static string VideoPlayer_PotPlayerNotFound {
             get {
-                return ResourceManager.GetString("VideoPlayer_PotPlayerOptions", resourceCulture);
+                return ResourceManager.GetString("VideoPlayer_PotPlayerNotFound", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Test PotPlayer File.
+        ///   Looks up a localized string similar to Pot Player Folder not selected.
+        /// </summary>
+        public static string VideoPlayer_PotPlayerNotSelected {
+            get {
+                return ResourceManager.GetString("VideoPlayer_PotPlayerNotSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test PotPlayer INI File.
         /// </summary>
         public static string VideoPlayer_PotPlayerTest {
             get {
                 return ResourceManager.GetString("VideoPlayer_PotPlayerTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Player.
+        /// </summary>
+        public static string VideoPlayer_VideoPlayer {
+            get {
+                return ResourceManager.GetString("VideoPlayer_VideoPlayer", resourceCulture);
             }
         }
         
@@ -8981,6 +12700,15 @@ namespace JMMClient.Properties {
         public static string VideoPlayer_VLC {
             get {
                 return ResourceManager.GetString("VideoPlayer_VLC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear VLC INI Folder.
+        /// </summary>
+        public static string VideoPlayer_VLCClear {
+            get {
+                return ResourceManager.GetString("VideoPlayer_VLCClear", resourceCulture);
             }
         }
         
@@ -9003,7 +12731,16 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to VLC 2.2+ records recent files and timestamps by default (and disabling is an &apos;Advanced&apos; option). Older versions do not support &apos;Resume from last position&apos; functionality. The location of the VLC .ini file is usually something like C:\Users\username\AppData\Roaming\vlc\vlc-qt-interface.ini.
+        ///   Looks up a localized string similar to No ini files found in the VLC Folder.
+        /// </summary>
+        public static string VideoPlayer_VLCINIMissing {
+            get {
+                return ResourceManager.GetString("VideoPlayer_VLCINIMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Any version of VLC can be used with JMM for general file playback. However only VLC version 2.2 and newer are able to take advantage of the video player integration as &apos;Resume from last position&quot; is not available in older versions. VLC also enables the required settings by default so you don&apos;t need to do any additional configuration. The location of the VLC .ini file is usually something like C:\Users\username\AppData\Roaming\vlc\vlc-qt-interface.ini.
         /// </summary>
         public static string VideoPlayer_VLCNote {
             get {
@@ -9012,20 +12749,56 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to VLC Options.
+        ///   Looks up a localized string similar to VLC Folder does not exist.
         /// </summary>
-        public static string VideoPlayer_VLCOptions {
+        public static string VideoPlayer_VLCNotFound {
             get {
-                return ResourceManager.GetString("VideoPlayer_VLCOptions", resourceCulture);
+                return ResourceManager.GetString("VideoPlayer_VLCNotFound", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Test VLC File.
+        ///   Looks up a localized string similar to VLC Folder not selected.
+        /// </summary>
+        public static string VideoPlayer_VLCNotSelected {
+            get {
+                return ResourceManager.GetString("VideoPlayer_VLCNotSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test VLC INI File.
         /// </summary>
         public static string VideoPlayer_VLCTest {
             get {
                 return ResourceManager.GetString("VideoPlayer_VLCTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comment View.
+        /// </summary>
+        public static string ViewComment_Comment {
+            get {
+                return ResourceManager.GetString("ViewComment_Comment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From AniDB.
+        /// </summary>
+        public static string ViewComment_FromAniDB {
+            get {
+                return ResourceManager.GetString("ViewComment_FromAniDB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From Trakt.
+        /// </summary>
+        public static string ViewComment_FromTrakt {
+            get {
+                return ResourceManager.GetString("ViewComment_FromTrakt", resourceCulture);
             }
         }
         
@@ -9075,7 +12848,7 @@ namespace JMMClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to View: .
+        ///   Looks up a localized string similar to View:.
         /// </summary>
         public static string ViewLabel {
             get {

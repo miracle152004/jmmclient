@@ -208,7 +208,7 @@
                     <Button HorizontalAlignment="Left" Name="btnEnable" Margin="5,0,0,0" Style="{DynamicResource FlatButtonStyle}" Width="Auto"
                             Visibility="{Binding Path=Disabled, Converter={StaticResource BooleanToVisibilityConverter}}"
                             Command="{StaticResource EnableSectionCommand}" CommandParameter="{Binding}" 
-                            ToolTip="Enable Section">
+                            ToolTip="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_MetroEnable}">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
                             <Image Height="26" Width="26" Source="/Images/Metro/check_false.png" Margin="0,0,0,0"/>
 
@@ -218,7 +218,7 @@
                     <Button HorizontalAlignment="Left" Name="btnDisable" Margin="5,0,0,0" Style="{DynamicResource FlatButtonStyle}" Width="Auto"
                             Visibility="{Binding Path=Enabled, Converter={StaticResource BooleanToVisibilityConverter}}"
                             Command="{StaticResource DisableSectionCommand}" CommandParameter="{Binding}" 
-                            ToolTip="Enable Section">
+                            ToolTip="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_MetroEnable}">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
                             <Image Height="26" Width="26" Source="/Images/Metro/check_true.png" Margin="0,0,0,0"/>
 
@@ -348,7 +348,7 @@
 
                 
                 <StackPanel Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" Orientation="Horizontal" Margin="10,10,2,2" >
-                    <TextBlock VerticalAlignment="Center" Text="Items" Margin="0,0,5,0" Foreground="Black"/>
+                    <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Items}" Margin="0,0,5,0" Foreground="Black"/>
                     <extToolkit:IntegerUpDown Name="udItemsContinueWatching" Minimum="1" Maximum="100" DefaultValue="10" VerticalAlignment="Center" 
                                       Value="{Binding Source={x:Static local:UserSettingsVM.Instance},Path=DashMetro_WatchNext_Items}" />
                 </StackPanel>
@@ -358,7 +358,7 @@
 
                
                 <StackPanel Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" Orientation="Horizontal" Margin="10,10,2,2" >
-                    <TextBlock VerticalAlignment="Center" Text="Items" Margin="0,0,5,0" Foreground="Black"/>
+                    <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Items}" Margin="0,0,5,0" Foreground="Black"/>
                     <extToolkit:IntegerUpDown Name="udItemsRandomSeries" Minimum="1" Maximum="100" DefaultValue="5" VerticalAlignment="Center" 
                                       Value="{Binding Source={x:Static local:UserSettingsVM.Instance},Path=DashMetro_RandomSeries_Items}" />
                 </StackPanel>
@@ -394,7 +394,7 @@
                 
 
                 <!-- Edit Dashboard -->
-                <Button Name="btnOptions" Margin="0,2,2,2" Style="{DynamicResource FlatButtonStyle}" ToolTip="Settings"
+                <Button Name="btnOptions" Margin="0,2,2,2" Style="{DynamicResource FlatButtonStyle}" ToolTip="{Resx ResxName=JMMClient.Properties.Resources, Key=Dashboard_Settings}"
                                          Visibility="{Binding Source={x:Static local:DashboardMetroVM.Instance}, Path=IsReadOnly, Converter={StaticResource BooleanToVisibilityConverter}}"
                         >
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
@@ -404,7 +404,7 @@
                 </Button>
 
                 <!-- Toggle Dash -->
-                <Button Name="btnToggleDash" Margin="0,2,2,2" Style="{DynamicResource FlatButtonStyle}" ToolTip="Regular Dashboard">
+                <Button Name="btnToggleDash" Margin="0,2,2,2" Style="{DynamicResource FlatButtonStyle}" ToolTip="{Resx ResxName=JMMClient.Properties.Resources, Key=Dashboard_Regular}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
                         <Image Height="24" Width="24" Source="/Images/Metro/Row.png" Margin="0,0,0,0"/>
                     </StackPanel>
@@ -423,13 +423,10 @@
                 <TextBlock IsHitTestVisible="False"  Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Metro_Continue}" Foreground="Black" FontSize="24" FontFamily="Segoe UI" FontWeight="Bold"  VerticalAlignment="Center"/>
 
                 <!-- Refresh -->
-                <Button Name="btnRefresh" Margin="12,2,2,2" Style="{DynamicResource FlatButtonStyle}">
+                <Button Name="btnRefresh" Margin="12,2,2,2" Style="{DynamicResource FlatButtonStyle}" ToolTip="{Resx ResxName=JMMClient.Properties.Resources, Key=Metro_Refresh}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                        <Image Height="24" Width="24" Source="/Images/Metro/refresh.png" Margin="0,0,0,0"/>
+                        <Image Height="24" Width="24" Source="/Images/Metro/refresh_32.png" Margin="0,0,0,0"/>
                     </StackPanel>
-                    <Button.ToolTip>
-                        <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Metro_Refresh}"/>
-                    </Button.ToolTip>
                 </Button>
 
             </StackPanel>
@@ -481,13 +478,10 @@
                        Foreground="Black" FontSize="24" FontFamily="Segoe UI" FontWeight="Bold"   />
 
                 <!-- Refresh -->
-                <Button Name="btnRefreshRandomSeries" Margin="12,2,2,2" Style="{DynamicResource FlatButtonStyle}">
+                <Button Name="btnRefreshRandomSeries" Margin="12,2,2,2" Style="{DynamicResource FlatButtonStyle}" ToolTip="{Resx ResxName=JMMClient.Properties.Resources, Key=Metro_Refresh}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                        <Image Height="24" Width="24" Source="/Images/Metro/refresh.png" Margin="0,0,0,0"/>
+                        <Image Height="24" Width="24" Source="/Images/Metro/refresh_32.png" Margin="0,0,0,0"/>
                     </StackPanel>
-                    <Button.ToolTip>
-                        <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Metro_Refresh}"/>
-                    </Button.ToolTip>
                 </Button>
             </StackPanel>
 
@@ -539,13 +533,10 @@
                        Foreground="Black" FontSize="24" FontFamily="Segoe UI" FontWeight="Bold"   />
 
                 <!-- Refresh -->
-                <Button Name="btnRefreshNewEpisodes" Margin="12,2,2,2" Style="{DynamicResource FlatButtonStyle}">
+                <Button Name="btnRefreshNewEpisodes" Margin="12,2,2,2" Style="{DynamicResource FlatButtonStyle}" ToolTip="{Resx ResxName=JMMClient.Properties.Resources, Key=Metro_Refresh}">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                        <Image Height="24" Width="24" Source="/Images/Metro/refresh.png" Margin="0,0,0,0"/>
+                        <Image Height="24" Width="24" Source="/Images/Metro/refresh_32.png" Margin="0,0,0,0"/>
                     </StackPanel>
-                    <Button.ToolTip>
-                        <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Metro_Refresh}"/>
-                    </Button.ToolTip>
                 </Button>
             </StackPanel>
 

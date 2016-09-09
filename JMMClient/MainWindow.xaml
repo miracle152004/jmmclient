@@ -108,6 +108,7 @@
             <DataTemplate x:Key="groupCountTemplate">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="{Binding Path=GroupCount}" />
+                    <TextBlock Text=" " />
                     <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Group_GroupCount}" />
                 </StackPanel>
             </DataTemplate>
@@ -216,7 +217,7 @@
         </Grid.RowDefinitions>
 
         <TabControl Grid.Column="0" Grid.Row="0" x:Name="tabControl1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0"  
-                    Style="{DynamicResource tabMain}">
+                    Style="{DynamicResource tabMain}" >
 
             <!-- Dashboard tab-->
             <TabItem x:Name="tabDashboard" Style="{DynamicResource tabMainItem}"
@@ -272,28 +273,28 @@
                                     <!-- Back -->
                                     <Button Name="btnToolbarBack" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}" Command="{StaticResource BackCommand}">
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                            <Image Height="16" Width="16" Source="/Images/16_Back.png" Margin="0,0,5,0"/>
+                                            <Image Height="16" Width="16" Source="/Images/32_back.png" Margin="0,0,5,0"/>
                                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Back}" Margin="0,0,5,0"/>
                                         </StackPanel>
                                     </Button>
                                     <!-- Refresh -->
                                     <Button Name="btnToolbarRefresh" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}" Command="{StaticResource RefreshCommand}">
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                            <Image Height="16" Width="16" Source="/Images/16_Refresh.png" Margin="0,0,5,0"/>
+                                            <Image Height="16" Width="16" Source="/Images/32_refresh.png" Margin="0,0,5,0"/>
                                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Refresh}" Margin="0,0,5,0"/>
                                         </StackPanel>
                                     </Button>
                                     <!-- New Group Filter -->
                                     <Button Name="btnToolbarNewGroupFilter" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}" Command="{StaticResource NewGroupFilterCommand}">
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                            <Image Height="16" Width="16" Source="/Images/32_folder_add.png" Margin="0,0,5,0"/>
+                                            <Image Height="16" Width="16" Source="/Images/24_folder_filter.png" Margin="0,0,5,0"/>
                                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=NewGroupFilter}" Margin="0,0,5,0"/>
                                         </StackPanel>
                                     </Button>
                                     <!-- New Group -->
                                     <Button Name="btnToolbarNewGroup" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}" Command="{StaticResource NewGroupCommand}">
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                            <Image Height="16" Width="16" Source="/Images/32_folder_add.png" Margin="0,0,5,0"/>
+                                            <Image Height="16" Width="16" Source="/Images/24_folder_group.png" Margin="0,0,5,0"/>
                                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=NewGroup}" Margin="0,0,5,0"/>
                                         </StackPanel>
                                     </Button>
@@ -302,7 +303,7 @@
                                 <Border BorderThickness="1,0,1,0" BorderBrush="LightGray" Visibility="{Binding Source={x:Static local:MainListHelperVM.Instance}, Path=CurrentWrapperIsGroup, Converter={StaticResource BooleanToVisibilityConverter}}">
                                     <StackPanel Orientation="Horizontal" >
 
-                                        <ComboBox Name="cboGroupSort" Margin="10,5,5,5"></ComboBox>
+                                        <ComboBox Name="cboGroupSort" Margin="10,2,5,2"></ComboBox>
                                         <!-- New Group -->
                                         <Button Name="btnToolbarSort" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}">
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
@@ -317,15 +318,13 @@
                                 <!-- Search box for groups -->
                                 <Border>
                                     <StackPanel Orientation="Horizontal" >
-                                        <Image Source="Images/MagnifyingGlass7.png" Width="16" Height="16" Margin="5,0,0,0" ></Image>
+                                        <Image Source="Images/32_search.png" Width="16" Height="16" Margin="5,0,0,0" ></Image>
 
-                                        <TextBox Name="txtGroupSearch" Width="180" Margin="10,3,0,3" BorderThickness="1" 
-                                                 ToolTip="{usercontrols:Info Title={Resx ResxName=JMMClient.Properties.Resources, Key=Search}, 
-                                                Body={Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_GroupSearch}}">
+                                        <TextBox Name="txtGroupSearch" Width="180" Margin="10,3,0,3" BorderThickness="1" VerticalAlignment="Center" ToolTip="{usercontrols:Info Title=Search, Body=Tooltip_GroupSearch}">
 
                                         </TextBox>
                                         <Button Name="btnClearSearch" Style="{DynamicResource FlatButtonStyle}" Command="{StaticResource ClearSearchCommand}">
-                                            <Image Height="16" Width="16" Source="Images/32_Delete.png" Margin="0,0,0,0"/>
+                                            <Image Height="16" Width="16" Source="Images/16_cancel.png" Margin="0,0,0,0"/>
                                         </Button>
                                     </StackPanel>
                                 </Border>
@@ -377,22 +376,23 @@
                             <!-- add sub group -->
                             <Button  Name="btnAddSubGroup" Margin="3,2,2,2" Style="{DynamicResource FlatButtonStyle}" Command="{DynamicResource AddSubGroupCommand}" CommandParameter="{Binding Source={x:Static local:MainListHelperVM.Instance}, Path=CurrentWrapper}">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                    <Image Height="16" Width="16" Source="/Images/32_folder_add.png" Margin="0,0,3,0"/>
+                                    <Image Height="16" Width="16" Source="/Images/24_folder_group.png" Margin="0,0,3,0"/>
                                     <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=AddSubGroup}" Margin="0,0,0,0"/>
                                 </StackPanel>
                             </Button>
                             <!-- add series -->
                             <Button  Name="btnAddSeries" Margin="3,2,2,2" Style="{DynamicResource FlatButtonStyle}" Command="{DynamicResource CreateSeriesFromAnimeCommand}" CommandParameter="{Binding Source={x:Static local:MainListHelperVM.Instance}, Path=CurrentWrapper}">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                    <Image Height="16" Width="16" Source="/Images/16_television.png" Margin="0,0,3,0"/>
+                                    <Image Height="16" Width="16" Source="/Images/32_television.png" Margin="0,0,3,0"/>
                                     <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=NewSeries}" Margin="0,0,0,0"/>
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-                        <ListBox DockPanel.Dock="Top" Name="lbGroupsSeries" BorderThickness="0" Background="Transparent" 
+                        <ListBox DockPanel.Dock="Top" Name="lbGroupsSeries" BorderThickness="0" Background="Transparent" VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Standard" 
                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemTemplateSelector="{StaticResource MainListTemplateSelector}" 
                          ItemContainerStyle="{DynamicResource ListBoxItemStyle}" ItemsSource="{Binding Source={x:Static local:MainListHelperVM.Instance},Path=ViewGroups}"
                          >
+
                         </ListBox>
                     </DockPanel>
 
@@ -447,7 +447,7 @@
                             <!-- Refresh -->
                             <Button Name="btnRefreshPlaylists" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}" Command="{StaticResource RefreshPlaylistCommand}">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                    <Image Height="16" Width="16" Source="/Images/16_Refresh.png" Margin="0,0,5,0"/>
+                                    <Image Height="16" Width="16" Source="/Images/32_refresh.png" Margin="0,0,5,0"/>
                                     <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Refresh}" Margin="0,0,5,0"/>
                                 </StackPanel>
                             </Button>
@@ -455,7 +455,7 @@
                             <!-- new playlist -->
                             <Button  Name="btnAddPlaylist" Margin="3,2,2,2" Style="{DynamicResource FlatButtonStyle}" Command="{DynamicResource AddPlaylistCommand}">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                    <Image Height="16" Width="16" Source="/Images/32_folder_add.png" Margin="0,0,3,0"/>
+                                    <Image Height="16" Width="16" Source="/Images/32_playlist_add.png" Margin="0,0,3,0"/>
                                     <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Playlist_NewPlaylist}" Margin="0,0,0,0"/>
                                 </StackPanel>
                             </Button>
@@ -465,6 +465,7 @@
                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemTemplateSelector="{StaticResource PlaylistTemplateSelector}" 
                          ItemContainerStyle="{DynamicResource ListBoxItemStyle}" ItemsSource="{Binding Source={x:Static local:PlaylistHelperVM.Instance},Path=ViewPlaylists}"
                          >
+
                         </ListBox>
                     </DockPanel>
 
@@ -546,7 +547,7 @@
                         <!-- Hasher clear -->
                         <Button Name="btnClearHasherQueue" Grid.Column="0" Grid.Row="3" Margin="10,2,2,2" Style="{DynamicResource RoundButtonStyle}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/32_delete.png" Margin="0,0,0,0"/>
+                                <Image Height="16" Width="16" Source="/Images/16_clear.png" Margin="0,0,0,0"/>
                             </StackPanel>
                             <Button.ToolTip>
                                 <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_ClearHash}" Foreground="Black" FontWeight="DemiBold"/>
@@ -557,14 +558,14 @@
                         <Button Grid.Column="1" Grid.Row="3" Margin="2,2,2,2" Style="{DynamicResource RoundButtonStyle}" Command="{StaticResource HasherQueuePauseCommand}"
                         Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=HasherQueueRunning, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/Pause.png" Margin="0,0,0,0"/>
+                                <Image Height="16" Width="16" Source="/Images/16_pause.png" Margin="0,0,0,0"/>
                             </StackPanel>
                         </Button>
                         <!-- Hasher resume -->
                         <Button Grid.Column="1" Grid.Row="3" Margin="2,2,2,2" Style="{DynamicResource RoundButtonStyle}" Command="{StaticResource HasherQueueResumeCommand}"
                         Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=HasherQueuePaused, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/Play.png" Margin="0,0,0,0"/>
+                                <Image Height="16" Width="16" Source="/Images/32_resume.png" Margin="0,0,0,0"/>
                             </StackPanel>
                         </Button>
 
@@ -589,7 +590,7 @@
                         <!-- General clear -->
                         <Button Name="btnClearGeneralQueue" Grid.Column="0" Grid.Row="4" Margin="10,2,2,2" Style="{DynamicResource RoundButtonStyle}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/32_delete.png" Margin="0,0,0,0"/>
+                                <Image Height="16" Width="16" Source="/Images/16_clear.png" Margin="0,0,0,0"/>
                             </StackPanel>
                             <Button.ToolTip>
                                 <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_ClearGeneral}" Foreground="Black" FontWeight="DemiBold"/>
@@ -600,14 +601,14 @@
                         <Button Grid.Column="1" Grid.Row="4" Margin="2,2,2,2" Style="{DynamicResource RoundButtonStyle}" Command="{StaticResource GeneralQueuePauseCommand}"
                         Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=GeneralQueueRunning, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/Pause.png" Margin="0,0,0,0"/>
+                                <Image Height="16" Width="16" Source="/Images/16_pause.png" Margin="0,0,0,0"/>
                             </StackPanel>
                         </Button>
                         <!-- General resume -->
                         <Button Grid.Column="1" Grid.Row="4" Margin="2,2,2,2" Style="{DynamicResource RoundButtonStyle}" Command="{StaticResource GeneralQueueResumeCommand}"
                         Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=GeneralQueuePaused, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/Play.png" Margin="0,0,0,0"/>
+                                <Image Height="16" Width="16" Source="/Images/32_resume.png" Margin="0,0,0,0"/>
                             </StackPanel>
                         </Button>
 
@@ -632,7 +633,7 @@
                         <!-- ServerImage clear -->
                         <Button Name="btnClearServerImageQueue" Grid.Column="0" Grid.Row="5" Margin="10,2,2,2" Style="{DynamicResource RoundButtonStyle}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/32_delete.png" Margin="0,0,0,0"/>
+                                <Image Height="16" Width="16" Source="/Images/16_clear.png" Margin="0,0,0,0"/>
                             </StackPanel>
                             <Button.ToolTip>
                                 <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_ClearGeneral}" Foreground="Black" FontWeight="DemiBold"/>
@@ -643,20 +644,20 @@
                         <Button Grid.Column="1" Grid.Row="5" Margin="2,2,2,2" Style="{DynamicResource RoundButtonStyle}" Command="{StaticResource ServerImageQueuePauseCommand}"
                         Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=ServerImageQueueRunning, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/Pause.png" Margin="0,0,0,0"/>
+                                <Image Height="16" Width="16" Source="/Images/16_pause.png" Margin="0,0,0,0"/>
                             </StackPanel>
                         </Button>
                         <!-- ServerImage resume -->
                         <Button Grid.Column="1" Grid.Row="5" Margin="2,2,2,2" Style="{DynamicResource RoundButtonStyle}" Command="{StaticResource ServerImageQueueResumeCommand}"
                         Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=ServerImageQueuePaused, Converter={StaticResource BooleanToVisibilityConverter}}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/Play.png" Margin="0,0,0,0"/>
+                                <Image Height="16" Width="16" Source="/Images/32_resume.png" Margin="0,0,0,0"/>
                             </StackPanel>
                         </Button>
 
                         <!-- Server Images status -->
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="2" Grid.Row="5">
-                            <Image Height="16" Width="16" Source="Images/32_Image.png" Margin="10,0,5,0" VerticalAlignment="Center"/>
+                            <Image Height="16" Width="16" Source="Images/16_image.png" Margin="10,0,5,0" VerticalAlignment="Center"/>
                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=JMMServer_ServerImage}" Margin="0,0,0,0"/>
                             <TextBlock VerticalAlignment="Center" Text=" - " Margin="0,0,0,0"/>
                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=JMMServer_Running}" Margin="0,0,5,0"
@@ -677,7 +678,7 @@
                         <!-- Run Import -->
                         <Button HorizontalAlignment="Left" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="6" Name="btnRunImport" Margin="10,0,0,0" Style="{DynamicResource FlatButtonStyle}" Command="{StaticResource RunImportCommand}" Width="Auto">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/32_import.png" Margin="0,0,5,0"/>
+                                <Image Height="16" Width="16" Source="/Images/16_update_data.png" Margin="0,0,5,0"/>
                                 <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=RunImport}" Margin="0,0,5,0"/>
                             </StackPanel>
                         </Button>
@@ -685,20 +686,20 @@
                         <!-- Remove Missing Files -->
                         <Button Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Left" Name="btnRemoveMissingFiles" Margin="10,0,0,0" Style="{DynamicResource FlatButtonStyle}" 
                             Command="{StaticResource RemoveMissingFilesCommand}" Width="Auto"
-                            ToolTip="{usercontrols:Info Title={Resx ResxName=JMMClient.Properties.Resources, Key=RemoveMissingFiles}, 
-                                                Body={Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_RemoveMissingFiles}}">
+                            ToolTip="{usercontrols:Info Title=RemoveMissingFiles, 
+                                                Body=Tooltip_RemoveMissingFiles}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/32_import.png" Margin="0,0,5,0"/>
+                                <Image Height="16" Width="16" Source="/Images/16_update_data.png" Margin="0,0,5,0"/>
                                 <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=RemoveMissingFiles}" Margin="0,0,5,0"/>
                             </StackPanel>
                         </Button>
 
                         <!-- Update Media Info -->
                         <Button Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Left" Name="btnUpdateMediaInfo" Margin="10,0,0,0" Style="{DynamicResource FlatButtonStyle}" 
-                            Width="Auto" ToolTip="{usercontrols:Info Title={Resx ResxName=JMMClient.Properties.Resources, Key=UpdateMediaInfo}, 
-                                                Body={Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_UpdateMediaInfo}}">
+                            Width="Auto" ToolTip="{usercontrols:Info Title=UpdateMediaInfo, 
+                                                Body=Tooltip_UpdateMediaInfo}">
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                <Image Height="16" Width="16" Source="/Images/32_import.png" Margin="0,0,5,0"/>
+                                <Image Height="16" Width="16" Source="/Images/16_update_data.png" Margin="0,0,5,0"/>
                                 <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=UpdateMediaInfo}" Margin="0,0,5,0"/>
                             </StackPanel>
                         </Button>
@@ -723,16 +724,16 @@
                         <StackPanel Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="6" Margin="10,0,0,0" Orientation="Horizontal">
                             <Button HorizontalAlignment="Left" Name="btnSyncMalUp" Style="{DynamicResource FlatButtonStyle}" Command="{StaticResource SyncMALUpCommand}" Width="Auto">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" 
-                                        ToolTip="{usercontrols:Info Title={Resx ResxName=JMMClient.Properties.Resources, Key=SyncMalUp}, 
-                                                Body={Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_SyncMalUp}}">
+                                        ToolTip="{usercontrols:Info Title=SyncMalUp, 
+                                                Body=Tooltip_SyncMalUp}">
                                     <Image Height="16" Width="16" Source="/Images/32_sync.png" Margin="0,0,5,0"/>
                                     <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=SyncMalUp}" Margin="0,0,5,0"/>
                                 </StackPanel>
                             </Button>
                             <Button HorizontalAlignment="Left" Name="btnSyncMalDown" Margin="10,0,0,0" Style="{DynamicResource FlatButtonStyle}" Command="{StaticResource SyncMALDownCommand}" Width="Auto">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" 
-                                        ToolTip="{usercontrols:Info Title={Resx ResxName=JMMClient.Properties.Resources, Key=SyncMalDown}, 
-                                                Body={Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_SyncMalDown}}">
+                                        ToolTip="{usercontrols:Info Title=SyncMalDown, 
+                                                Body=Tooltip_SyncMalDown}">
                                     <Image Height="16" Width="16" Source="/Images/32_sync.png" Margin="0,0,5,0"/>
                                     <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=SyncMalDown}" Margin="0,0,5,0"/>
                                 </StackPanel>
@@ -882,6 +883,9 @@
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
@@ -896,8 +900,8 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
-                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=INFO_SettingsEssential}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Info_SettingsEssential}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1" />
                                     </Grid>
                                 </Border>
 
@@ -931,15 +935,15 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/64_admin.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_admin.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
                                         <usercontrols:HyperLinkStandard Margin="0,0,20,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=AniDBSignup}" Grid.Column="1"
                                                                         URL="http://anidb.net"/>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="2" VerticalAlignment="Top"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="2" VerticalAlignment="Top"/>
                                         <usercontrols:HyperLinkStandard Margin="0,0,20,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=AvdumpInfoLink}" Grid.Column="3"
                                                                         URL="http://wiki.anidb.net/w/Avdump2"/>
 
-                                        <Image Height="16" Width="16" Source="/Images/16_key.png" Margin="5,2,5,0" Grid.Column="4" VerticalAlignment="Top"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_key.png" Margin="5,2,4,0" Grid.Column="4" VerticalAlignment="Top"/>
                                         <usercontrols:HyperLinkStandard Margin="0,0,20,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=AvdumpKeyEditLink}" Grid.Column="5"
                                                                         URL="http://anidb.net/perl-bin/animedb.pl?show=profile"/>
 
@@ -961,6 +965,33 @@
                                 </Border>
 
                                 <usercontrols:ImportSettings Grid.Column="0" Grid.Row="9" Margin="0,0,0,10"
+                                        Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=ShowServerSettings, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="10" Background="#FFE9ECEF" Margin="0,0,0,5"
+                                        Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=ShowServerSettings, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <TextBlock  Text="{Resx ResxName=JMMClient.Properties.Resources, Key=TAB_Settings_RelationSettings}" Margin="5,0,0,0" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                </Border>
+
+                                <Border Style="{DynamicResource ToolbarBorderControlStyle}" Grid.Column="0" Grid.Row="11"  Background="#F1F1F1" Margin="0,0,0,5" Padding="5" Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=ShowServerSettings, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="25"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=RelationSettings_Info}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0"/>
+
+                                        <usercontrols:HyperLinkStandard Margin="0,0,0,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=LearnMore_RelationSettings}"  Grid.Column="1" Grid.Row="1" URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_RelationSettings}"/>
+                                    </Grid>
+                                </Border>
+
+                                <usercontrols:RelationSettings Grid.Column="0" Grid.Row="12" Margin="0,0,0,10"
                                         Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=ShowServerSettings, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                             </Grid>
@@ -1018,15 +1049,15 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/64_admin.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_admin.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
                                         <usercontrols:HyperLinkStandard Margin="0,0,20,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=AniDBSignup}" Grid.Column="1"
                                                                         URL="http://anidb.net"/>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="2" VerticalAlignment="Top"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="2" VerticalAlignment="Top"/>
                                         <usercontrols:HyperLinkStandard Margin="0,0,20,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=AvdumpInfoLink}" Grid.Column="3"
                                                                         URL="http://wiki.anidb.net/w/Avdump2"/>
 
-                                        <Image Height="16" Width="16" Source="/Images/16_key.png" Margin="5,2,5,0" Grid.Column="4" VerticalAlignment="Top"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_key.png" Margin="5,2,4,0" Grid.Column="4" VerticalAlignment="Top"/>
                                         <usercontrols:HyperLinkStandard Margin="0,0,20,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=AvdumpKeyEditLink}" Grid.Column="5"
                                                                         URL="http://anidb.net/perl-bin/animedb.pl?show=profile"/>
 
@@ -1061,8 +1092,8 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
-                                        <usercontrols:HyperLinkStandard VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=DetailedInformationLink}" Grid.Column="1"
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <usercontrols:HyperLinkStandard VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=LearnMore_AniDBOptions}" Grid.Column="1"
                                                                         URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_AniDBSettings}"/>
                                     </Grid>
                                 </Border>
@@ -1091,8 +1122,8 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
-                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=INFO_SettingsDisplayStyle}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Info_SettingsLanguage}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
                                     </Grid>
                                 </Border>
 
@@ -1127,10 +1158,10 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
 
-                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="#FFE9ECEF" Padding="5" Margin="0,0,0,5">
+                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="#FFE9ECEF" Padding="4" Margin="0,0,0,5">
 
                                     <StackPanel Orientation="Horizontal">
-                                        <Image Height="16" Width="16" Source="/Images/tvdb.ico" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Center"/>
+                                        <Image Height="24" Width="24" Source="/Images/32_tvdb.png" Margin="5,0,5,0" Grid.Column="0" VerticalAlignment="Center"/>
                                         <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=TAB_SettingsOnlineDB_TvDB}" Margin="5,0,0,0" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
                                         <usercontrols:HyperLinkStandard VerticalAlignment="Center" Margin="5,0,0,0" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=WhatsThis}"
                                                                         URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_TvDB}"/>
@@ -1140,10 +1171,10 @@
 
                                 <usercontrols:TvDBSettings Grid.Column="0" Grid.Row="1" Margin="5,0,0,10"/>
 
-                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="2" Background="#FFE9ECEF" Padding="5" Margin="0,0,0,5">
+                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="2" Background="#FFE9ECEF" Padding="4" Margin="0,0,0,5">
 
                                     <StackPanel Orientation="Horizontal">
-                                        <Image Height="16" Width="16" Source="/Images/moviedb.ico" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Center"/>
+                                        <Image Height="24" Width="24" Source="/Images/32_tmdb.png" Margin="5,0,5,0" Grid.Column="0" VerticalAlignment="Center"/>
                                         <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=TAB_SettingsOnlineDB_MovieDB}" Margin="5,0,0,0" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
                                         <usercontrols:HyperLinkStandard VerticalAlignment="Center" Margin="5,0,0,0" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=WhatsThis}"
                                                                         URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_TMDb}"/>
@@ -1154,10 +1185,10 @@
 
                                 <usercontrols:MovieDBSettings Grid.Column="0" Grid.Row="3" Margin="5,0,0,10"/>
 
-                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="4" Background="#FFE9ECEF" Padding="5" Margin="0,0,0,5">
+                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="4" Background="#FFE9ECEF" Padding="4" Margin="0,0,0,5">
 
                                     <StackPanel Orientation="Horizontal">
-                                        <Image Height="16" Width="16" Source="/Images/trakttv.ico" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Center"/>
+                                        <Image Height="24" Width="24" Source="/Images/32_trakt.png" Margin="5,0,5,0" Grid.Column="0" VerticalAlignment="Center"/>
                                         <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=TAB_SettingsOnlineDB_Trakt}" Margin="5,0,0,0" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
                                         <usercontrols:HyperLinkStandard VerticalAlignment="Center" Margin="5,0,0,0" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=WhatsThis}"
                                                                         URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_Trakt}"/>
@@ -1167,9 +1198,9 @@
 
                                 <usercontrols:TraktSettings Grid.Column="0" Grid.Row="5" Margin="5,0,0,10"/>
 
-                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="6" Background="#FFE9ECEF" Padding="5" Margin="0,0,0,5">
+                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="6" Background="#FFE9ECEF" Padding="4" Margin="0,0,0,5">
                                     <StackPanel Orientation="Horizontal">
-                                        <Image Height="16" Width="16" Source="/Images/myanimelist.ico" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Center"/>
+                                        <Image Height="24" Width="24" Source="/Images/32_mal.png" Margin="5,0,5,0" Grid.Column="0" VerticalAlignment="Center"/>
                                         <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=TAB_SettingsOnlineDB_MAL}" Margin="5,0,0,0" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
                                         <usercontrols:HyperLinkStandard VerticalAlignment="Center" Margin="5,0,0,0" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=WhatsThis}"
                                                                         URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_MAL}"/>
@@ -1209,6 +1240,7 @@
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
                                         </Grid.RowDefinitions>
 
                                         <Grid.ColumnDefinitions>
@@ -1216,8 +1248,10 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
-                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=INFO_SettingsWebCache}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Info_SettingsWebCache}" Margin="0,1,5,0" TextWrapping="Wrap" Grid.Column="1"/>
+                                        <usercontrols:HyperLinkStandard Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,5,0" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=LearnMore_WebCache}"
+                                                                        URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_WebCache}"/>
                                     </Grid>
                                 </Border>
 
@@ -1227,24 +1261,6 @@
 
                                 <usercontrols:WebCacheBasicSettings Grid.Column="0" Grid.Row="2" Margin="5,0,0,10"/>
 
-                                <Border Style="{DynamicResource ToolbarBorderControlStyle}" Grid.Column="0" Grid.Row="3"  Background="#F1F1F1" Margin="0,0,0,5" Padding="5">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"></RowDefinition>
-                                        </Grid.RowDefinitions>
-
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="25"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
-                                        <usercontrols:HyperLinkStandard VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=DetailedInformationLink}" Grid.Column="1"
-                                                                        URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_WebCache}"/>
-                                    </Grid>
-                                </Border>
-
-
                             </Grid>
                         </ScrollViewer>
                     </TabItem>
@@ -1253,6 +1269,7 @@
                     <TabItem Header="{Resx ResxName=JMMClient.Properties.Resources, Key=TAB_SettingsDisplay}" Name="tabSettingDisplay"
                              Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=ServerOnline, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <ScrollViewer>
+                            
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
@@ -1271,15 +1288,7 @@
                                 </Grid.RowDefinitions>
 
 
-
-
-                                <!-- Styles -->
-
-                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="3" Background="#FFE9ECEF" Margin="0,0,0,5">
-                                    <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=TAB_SettingsStyle}" Margin="5,0,0,0" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
-                                </Border>
-
-                                <Border Style="{DynamicResource ToolbarBorderControlStyle}" Grid.Column="0" Grid.Row="4"  Background="#F1F1F1" Margin="0,0,0,5" Padding="5">
+                                <Border Style="{DynamicResource ToolbarBorderControlStyle}" Grid.Column="0" Grid.Row="1"  Background="#F1F1F1" Margin="0,0,0,5" Padding="5">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"></RowDefinition>
@@ -1290,10 +1299,17 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
-                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=INFO_SettingsDisplayStyle}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Info_SettingsDisplay}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
                                     </Grid>
                                 </Border>
+                                
+                                <!-- Styles -->
+
+                                <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="3" Background="#FFE9ECEF" Margin="0,0,0,5">
+                                    <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=TAB_SettingsStyle}" Margin="5,0,0,0" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                </Border>
+  
 
                                 <usercontrols:DisplayStyleSettings Grid.Column="0" Grid.Row="5" Margin="5,0,0,10"/>
 
@@ -1331,12 +1347,12 @@
                                         </Grid.RowDefinitions>
 
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="40"/>
+                                            <ColumnDefinition Width="25"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="24" Width="24" Source="/Images/64_user.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
-                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=INFO_SettingsUserAdmin}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Info_SettingsUserAdmin}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
                                     </Grid>
                                 </Border>
 
@@ -1350,7 +1366,7 @@
                     </TabItem>
 
                     <!-- Video Player tab -->
-                    <TabItem Header="Video Player" Name="tabSettingVideoPlayer"
+                    <TabItem Header="{Resx ResxName=JMMClient.Properties.Resources, Key=VideoPlayer_VideoPlayer}" Name="tabSettingVideoPlayer"
                              Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=ServerOnline, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <ScrollViewer>
                             <Grid>
@@ -1373,10 +1389,9 @@
 
 
 
-                                <!-- Media Player Classic -->
 
                                 <Border BorderBrush="LightGray" BorderThickness="1" Grid.Column="0" Grid.Row="0" Background="#FFE9ECEF" Margin="0,0,0,5">
-                                    <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=VideoPlayer_MPCI}" Margin="5,0,0,0" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                    <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=VideoPlayer_VideoPlayer}" Margin="5,0,0,0" Padding="3" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
                                 </Border>
 
 
@@ -1453,7 +1468,7 @@
                     </TabItem>
 
                     <TabItem Header="{Resx ResxName=JMMClient.Properties.Resources, Key=Tab_Recommendations}" Name="tabRecommendations">
-                        <usercontrols:DownloadRecommendationsControl Width="{Binding Source={x:Static local:MainListHelperVM.Instance},Path=DownloadRecScrollerWidth}"/>
+                        <usercontrols:DownloadRecommendationsControl/>
 
                     </TabItem>
 
@@ -1488,7 +1503,8 @@
                                 <Border Style="{DynamicResource ToolbarBorderControlStyle}" Grid.Column="0" Grid.Row="0"  Background="#F1F1F1" Margin="0,0,0,5" Padding="5">
                                     <Grid>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
 
                                         <Grid.ColumnDefinitions>
@@ -1498,11 +1514,11 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
-                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Downloads_uTorrentInfo}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Info_Downloads}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
 
-                                        <usercontrols:HyperLinkStandard Margin="5,0,20,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=MoreInfo}"  Grid.Column="2"
-                                                                        URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_uTorrent}"/>
+                                        <usercontrols:HyperLinkStandard Margin="0,0,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=LearnMore_Downloads}" 
+                                                                        URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_Downloads}"/>
                                     </Grid>
                                 </Border>
 
@@ -1541,7 +1557,7 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
                                         <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Downloads_BakaBTInfo}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
 
                                         <usercontrols:HyperLinkStandard Margin="5,0,20,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=Downloads_GoTo}"  Grid.Column="2"
@@ -1568,7 +1584,7 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,5,0" Grid.Column="0" VerticalAlignment="Top"/>
+                                        <Image Height="16" Width="16" Source="/Images/32_info.png" Margin="5,2,4,0" Grid.Column="0" VerticalAlignment="Top"/>
                                         <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Downloads_AnimeBytesInfo}" Margin="0,0,5,0" TextWrapping="Wrap" Grid.Column="1"/>
 
                                         <usercontrols:HyperLinkStandard Margin="5,0,20,0" VerticalAlignment="Center" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=Downloads_GoTo}"  Grid.Column="2"
@@ -1594,14 +1610,22 @@
             <TabItem Name="tabSearch" Style="{DynamicResource tabMainItem}"
                      Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=ServerOnline, Converter={StaticResource BooleanToVisibilityConverter}}">
                 <TabItem.Header>
-                    <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                        <Image Height="20" Source="/Images/MagnifyingGlass6.png" Margin="0,0,0,0"/>
-                        <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tab_Search}" Margin="2,0,0,0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="20" Source="/Images/32_search.png" Margin="0,0,5,0"/>
+                        <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tab_Search}" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold"/>
                     </StackPanel>
                 </TabItem.Header>
 
                 <usercontrols:SeriesSearchControl x:Name="seriesSearch" Width="{Binding Source={x:Static local:MainListHelperVM.Instance},Path=FullScrollerWidth}" Margin="0,5,0,0"/>
 
+            </TabItem>
+
+            <TabItem Name="tabHelp" Style="{DynamicResource tabMainItem}">
+                <TabItem.Header>
+                    <Hyperlink Cursor="Arrow" TextDecorations="{x:Null}" NavigateUri="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_Help}" RequestNavigate="Hyperlink_RequestNavigate">
+                        <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tab_Help}" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" />
+                    </Hyperlink>
+                </TabItem.Header>
             </TabItem>
 
             <!-- Community tab-->
@@ -1651,18 +1675,8 @@
             <DockPanel >
                 <StackPanel Orientation="Horizontal"  Background="#F1F1F1" DockPanel.Dock="Left">
 
-                    <!-- Image download queue -->
-                    <Image Height="16" Width="16" Source="/Images/32_Image.png" Margin="5,4,0,4" VerticalAlignment="Center">
-                        <Image.ToolTip>
-                            <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_QueueImages}"></TextBlock>
-                        </Image.ToolTip>
-                    </Image>
-
-                    <TextBlock Name="tbImageDownloadQueueStatus" Margin="4,4,0,4" Text="{Binding Source={x:Static local:JMMServerVM.Instance},Path=ServerImageQueueCount}"
-                               VerticalAlignment="Center"/>
-
                     <!-- hasher command queue -->
-                    <Image Height="16" Width="16" Source="/Images/16_server_hash.png" Margin="15,4,0,4" VerticalAlignment="Center">
+                    <Image Height="16" Width="16" Source="/Images/16_server_hash.png" Margin="5,4,0,4" VerticalAlignment="Center">
                         <Image.ToolTip>
                             <StackPanel Orientation="Vertical">
                                 <Border Background="SteelBlue">
@@ -1689,6 +1703,20 @@
                     <TextBlock Name="tbGeneralQueueCount" Margin="4,4,0,4" Text="{Binding Source={x:Static local:JMMServerVM.Instance},Path=GeneralQueueCount}"  VerticalAlignment="Center">
                     </TextBlock>
 
+                    <!-- Image download queue -->
+                    <Image Height="16" Width="16" Source="/Images/16_image.png" Margin="15,4,0,4" VerticalAlignment="Center">
+                        <Image.ToolTip>
+                            <StackPanel Orientation="Vertical">
+                                <Border Background="SteelBlue">
+                                    <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Tooltip_QueueImages}" FontWeight="Bold" Foreground="White" Padding="6"/>
+                                </Border>
+                                <TextBlock Margin="4,4,0,4" Text="{Binding Source={x:Static local:JMMServerVM.Instance},Path=ServerImageQueueState}"/>
+                            </StackPanel>
+                        </Image.ToolTip>
+                    </Image>
+                    <TextBlock Name="tbImageDownloadQueueStatus" Margin="4,4,0,4" Text="{Binding Source={x:Static local:JMMServerVM.Instance},Path=ServerImageQueueCount}" VerticalAlignment="Center">
+                    </TextBlock>
+
                     <!-- Admin Messages -->
                     <Button Name="btnAdminMessages" Margin="10,2,2,2" Style="{DynamicResource FlatButtonStyle}"
                         Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=AdminMessagesAvailable, Converter={StaticResource BooleanToVisibilityConverter}}">
@@ -1704,10 +1732,11 @@
                                 Visibility="{Binding Source={x:Static local:JMMServerVM.Instance}, Path=IsBanned, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <Image Height="16" Width="16" Source="/Images/16_exclamation.png" Margin="0,0,5,0"/>
                         <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Main_Paused}" Margin="0,0,0,0" FontWeight="Bold"/>
+                        <TextBlock VerticalAlignment="Center" Margin="0,0,0,0" Text="(" FontWeight="Bold"/>
                         <TextBlock VerticalAlignment="Center" Text="{Binding Source={x:Static local:JMMServerVM.Instance},Path=BanOrigin}" FontWeight="Bold"/>
                         <TextBlock VerticalAlignment="Center" Margin="0,0,0,0" Text=")" FontWeight="Bold"/>
                         <TextBlock VerticalAlignment="Center" Margin="10,0,0,0" Text="{Binding Source={x:Static local:JMMServerVM.Instance},Path=BanReason}"/>
-                        <usercontrols:HyperLinkStandard VerticalAlignment="Center" Margin="10,0,0,0" DisplayText="What does this mean?" Grid.Column="1"
+                        <usercontrols:HyperLinkStandard VerticalAlignment="Center" Margin="10,0,0,0" DisplayText="{Resx ResxName=JMMClient.Properties.Resources, Key=WhatDoesThisMean}" Grid.Column="1"
                                                                         URL="{Resx ResxName=JMMClient.Properties.Resources, Key=Link_AniDBBanned}"/>
                     </StackPanel>
 
@@ -1742,6 +1771,12 @@
                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Main_Feed}" Margin="0,0,0,0"/>
                         </StackPanel>
                     </Button>
+                    <Button x:Name="btnDiscord"  Margin="2" Style="{DynamicResource FlatButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <Image Height="16" Width="16" Source="Images/16_discord.png" Margin="0,0,5,0"/>
+                            <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Main_Discord}" Margin="0,0,0,0"/>
+                        </StackPanel>
+                    </Button>
                     <Button x:Name="btnAbout"  Margin="2" Style="{DynamicResource FlatButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Center">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
                             <Image Height="16" Width="16" Source="Images/32_info.png" Margin="0,0,5,0"/>
@@ -1756,3 +1791,4 @@
     </Grid>
 
 </Window>
+

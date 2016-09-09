@@ -4,7 +4,7 @@
         xmlns:local="clr-namespace:JMMClient"
         xmlns:forms="clr-namespace:JMMClient.Forms"
         xmlns:usercontrols="clr-namespace:JMMClient.UserControls"
-        Title="Delete Files" Height="450" Width="700" ShowInTaskbar="False" WindowStyle="ToolWindow" Icon="/JMMDesktop;component/Images/32_trash.png"
+        Title="{Resx ResxName=JMMClient.Properties.Resources, Key=DeleteFiles_Name}" Height="450" Width="700" ShowInTaskbar="False" WindowStyle="ToolWindow" Icon="/JMMDesktop;component/Images/32_trash.png"
         WindowStartupLocation="CenterOwner" Topmost="False">
     <Grid>
         <Grid.Resources>
@@ -41,8 +41,12 @@
                                Visibility="{Binding Path=IsBluRay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                             <Label Content="{Resx ResxName=JMMClient.Properties.Resources, Key=Video_DVD}" Style="{DynamicResource VideoDefStyle_Source}" VerticalAlignment="Center" Margin="0,0,10,0"
                                Visibility="{Binding Path=IsDVD, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                            <Label Content="{Resx ResxName=JMMClient.Properties.Resources, Key=Video_Hi08P}" Style="{DynamicResource VideoDefStyle_Hi08P}" VerticalAlignment="Center" Margin="0,0,10,0"
+                               Visibility="{Binding Path=IsHi08P, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                             <Label Content="{Resx ResxName=JMMClient.Properties.Resources, Key=Video_Hi10P}" Style="{DynamicResource VideoDefStyle_Hi10P}" VerticalAlignment="Center" Margin="0,0,10,0"
                                Visibility="{Binding Path=IsHi10P, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                            <Label Content="{Resx ResxName=JMMClient.Properties.Resources, Key=Video_Hi12P}" Style="{DynamicResource VideoDefStyle_Hi12P}" VerticalAlignment="Center" Margin="0,0,10,0"
+                               Visibility="{Binding Path=IsHi12P, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
                             <usercontrols:HyperLinkStandard Margin="0,0,10,0" VerticalAlignment="Center" DisplayText="{Binding Path=ReleaseGroupName}" URL="{Binding Path=ReleaseGroupAniDBURL}" 
                                 Visibility="{Binding Path=HasReleaseGroup, Converter={StaticResource BooleanToVisibilityConverter}}"/>
@@ -50,7 +54,7 @@
 
                             <TextBlock Text="{Binding Path=AniDB_Anime_GroupNameShort}" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,10,0"
                                    Visibility="{Binding Path=IsAutoAssociation, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                            <TextBlock Text="MANUAL LINK" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,10,0"
+                            <TextBlock Text="{Resx ResxName=JMMClient.Properties.Resources, Key=ManualLink}" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,10,0"
                                    Visibility="{Binding Path=IsManualAssociation, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                             <TextBlock Text="{Binding Path=FormattedFileSize}" FontWeight="DemiBold" VerticalAlignment="Center" Margin="0,0,10,0" />
 

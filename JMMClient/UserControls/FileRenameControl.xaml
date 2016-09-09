@@ -49,7 +49,7 @@
         <TabControl Grid.Row="0" Grid.Column="0" Margin="5" Name="tabTorrentDetails" TabStripPlacement="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
 
 
-            <TabItem Header="Renaming Rules">
+            <TabItem Header="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_Title}">
 
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                     <Grid>
@@ -82,7 +82,7 @@
                                     <!-- Save Script -->
                                     <Button Name="btnSaveScript" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}">
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                            <Image Height="16" Width="16" Source="/Images/32_save.png" Margin="0,0,5,0"/>
+                                            <Image Height="16" Width="16" Source="/Images/16_save.png" Margin="0,0,5,0"/>
                                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_Save}" Margin="0,0,5,0"/>
                                         </StackPanel>
                                     </Button>
@@ -90,7 +90,7 @@
                                     <!-- New Script -->
                                     <Button Name="btnNewScript" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}">
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                            <Image Height="16" Width="16" Source="/Images/16_plus.png" Margin="0,0,5,0"/>
+                                            <Image Height="16" Width="16" Source="/Images/16_add.png" Margin="0,0,5,0"/>
                                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_New}" Margin="0,0,5,0"/>
                                         </StackPanel>
                                     </Button>
@@ -116,7 +116,7 @@
                             <!-- Add Tag -->
                             <Button Name="btnAddTag" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                    <Image Height="16" Width="16" Source="/Images/16_plus.png" Margin="0,0,5,0"/>
+                                    <Image Height="16" Width="16" Source="/Images/16_add.png" Margin="0,0,5,0"/>
                                     <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_Add}" Margin="0,0,5,0"/>
                                 </StackPanel>
                             </Button>
@@ -128,7 +128,7 @@
                             <!-- Add Tag -->
                             <Button Name="btnAddTest" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                                    <Image Height="16" Width="16" Source="/Images/16_plus.png" Margin="0,0,5,0"/>
+                                    <Image Height="16" Width="16" Source="/Images/16_add.png" Margin="0,0,5,0"/>
                                     <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_Add}" Margin="0,0,5,0"/>
                                 </StackPanel>
                             </Button>
@@ -168,7 +168,7 @@
                     <!-- Clear List -->
                     <Button Name="btnClearList" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                            <Image Height="16" Width="16" Source="/Images/32_delete.png" Margin="0,0,5,0"/>
+                            <Image Height="16" Width="16" Source="/Images/16_cancel.png" Margin="0,0,5,0"/>
                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_Clear}" Margin="0,0,5,0"/>
                         </StackPanel>
                     </Button>
@@ -183,7 +183,7 @@
                     <!-- Add Files -->
                     <Button Name="btnLoadFiles" Margin="2,2,2,2" Style="{DynamicResource FlatButtonStyle}">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                            <Image Height="16" Width="16" Source="/Images/16_plus.png" Margin="0,0,5,0"/>
+                            <Image Height="16" Width="16" Source="/Images/16_add.png" Margin="0,0,5,0"/>
                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_AddFiles}" Margin="0,0,5,0"/>
                         </StackPanel>
                     </Button>
@@ -199,7 +199,7 @@
                     <!-- Rename Files -->
                     <Button Name="btnRenameFiles" Margin="0,2,5,2" Style="{DynamicResource FlatButtonStyle}">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                            <Image Height="16" Width="16" Source="/Images/32_save.png" Margin="0,0,5,0"/>
+                            <Image Height="16" Width="16" Source="/Images/16_save.png" Margin="0,0,5,0"/>
                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_Rename}" Margin="0,0,5,0"/>
                         </StackPanel>
                     </Button>
@@ -211,7 +211,7 @@
                     <Button Name="btnPreviewStop" Margin="0,2,10,2" Style="{DynamicResource FlatButtonStyle}" VerticalAlignment="Center"
                             Visibility="{Binding Path=WorkerRunning, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type usercontrols:FileRenameControl}}, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" >
-                            <Image Height="16" Width="16" Source="/Images/32_cancel.png" Margin="0,0,5,0"/>
+                            <Image Height="16" Width="16" Source="/Images/16_cancel.png" Margin="0,0,5,0"/>
                             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=Cancel}" Margin="0,0,5,0"/>
                         </StackPanel>
                     </Button>
@@ -250,8 +250,8 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="Old Name" Binding="{Binding VideoLocal.FullPath}" IsReadOnly="True" />
-                    <DataGridTextColumn Header="New Name" Binding="{Binding NewFileName}" IsReadOnly="True" />
+                    <DataGridTextColumn Header="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_OldName}" Binding="{Binding VideoLocal.FullPath}" IsReadOnly="True" />
+                    <DataGridTextColumn Header="{Resx ResxName=JMMClient.Properties.Resources, Key=Rename_NewName}" Binding="{Binding NewFileName}" IsReadOnly="True" />
 
                 </DataGrid.Columns>
             </DataGrid>

@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using JMMClient.ViewModel;
+﻿using JMMClient.ViewModel;
 using NLog;
+using System;
+using System.Globalization;
+using System.Threading;
+using System.Windows;
+using System.Windows.Input;
 
 namespace JMMClient.Forms
 {
@@ -26,6 +18,8 @@ namespace JMMClient.Forms
         public ManageCustomTags()
         {
             InitializeComponent();
+
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
 
             btnAddCustomTag.Click += btnAddCustomTag_Click;
             btnClose.Click += new RoutedEventHandler(btnClose_Click);
@@ -46,7 +40,7 @@ namespace JMMClient.Forms
 
                 if (string.IsNullOrWhiteSpace(txtTagName.Text))
                 {
-                    MessageBox.Show("Please enter a tag name", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(Properties.Resources.CustomTag_EnterName, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                     txtTagName.Focus();
                     return;
                 }
@@ -60,7 +54,7 @@ namespace JMMClient.Forms
 
                 if (!string.IsNullOrEmpty(resp.ErrorMessage))
                 {
-                    MessageBox.Show(res, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(res, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
                 else
@@ -101,7 +95,7 @@ namespace JMMClient.Forms
 
                 if (res.Length > 0)
                 {
-                    MessageBox.Show(res, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(res, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                 {

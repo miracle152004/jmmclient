@@ -4,7 +4,7 @@
         xmlns:local="clr-namespace:JMMClient"
         xmlns:forms="clr-namespace:JMMClient.Forms"
         xmlns:usercontrols="clr-namespace:JMMClient.UserControls"
-        Title="Delete Series/Group" Height="300" Width="700" ShowInTaskbar="False" WindowStyle="SingleBorderWindow" Icon="/JMMDesktop;component/Images/32_trash.png"
+        Title="{Resx ResxName=JMMClient.Properties.Resources, Key=DeleteSeriesGroup}" Height="300" Width="700" ShowInTaskbar="False" WindowStyle="SingleBorderWindow" Icon="/JMMDesktop;component/Images/32_trash.png"
         WindowStartupLocation="CenterOwner" Topmost="False" SizeToContent="WidthAndHeight">
     
     <Grid Margin="10">
@@ -34,7 +34,7 @@
 
         <!-- Row 1 -->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Margin="0,0,0,10">
-            <Image Height="16" Width="16" Source="/Images/32_trash.png" Margin="0,0,6,0"/>
+            <Image Height="16" Width="16" Source="/Images/16_warning.png" Margin="0,0,6,0"/>
             <TextBlock VerticalAlignment="Center" Text="{Resx ResxName=JMMClient.Properties.Resources, Key=DeleteSeriesConfirm}" Margin="0,0,0,0"/>
         </StackPanel>
 

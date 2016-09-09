@@ -1,20 +1,13 @@
-﻿using System;
+﻿using JMMClient.Forms;
+using JMMClient.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using JMMClient.ViewModel;
-using System.ComponentModel;
-using System.Collections.ObjectModel;
-using JMMClient.Forms;
 
 namespace JMMClient.UserControls
 {
@@ -44,6 +37,8 @@ namespace JMMClient.UserControls
         public UserAdminControl()
         {
             InitializeComponent();
+
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
 
             IsUserSelected = false;
             SelectedUser = null;
@@ -79,7 +74,7 @@ namespace JMMClient.UserControls
         {
             if (string.IsNullOrEmpty(txtUsername.Text.Trim()))
             {
-                MessageBox.Show("Please enter a username", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Properties.Resources.User_EnterUsername, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                 txtUsername.Focus();
                 return;
             }
@@ -90,14 +85,13 @@ namespace JMMClient.UserControls
                 {
                     if (us != lbUsers.SelectedItem)
                     {
-                        if (!string.IsNullOrEmpty(us.PlexUsers))
+                        if (us.PlexUsers!=null && us.PlexUsers.Count>0)
                         {
-                            string[] splexusers = us.PlexUsers.Split(',');
-                            foreach (string m in splexusers)
+                            foreach (string m in us.PlexUsers)
                             {
                                 if (n.Trim().ToLower() == m.Trim().ToLower())
                                 {
-                                    MessageBox.Show(string.Format("The Plex User '{0}' is already asigned to the JMM User '{1}'", n.Trim(), us.Username), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                                    MessageBox.Show(string.Format(Properties.Resources.User_PlexAssigned, n.Trim(), us.Username), Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                                     txtPlexUsers.Focus();
                                     return;
                                 }
@@ -107,15 +101,15 @@ namespace JMMClient.UserControls
                 }
 
             }
-            SelectedUser = lbUsers.SelectedItem as JMMUserVM;
+            //SelectedUser = lbUsers.SelectedItem as JMMUserVM;
 
             SelectedUser.Username = txtUsername.Text.Trim();
-            SelectedUser.HideTags = txtTags.Text.Trim();
+            SelectedUser.HideTags = new HashSet<string>(txtTags.Text.Split(',').Select(a=>a.Trim()).Where(a=>!string.IsNullOrEmpty(a)));
             SelectedUser.IsAdmin = chkIsAdmin.IsChecked.Value ? 1 : 0;
             SelectedUser.IsAniDBUser = chkIsAniDB.IsChecked.Value ? 1 : 0;
             SelectedUser.IsTraktUser = chkIsTrakt.IsChecked.Value ? 1 : 0;
             SelectedUser.CanEditServerSettings = chkEditSettings.IsChecked.Value ? 1 : 0;
-            SelectedUser.PlexUsers = txtPlexUsers.Text.Trim();
+            SelectedUser.PlexUsers = new HashSet<string>(txtPlexUsers.Text.Split(',').Select(a => a.Trim()).Where(a => !string.IsNullOrEmpty(a)));
 
             try
             {
@@ -124,7 +118,7 @@ namespace JMMClient.UserControls
                 this.Cursor = Cursors.Arrow;
                 if (ret.Length > 0)
                 {
-                    MessageBox.Show(ret, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(ret, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                     txtUsername.Focus();
                 }
 
@@ -153,7 +147,7 @@ namespace JMMClient.UserControls
                 {
                     JMMUserVM user = (JMMUserVM)obj;
 
-                    MessageBoxResult res = MessageBox.Show(string.Format("Are you sure you want to delete the User: {0}", user.Username),
+                    MessageBoxResult res = MessageBox.Show(string.Format(Properties.Resources.User_Delete, user.Username),
                     "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question);
                     if (res == MessageBoxResult.Yes)
                     {
@@ -161,7 +155,7 @@ namespace JMMClient.UserControls
                         {
                             if (user.JMMUserID.Value == JMMServerVM.Instance.CurrentUser.JMMUserID.Value)
                             {
-                                MessageBox.Show("Cannot delete currently logged in user", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                                MessageBox.Show(Properties.Resources.User_DeleteError, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                                 return;
                             }
                         }
@@ -170,7 +164,7 @@ namespace JMMClient.UserControls
                         string ret = JMMServerVM.Instance.clientBinaryHTTP.DeleteUser(user.JMMUserID.Value);
                         this.Cursor = Cursors.Arrow;
                         if (ret.Length > 0)
-                            MessageBox.Show(ret, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBox.Show(ret, Properties.Resources.Error, MessageBoxButton.OK, MessageBoxImage.Error);
 
                         JMMServerVM.Instance.RefreshAllUsers();
 
@@ -253,12 +247,12 @@ namespace JMMClient.UserControls
 
             btnChangePassword.Visibility = System.Windows.Visibility.Visible;
             txtUsername.Text = SelectedUser.Username;
-            txtTags.Text = SelectedUser.HideTags;
+            txtTags.Text = string.Join(", ",SelectedUser.HideTags);
             chkIsAdmin.IsChecked = SelectedUser.IsAdminUser;
             chkIsAniDB.IsChecked = SelectedUser.IsAniDBUserBool;
             chkIsTrakt.IsChecked = SelectedUser.IsTraktUserBool;
             chkEditSettings.IsChecked = SelectedUser.CanEditSettings;
-            txtPlexUsers.Text = SelectedUser.PlexUsers;
+            txtPlexUsers.Text = string.Join(", ",SelectedUser.PlexUsers);
         }
 
         void UserAdminControl_Loaded(object sender, RoutedEventArgs e)

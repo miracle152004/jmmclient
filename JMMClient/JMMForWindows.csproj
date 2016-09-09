@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>JMMClient</RootNamespace>
     <AssemblyName>JMMDesktop</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -31,6 +31,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,6 +43,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -50,17 +53,19 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
@@ -72,6 +77,7 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Web Database.ico</ApplicationIcon>
@@ -135,8 +141,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\Infralution.Localization.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="Jint, Version=2.6.0.0, Culture=neutral, PublicKeyToken=2e92ba9c8d81157f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Jint.2.7.1\lib\portable-net40+sl50+win+WindowsPhoneApp81+wp80\Jint.dll</HintPath>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>..\Dependencies\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Jint, Version=2.7.1.0, Culture=neutral, PublicKeyToken=2e92ba9c8d81157f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jint.2.8\lib\portable-net40+sl50+win+WindowsPhoneApp81+wp80\Jint.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MahApps.Metro">
@@ -145,22 +154,69 @@
     <Reference Include="MahApps.Metro.Resources">
       <HintPath>..\Dependencies\MahApps.Metro.Resources.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.0.1\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dependencies\NLog.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="Pri.LongPath, Version=2.0.32.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pri.LongPath.2.0.32\lib\net45\Pri.LongPath.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ReuxablesLegacy">
       <HintPath>..\Dependencies\ReuxablesLegacy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.1.0\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.2.0\lib\net46\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.0.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.0.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.1.0\lib\net46\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\System.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -217,7 +273,6 @@
     <Compile Include="Downloads\TorrentLink.cs" />
     <Compile Include="Downloads\TorrentList.cs" />
     <Compile Include="Downloads\TorrentsAnimeBytes.cs" />
-    <Compile Include="Downloads\TorrentsAnimeSuki.cs" />
     <Compile Include="Downloads\TorrentsBakaBT.cs" />
     <Compile Include="Downloads\TorrentsNyaa.cs" />
     <Compile Include="Downloads\TorrentSourceVM.cs" />
@@ -242,6 +297,56 @@
     <Compile Include="Forms\ViewCommentForm.xaml.cs">
       <DependentUpon>ViewCommentForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.en-gb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en-gb.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.pl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.pl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.pt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.pt.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AnimeFolderSummaryControl.xaml.cs">
       <DependentUpon>AnimeFolderSummaryControl.xaml</DependentUpon>
     </Compile>
@@ -263,6 +368,15 @@
     <Compile Include="UserControls\PlayNextEpisodeControlV2.xaml.cs">
       <DependentUpon>PlayNextEpisodeControlV2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Settings\RelationSettings.xaml.cs">
+      <DependentUpon>RelationSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VideoPlayers\BaseVideoPlayer.cs" />
+    <Compile Include="VideoPlayers\IVideoPlayer.cs" />
+    <Compile Include="VideoPlayers\MPCVideoPlayer.cs" />
+    <Compile Include="VideoPlayers\MPVVideoPlayer.cs" />
+    <Compile Include="VideoPlayers\PotVideoPlayer.cs" />
+    <Compile Include="VideoPlayers\VLCVideoPlayer.cs" />
     <Compile Include="ViewModel\AniDB_CharacterVM.cs" />
     <Compile Include="ViewModel\AniDB_SeiyuuVM.cs" />
     <Compile Include="ViewModel\AnimeEpisodeDisplayVM.cs" />
@@ -373,9 +487,6 @@
     <Compile Include="Metro\RecommendationTile.cs" />
     <Compile Include="Metro\TraktShoutTile.cs" />
     <Compile Include="MoveSeriesDetails.cs" />
-    <Compile Include="MultiSortLib\MultiSort.cs" />
-    <Compile Include="MultiSortLib\SortSearchCriteria.cs" />
-    <Compile Include="MultiSortLib\ValueComparison.cs" />
     <Compile Include="NamingLanguage.cs" />
     <Compile Include="Service References\JMMImageServer\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -630,7 +741,6 @@
     <Compile Include="UserCulture.cs" />
     <Compile Include="Utilities\DragAndDrop.cs" />
     <Compile Include="Utilities\ImageAsyncHelper.cs" />
-    <Compile Include="Utilities\MPCHelper.cs" />
     <Compile Include="Utilities\MultiSort.cs" />
     <Compile Include="Utilities\RenameHelper.cs" />
     <Compile Include="Utilities\RenameTag.cs" />
@@ -638,7 +748,7 @@
     <Compile Include="Utilities\ShowSelectedInExplorer.cs" />
     <Compile Include="Utilities\SortSearchCriteria.cs" />
     <Compile Include="Utilities\ValueComparison.cs" />
-    <Compile Include="Utilities\VideoHandler.cs" />
+    <Compile Include="VideoPlayers\VideoHandler.cs" />
     <Compile Include="ViewModel\AdminMessage.cs" />
     <Compile Include="ViewModel\AniDBReleaseGroupVM.cs" />
     <Compile Include="ViewModel\AniDB_AnimeCrossRefsVM.cs" />
@@ -730,11 +840,6 @@
     <Compile Include="ViewModel\VideoDetailedVM.cs" />
     <Compile Include="ViewModel\GroupFilterVM.cs" />
     <Compile Include="DataTemplateSelectors\GroupsSeriesDataTemplateSelector.cs" />
-    <Compile Include="Properties\Resources.de.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.de.resx</DependentUpon>
-    </Compile>
     <Compile Include="Utils.cs" />
     <Compile Include="ViewModel\VideoLocalRenamedVM.cs" />
     <Compile Include="ViewModel\VideoLocalVM.cs" />
@@ -1174,6 +1279,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\Settings\RelationSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Settings\VideoPlayerSettingsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1247,19 +1356,37 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\Resources.es.resx" />
-    <EmbeddedResource Include="Properties\Resources.fr.resx" />
-    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.es.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.it.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.it.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.nl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.pl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pt.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.pt.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -1271,26 +1398,28 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.en-gb.resx">
       <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-gb.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.ru.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="app.manifest" />
     <None Include="default.config" />
     <None Include="JMMDesktop.snk" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Service References\JMMImageServer\JMMClient.JMMImageServer.Contract_Test.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\JMMImageServer\JMMServerImage.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\JMMServerBinary\JMMClient.JMMServerBinary.Contract_AdminMessage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1366,6 +1495,9 @@
     <None Include="Service References\JMMServerBinary\JMMClient.JMMServerBinary.Contract_BookmarkedAnime_SaveResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\JMMServerBinary\JMMClient.JMMServerBinary.Contract_ChangesOfContract_GroupFilterFG2lp1Ah.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\JMMServerBinary\JMMClient.JMMServerBinary.Contract_CrossRef_AniDB_MALResult1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1427,6 +1559,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JMMServerBinary\JMMClient.JMMServerBinary.Contract_JMMUser1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\JMMServerBinary\JMMClient.JMMServerBinary.Contract_MainChanges.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\JMMServerBinary\JMMClient.JMMServerBinary.Contract_MALAnimeResponse1.datasource">
@@ -1562,44 +1697,10 @@
     <None Include="Service References\JMMImageServer\JMMServiceImplementationImage1.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MagnifyingGlass.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\MagnifyingGlass2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\MagnifyingGlass3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\MagnifyingGlass4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\MagnifyingGlass5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\MagnifyingGlass6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\loading.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\MagnifyingGlass7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\16_favorite.png" />
-    <Resource Include="Images\16_favorite_add.png" />
-    <Resource Include="Images\16_favorite_remove.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\16_Refresh.png" />
     <Resource Include="Images\32_Refresh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\16_folder.png" />
-    <Resource Include="Images\32_folder.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\16_filter.png" />
@@ -1608,39 +1709,21 @@
     <Resource Include="Images\16_windowlist.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\16_dvd.png" />
-    <Resource Include="Images\16_folder2.png" />
     <Resource Include="Images\16_videofile.png" />
     <Resource Include="Images\32_dvd.png" />
-    <Resource Include="Images\32_folder2.png" />
-    <Resource Include="Images\32_videofile.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\16_back.png" />
     <Resource Include="Images\32_back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_delete.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\16_blankstar.png" />
     <Resource Include="Images\16_star.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\32_delete_folder.png" />
-    <Resource Include="Images\32_save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_import.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Flags\au_australia.gif" />
     <Resource Include="Images\Flags\de_germany.gif" />
     <Resource Include="Images\Flags\uk_unitedkingdom.gif" />
     <Resource Include="Images\Flags\us.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_warning.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Flags\jp.gif" />
@@ -1695,27 +1778,10 @@
     <Resource Include="Images\Flags\vi.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\16_toggle-expand.png" />
-    <Resource Include="Images\16_toggle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\16_collapse2.png" />
-    <Resource Include="Images\16_toggle2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\64_Play.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\16_multiplefiles.png" />
-    <Resource Include="Images\32_play.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_calendar.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\16_award.png" />
-    <Resource Include="Images\16_eye.png" />
-    <Resource Include="Images\16_eye2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\16_exclamation.png" />
@@ -1725,12 +1791,8 @@
     <Resource Include="Images\32_clock.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\128_cinema.png" />
     <Resource Include="Images\16_television.png" />
     <Resource Include="Images\32_movie.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\64_browser.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\star_48.png" />
@@ -1741,62 +1803,12 @@
     <Resource Include="Images\blankposter.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\32_image.png" />
-    <Resource Include="Images\32_picture.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_down.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\16_server_connect.png" />
     <Resource Include="Images\16_server_hash.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\16_arrow45.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_folder_add.png" />
-    <Resource Include="Images\32_folder_remove.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_folder_edit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_settings2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_cut.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_pause.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_drop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_folder_down.png" />
-    <Resource Include="Images\32_folder_up.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\24_ignore.png" />
-    <Resource Include="Images\24_ignore_off.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\16_link_add.png" />
     <Resource Include="Images\16_link_remove.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_help.png" />
-    <Resource Include="Images\32_info.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -1873,17 +1885,10 @@
     <Resource Include="Images\16_switch.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\anidb.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\EpisodeThumb_NotFound.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Samples\Episode.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\moviedb.ico" />
-    <Resource Include="Images\tvdb.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\16_heart.png" />
@@ -1891,33 +1896,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\64_user.png" />
-    <Resource Include="Images\64_user_add.png" />
-    <Resource Include="Images\64_user_delete.png" />
-    <Resource Include="Images\64_user_edit.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\16_minus.png" />
-    <Resource Include="Images\16_plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\16_admin.png" />
-    <Resource Include="Images\64_admin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\myanimelist.ico" />
-    <Resource Include="Images\trakttv.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\16_windows.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\navbar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\24_export.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\16_key.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\16_clipboard.png" />
@@ -1928,9 +1912,6 @@
   <ItemGroup>
     <Resource Include="Images\trakt-icon-scrobble.png" />
     <Resource Include="Images\trakt-icon-shouts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\16_folder_find.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\32_discussion.png" />
@@ -1946,12 +1927,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\32_new.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_bookmark_add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_bookmark.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\16_columns.png" />
@@ -1972,44 +1947,16 @@
     <Resource Include="Images\Torrents\tor_queuedseed.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\128_download3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\24_download3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="PostBuild.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\16_preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\64_preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Pause.png" />
-    <Resource Include="Images\Play.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\32_play2.png" />
-    <Resource Include="Images\32_play2_all.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\metro_Back.png" />
-    <Resource Include="Images\metro_Next.png" />
-    <Resource Include="Images\metro_Prev.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Backgrounds\shattered.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Backgrounds\subtlenet2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\vote_down.png" />
-    <Resource Include="Images\vote_down2.png" />
-    <Resource Include="Images\vote_up.png" />
-    <Resource Include="Images\vote_up2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\blankfanart.png" />
@@ -2125,6 +2072,61 @@
     <Content Include="Dependencies\DevExpress.Xpf.Printing.v12.2.Core.dll" />
     <Content Include="Dependencies\DevExpress.Xpf.Printing.v12.2.dll" />
     <Content Include="Dependencies\DevExpress.Xpf.Printing.v12.2.resources.dll" />
+    <Resource Include="Images\32_play_all.png" />
+    <Resource Include="Images\Metro\pin.png" />
+    <Resource Include="Images\Flags\lv.gif" />
+    <Resource Include="Images\32_edit.png" />
+    <Resource Include="Images\32_edit_accept.png" />
+    <Resource Include="Images\32_edit_delete.png" />
+    <Resource Include="Images\16_ignore.png" />
+    <Resource Include="Images\32_television.png" />
+    <Resource Include="Images\16_discord.png" />
+    <Resource Include="Images\32_discord.png" />
+    <Resource Include="Images\Metro\refresh_32.png" />
+    <Resource Include="Images\32_key.png" />
+    <Resource Include="Images\16_hourglass.png" />
+    <Resource Include="Images\32_simple.png" />
+    <Resource Include="Images\24_cut.png" />
+    <Resource Include="Images\16_link_edit.png" />
+    <Resource Include="Images\32_settings.png" />
+    <Resource Include="Images\16_toggle_close.png" />
+    <Resource Include="Images\16_toggle_open.png" />
+    <Resource Include="Images\24_vote_down.png" />
+    <Resource Include="Images\24_vote_up.png" />
+    <Resource Include="Images\16_warning.png" />
+    <Resource Include="Images\32_admin.png" />
+    <Resource Include="Images\32_search.png" />
+    <Resource Include="Images\Sources.txt" />
+    <Resource Include="Images\16_add.png" />
+    <Resource Include="Images\24_calendar.png" />
+    <Resource Include="Images\24_download.png" />
+    <Resource Include="Images\24_folder_filter.png" />
+    <Resource Include="Images\24_folder_group.png" />
+    <Resource Include="Images\16_cancel.png" />
+    <Resource Include="Images\16_clear.png" />
+    <Resource Include="Images\16_folder_video.png" />
+    <Resource Include="Images\16_save.png" />
+    <Resource Include="Images\16_update_data.png" />
+    <Resource Include="Images\24_folder.png" />
+    <Resource Include="Images\24_folder_down.png" />
+    <Resource Include="Images\24_folder_find.png" />
+    <Resource Include="Images\24_folder_up.png" />
+    <Resource Include="Images\32_eye.png" />
+    <Resource Include="Images\32_eye2.png" />
+    <Resource Include="Images\32_info.png" />
+    <Resource Include="Images\16_bookmark.png" />
+    <Resource Include="Images\16_bookmark_add.png" />
+    <Resource Include="Images\16_image.png" />
+    <Resource Include="Images\16_info.png" />
+    <Resource Include="Images\16_link.png" />
+    <Resource Include="Images\16_pause.png" />
+    <Resource Include="Images\32_anidb.png" />
+    <Resource Include="Images\32_mal.png" />
+    <Resource Include="Images\32_resume.png" />
+    <Resource Include="Images\32_tmdb.png" />
+    <Resource Include="Images\32_trakt.png" />
+    <Resource Include="Images\32_tvdb.png" />
+    <Resource Include="Images\Flags\pt.gif" />
     <Resource Include="Images\Metro\details.png" />
     <Resource Include="Images\16_feed.png" />
     <Resource Include="Images\32_feed.png" />
@@ -2134,11 +2136,17 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetDir)*.dll" "C:\Projects\[ JMM Binaries No Configs ]\JMMDesktop\" /S /R /I /Y	
-xcopy "$(TargetDir)*.exe" "C:\Projects\[ JMM Binaries No Configs ]\JMMDesktop\" /S /R /I /Y
-xcopy "$(TargetDir)*.pdb" "C:\Projects\[ JMM Binaries No Configs ]\JMMDesktop\" /S /R /I /Y
-xcopy "$(TargetDir)*.manifest" "C:\Projects\[ JMM Binaries No Configs ]\JMMDesktop\" /S /R /I /Y
-</PostBuildEvent>
+xcopy "$(TargetDir)*.exe" "C:\Projects\[ JMM Binaries No Configs ]\JMMDesktop\" /S /R /I /Y	
+xcopy "$(TargetDir)*.pdb" "C:\Projects\[ JMM Binaries No Configs ]\JMMDesktop\" /S /R /I /Y	
+xcopy "$(TargetDir)*.manifest" "C:\Projects\[ JMM Binaries No Configs ]\JMMDesktop\" /S /R /I /Y	</PostBuildEvent>
   </PropertyGroup>
+  <Import Project="..\packages\StrongNamer.0.0.2\build\StrongNamer.targets" Condition="Exists('..\packages\StrongNamer.0.0.2\build\StrongNamer.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\StrongNamer.0.0.2\build\StrongNamer.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StrongNamer.0.0.2\build\StrongNamer.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

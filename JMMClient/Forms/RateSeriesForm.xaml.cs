@@ -1,125 +1,122 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using JMMClient.UserControls;
+using System;
+using System.Globalization;
+using System.Threading;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using JMMClient.UserControls;
 
 namespace JMMClient.Forms
 {
-	/// <summary>
-	/// Interaction logic for RateSeriesForm.xaml
-	/// </summary>
-	public partial class RateSeriesForm : Window
-	{
-		public static readonly DependencyProperty SeriesProperty = DependencyProperty.Register("Series",
-			typeof(AnimeSeriesVM), typeof(RateSeriesForm), new UIPropertyMetadata(null, null));
+    /// <summary>
+    /// Interaction logic for RateSeriesForm.xaml
+    /// </summary>
+    public partial class RateSeriesForm : Window
+    {
+        public static readonly DependencyProperty SeriesProperty = DependencyProperty.Register("Series",
+            typeof(AnimeSeriesVM), typeof(RateSeriesForm), new UIPropertyMetadata(null, null));
 
-		public AnimeSeriesVM Series
-		{
-			get { return (AnimeSeriesVM)GetValue(SeriesProperty); }
-			set { SetValue(SeriesProperty, value); }
-		}
+        public AnimeSeriesVM Series
+        {
+            get { return (AnimeSeriesVM)GetValue(SeriesProperty); }
+            set { SetValue(SeriesProperty, value); }
+        }
 
-		public static readonly DependencyProperty TraktLinkExistsProperty = DependencyProperty.Register("TraktLinkExists",
-			typeof(bool), typeof(RateSeriesForm), new UIPropertyMetadata(false, null));
+        public static readonly DependencyProperty TraktLinkExistsProperty = DependencyProperty.Register("TraktLinkExists",
+            typeof(bool), typeof(RateSeriesForm), new UIPropertyMetadata(false, null));
 
-		public bool TraktLinkExists
-		{
-			get { return (bool)GetValue(TraktLinkExistsProperty); }
-			set { SetValue(TraktLinkExistsProperty, value); }
-		}
+        public bool TraktLinkExists
+        {
+            get { return (bool)GetValue(TraktLinkExistsProperty); }
+            set { SetValue(TraktLinkExistsProperty, value); }
+        }
 
-		public RateSeriesForm()
-		{
-			InitializeComponent();
+        public RateSeriesForm()
+        {
+            InitializeComponent();
 
-			cRating.OnRatingValueChangedEvent += new RatingControl.RatingValueChangedHandler(cRating_OnRatingValueChangedEvent);
-			this.DataContextChanged += new DependencyPropertyChangedEventHandler(RateSeriesForm_DataContextChanged);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
 
-			this.Loaded += new RoutedEventHandler(RateSeriesForm_Loaded);
-		}
+            cRating.OnRatingValueChangedEvent += new RatingControl.RatingValueChangedHandler(cRating_OnRatingValueChangedEvent);
+            this.DataContextChanged += new DependencyPropertyChangedEventHandler(RateSeriesForm_DataContextChanged);
 
-		void RateSeriesForm_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
-		{
-			AnimeSeriesVM ser = this.DataContext as AnimeSeriesVM;
-			if (ser == null) return;
+            this.Loaded += new RoutedEventHandler(RateSeriesForm_Loaded);
+        }
 
-			cboVoteType.Items.Clear();
-			cboVoteType.Items.Add(Properties.Resources.VoteTypeAnimeTemporary);
-			if (ser.AniDB_Anime.FinishedAiring)
-				cboVoteType.Items.Add(Properties.Resources.VoteTypeAnimePermanent);
+        void RateSeriesForm_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            AnimeSeriesVM ser = this.DataContext as AnimeSeriesVM;
+            if (ser == null) return;
 
-			if (ser.AniDB_Anime.FinishedAiring && ser.AllFilesWatched)
-				cboVoteType.SelectedIndex = 1;
-			else
-				cboVoteType.SelectedIndex = 0;
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(AppSettings.Culture);
 
-			TraktLinkExists = ser.AniDB_Anime != null && ser.AniDB_Anime.AniDB_AnimeCrossRefs != null && ser.AniDB_Anime.AniDB_AnimeCrossRefs.TraktCrossRefExists;
-		}
+            cboVoteType.Items.Clear();
+            cboVoteType.Items.Add(Properties.Resources.VoteTypeAnimeTemporary);
+            if (ser.AniDB_Anime.FinishedAiring)
+                cboVoteType.Items.Add(Properties.Resources.VoteTypeAnimePermanent);
 
-		private void CommandBinding_RevokeVote(object sender, ExecutedRoutedEventArgs e)
-		{
-			AnimeSeriesVM ser = e.Parameter as AnimeSeriesVM;
-			if (ser == null) return;
+            if (ser.AniDB_Anime.FinishedAiring && ser.AllFilesWatched)
+                cboVoteType.SelectedIndex = 1;
+            else
+                cboVoteType.SelectedIndex = 0;
 
-			try
-			{
-				JMMServerVM.Instance.RevokeVote(ser.AniDB_ID);
-				MainListHelperVM.Instance.UpdateHeirarchy(ser);
-			}
-			catch (Exception ex)
-			{
-				Utils.ShowErrorMessage(ex);
-			}
-		}
+            TraktLinkExists = ser.AniDB_Anime != null && ser.AniDB_Anime.AniDB_AnimeCrossRefs != null && ser.AniDB_Anime.AniDB_AnimeCrossRefs.TraktCrossRefExists;
+        }
 
-		void cRating_OnRatingValueChangedEvent(RatingValueEventArgs ev)
-		{
-			AnimeSeriesVM ser = this.DataContext as AnimeSeriesVM;
-			if (ser == null) return;
+        private void CommandBinding_RevokeVote(object sender, ExecutedRoutedEventArgs e)
+        {
+            AnimeSeriesVM ser = e.Parameter as AnimeSeriesVM;
+            if (ser == null) return;
 
-			try
-			{
-				decimal rating = (decimal)ev.RatingValue;
+            try
+            {
+                JMMServerVM.Instance.RevokeVote(ser.AniDB_ID);
+                MainListHelperVM.Instance.UpdateHeirarchy(ser);
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowErrorMessage(ex);
+            }
+        }
 
-				int voteType = 1;
-				if (cboVoteType.SelectedItem.ToString() == Properties.Resources.VoteTypeAnimeTemporary) voteType = 2;
-				if (cboVoteType.SelectedItem.ToString() == Properties.Resources.VoteTypeAnimePermanent) voteType = 1;
+        void cRating_OnRatingValueChangedEvent(RatingValueEventArgs ev)
+        {
+            AnimeSeriesVM ser = this.DataContext as AnimeSeriesVM;
+            if (ser == null) return;
 
-				JMMServerVM.Instance.VoteAnime(ser.AniDB_ID, rating, voteType);
+            try
+            {
+                decimal rating = (decimal)ev.RatingValue;
 
-				// refresh the data
-				MainListHelperVM.Instance.UpdateHeirarchy(ser);
-			}
-			catch (Exception ex)
-			{
-				Utils.ShowErrorMessage(ex);
-			}
-		}
+                int voteType = 1;
+                if (cboVoteType.SelectedItem.ToString() == Properties.Resources.VoteTypeAnimeTemporary) voteType = 2;
+                if (cboVoteType.SelectedItem.ToString() == Properties.Resources.VoteTypeAnimePermanent) voteType = 1;
 
-		void RateSeriesForm_Loaded(object sender, RoutedEventArgs e)
-		{
-			if (TraktLinkExists)
-			{
+                JMMServerVM.Instance.VoteAnime(ser.AniDB_ID, rating, voteType);
+
+                // refresh the data
+                MainListHelperVM.Instance.UpdateHeirarchy(ser);
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowErrorMessage(ex);
+            }
+        }
+
+        void RateSeriesForm_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (TraktLinkExists)
+            {
                 //this.Cursor = Cursors.Wait;
                 ucTraktComments.RefreshComments();
-				//this.Cursor = Cursors.Arrow;
-			}
-		}
+                //this.Cursor = Cursors.Arrow;
+            }
+        }
 
-		public void Init(AnimeSeriesVM series)
-		{
-			Series = series;
-			this.DataContext = Series;
+        public void Init(AnimeSeriesVM series)
+        {
+            Series = series;
+            this.DataContext = Series;
             ucTraktComments.DataContext = Series;
-		}
-	}
+        }
+    }
 }
