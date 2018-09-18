@@ -584,7 +584,7 @@ namespace Shoko.Desktop
                 string val = Get("DisplaySeriesSimple");
                 if (bool.TryParse(val, out var bval))
                     return bval;
-                return true; // default value
+                return false; // default value
             }
             set => Set("DisplaySeriesSimple", value.ToString());
         }
